@@ -1,145 +1,1110 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8" />
-<title>Services — Nawiri Akili-Care Africa</title>
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<meta name="description" content="Professional mental health services from Nawiri Akili-Care Africa: individual, family, group therapy, organisational wellness, and virtual care." />
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  html,body{width:100%;overflow-x:hidden;background:#fff;color:#1f2937;font-family:'Inter',system-ui,sans-serif;line-height:1.65}
-  a{color:inherit;text-decoration:none}h1,h2,h3,h4{font-family:'Fraunces',serif;line-height:1.18;letter-spacing:-.02em}
-  :root{--purple:#6D28D9;--purple-deep:#4C1D95;--purple-soft:#EDE9FE;--green:#059669;--green-soft:#D1FAE5}
-  nav.top{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid #f1f1f4}
-  nav.top .wrap{padding:18px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-  .brand{display:flex;align-items:center;gap:10px;font-family:'Fraunces',serif;font-weight:700;font-size:22px;color:var(--purple-deep)}
-  .brand .dot{width:14px;height:14px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--green));box-shadow:0 0 0 4px var(--purple-soft)}
-  .links{display:flex;gap:28px;font-size:14px;font-weight:500}.links a{color:#374151;padding:6px 0;position:relative}
-  .links a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--green);transition:width .25s}
-  .links a:hover{color:var(--purple)}.links a:hover::after{width:100%}
-  .nav-cta{background:var(--purple);color:#fff;padding:10px 18px;border-radius:999px;font-size:13px;font-weight:600}
-  .burger{display:none;background:none;border:0;font-size:24px;color:var(--purple-deep);cursor:pointer}
-  @media(max-width:880px){.links,.nav-cta{display:none}.burger{display:block}.links.open{display:flex;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;padding:20px 40px}}
-  .eyebrow{display:inline-block;background:var(--purple-soft);color:var(--purple-deep);padding:8px 14px;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
-  section{width:100%;padding:90px 40px}
-  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:999px;font-weight:600;font-size:14.5px;cursor:pointer;border:0;transition:transform .2s}
-  .btn-primary{background:var(--purple);color:#fff;box-shadow:0 14px 30px rgba(109,40,217,.3)}.btn-primary:hover{transform:translateY(-2px)}
-  .btn-green{background:var(--green);color:#fff}
-  .hero{padding:100px 40px 60px;background:radial-gradient(900px 500px at 80% 0,var(--purple-soft),transparent 60%),radial-gradient(700px 400px at 0 100%,var(--green-soft),transparent 60%),#fff;text-align:center}
-  .hero h1{font-size:clamp(44px,6vw,86px);font-weight:700;margin:18px auto;max-width:1100px}
-  .hero h1 .grad{background:linear-gradient(120deg,var(--purple),var(--green));-webkit-background-clip:text;background-clip:text;color:transparent}
-  .hero .lede{max-width:780px;margin:0 auto;color:#4b5563;font-size:18px}
-  .notice{max-width:900px;margin:30px auto 0;padding:18px 22px;background:var(--green-soft);border-left:4px solid var(--green);border-radius:14px;font-size:15px;color:#064e3b;text-align:left}
-  .cat-title{max-width:1300px;margin:0 auto 30px;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--purple-deep);font-weight:700}
-  .grid{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
-  @media(max-width:900px){.grid{grid-template-columns:1fr}}
-  .svc{padding:38px;border-radius:24px;background:#fff;border:1px solid #ececf0;transition:transform .3s,box-shadow .3s,border-color .3s;position:relative;overflow:hidden}
-  .svc:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(109,40,217,.1);border-color:var(--purple-soft)}
-  .svc::before{content:"";position:absolute;width:120px;height:120px;border-radius:50%;background:var(--purple-soft);top:-40px;right:-40px;opacity:.6;transition:transform .5s}
-  .svc:hover::before{transform:scale(1.6)}
-  .svc .ic{position:relative;z-index:2;width:54px;height:54px;border-radius:14px;background:linear-gradient(135deg,var(--purple),var(--green));display:grid;place-items:center;font-size:24px;color:#fff;margin-bottom:18px}
-  .svc h3{position:relative;z-index:2;font-size:24px;color:var(--purple-deep);margin-bottom:12px}
-  .svc p{position:relative;z-index:2;color:#4b5563;font-size:15px;margin-bottom:14px}
-  .svc .tags{position:relative;z-index:2;font-size:12.5px;color:var(--green);font-weight:600;letter-spacing:.04em}
-  .glance{background:linear-gradient(135deg,var(--purple-deep),var(--purple));color:#fff;border-radius:32px;max-width:1300px;margin:0 auto;padding:60px 50px;text-align:center;position:relative;overflow:hidden}
-  .glance::after{content:"";position:absolute;width:400px;height:400px;background:var(--green);border-radius:50%;opacity:.25;filter:blur(80px);right:-100px;top:-100px}
-  .glance h2{color:#fff;font-size:clamp(28px,3.5vw,42px);margin-bottom:16px;position:relative}
-  .glance p{color:#e9d5ff;max-width:760px;margin:0 auto 26px;position:relative}
-  .glance .btns{position:relative;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-  .faq{max-width:900px;margin:0 auto}
-  .q{background:#fafafb;border:1px solid #ececf0;border-radius:18px;margin-bottom:14px;overflow:hidden;transition:background .3s}
-  .q[open]{background:#fff;border-color:var(--purple-soft);box-shadow:0 12px 30px rgba(109,40,217,.06)}
-  .q summary{padding:22px 26px;cursor:pointer;font-weight:600;color:var(--purple-deep);list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:16.5px}
-  .q summary::after{content:"+";font-size:24px;color:var(--green);transition:transform .3s}
-  .q[open] summary::after{transform:rotate(45deg)}
-  .q .ans{padding:0 26px 24px;color:#4b5563;font-size:15px}
-  footer{background:#0f0a1a;color:#cbb6ff;padding:80px 40px 30px}
-  .foot-grid{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:50px}
-  @media(max-width:880px){.foot-grid{grid-template-columns:1fr 1fr}}
-  footer h5{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:18px}
-  footer ul{list-style:none}footer li{margin-bottom:10px;font-size:14.5px}footer a:hover{color:#6ee7b7}
-  .foot-brand{font-family:'Fraunces',serif;color:#fff;font-size:24px;margin-bottom:12px}
-  .copy{max-width:1400px;margin:60px auto 0;padding-top:30px;border-top:1px solid rgba(255,255,255,.08);text-align:center;font-size:13px;color:#7c6ba8}
-  .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}.reveal.in{opacity:1;transform:none}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Services · Nawiri Akili-Care Africa</title>
+  <meta name="description"
+    content="Evidence-based therapy, family and group support, organisational wellness, virtual care, and subsidised options.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    html,
+    body {
+      width: 100%;
+      overflow-x: hidden
+    }
+
+    body {
+      font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+      color: #1f2937;
+      background: #fff;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Fraunces', 'Georgia', serif;
+      font-weight: 600;
+      line-height: 1.2;
+      color: #111827
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 4rem)
+    }
+
+    h2 {
+      font-size: clamp(1.7rem, 3.2vw, 2.6rem);
+      margin-bottom: 1rem
+    }
+
+    h3 {
+      font-size: 1.35rem;
+      margin-bottom: .6rem
+    }
+
+    h4 {
+      font-size: 1.1rem;
+      margin-bottom: .5rem
+    }
+
+    p {
+      color: #374151
+    }
+
+    a {
+      color: #6b46c1;
+      text-decoration: none;
+      transition: color .2s
+    }
+
+    a:hover {
+      color: #15803d
+    }
+
+    img {
+      max-width: 100%;
+      display: block
+    }
+
+    .section {
+      width: 100%;
+      padding: 5rem 6vw
+    }
+
+    .section.alt {
+      background: linear-gradient(180deg, #fafaf9 0%, #fff 100%)
+    }
+
+    .section.purple-tint {
+      background: #f5f3ff
+    }
+
+    .section.green-tint {
+      background: #f0fdf4
+    }
+
+    .section.dual-tint {
+      background: linear-gradient(135deg, #f5f3ff 0%, #fff 50%, #f0fdf4 100%)
+    }
+
+    .grid {
+      display: grid;
+      gap: 2rem
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+    }
+
+    .grid-4 {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))
+    }
+
+    .center {
+      text-align: center
+    }
+
+    .lead-p {
+      font-size: 1.1rem;
+      color: #4b5563;
+      max-width: 820px;
+      margin: 0 auto 2.5rem
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: .78rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: #15803d;
+      background: #dcfce7;
+      padding: .4rem 1rem;
+      border-radius: 999px;
+      margin-bottom: 1.4rem;
+      font-weight: 600
+    }
+
+    .eyebrow.purple {
+      color: #6b46c1;
+      background: #ede9fe
+    }
+
+    /* NAV */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      width: 100%;
+      background: rgba(255, 255, 255, .92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #e5e7eb
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 6vw
+    }
+
+    .brand {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 1.35rem;
+      color: #6b46c1;
+      display: flex;
+      align-items: center;
+      gap: .5rem
+    }
+
+    .brand .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #16a34a;
+      display: inline-block;
+      transition: transform .4s
+    }
+
+    .brand:hover .dot {
+      transform: scale(1.6) rotate(180deg);
+      background: #6b46c1
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.4rem;
+      align-items: center;
+      flex-wrap: wrap
+    }
+
+    .nav-links a {
+      color: #1f2937;
+      font-size: .9rem;
+      font-weight: 500;
+      position: relative;
+      padding: .3rem 0
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #6b46c1, #16a34a);
+      transition: width .3s
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%
+    }
+
+    .nav-cta {
+      background: #6b46c1;
+      color: #fff !important;
+      padding: .55rem 1.1rem;
+      border-radius: 999px;
+      font-weight: 600;
+      transition: all .3s
+    }
+
+    .nav-cta:hover {
+      background: #15803d;
+      color: #fff !important;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(107, 70, 193, .25)
+    }
+
+    .nav-cta::after {
+      display: none
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.6rem;
+      color: #6b46c1;
+      cursor: pointer
+    }
+
+    @media(max-width:980px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        padding: 1.2rem 6vw;
+        border-bottom: 1px solid #e5e7eb;
+        gap: 1rem;
+        align-items: flex-start
+      }
+
+      .nav-links.open {
+        display: flex
+      }
+
+      .menu-toggle {
+        display: block
+      }
+    }
+
+    /* BANNER */
+    .banner {
+      position: relative;
+      width: 100%;
+      min-height: 78vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6rem 6vw;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden
+    }
+
+    .banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, rgba(255, 255, 255, .92) 0%, rgba(255, 255, 255, .7) 55%, rgba(237, 233, 254, .55) 100%)
+    }
+
+    .banner-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      width: 100%;
+      text-align: center;
+      animation: rise .9s ease-out both
+    }
+
+    .banner h1 {
+      margin-bottom: 1.2rem
+    }
+
+    .banner .lead {
+      font-size: 1.15rem;
+      max-width: 780px;
+      margin: 0 auto 2rem;
+      color: #4b5563
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .85rem 1.7rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: .95rem;
+      cursor: pointer;
+      border: none;
+      transition: all .35s cubic-bezier(.2, .8, .2, 1);
+      text-decoration: none
+    }
+
+    .btn-primary {
+      background: #6b46c1;
+      color: #fff
+    }
+
+    .btn-primary:hover {
+      background: #553c9a;
+      color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(107, 70, 193, .3)
+    }
+
+    .btn-secondary {
+      background: #16a34a;
+      color: #fff
+    }
+
+    .btn-secondary:hover {
+      background: #15803d;
+      color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(22, 163, 74, .3)
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #6b46c1;
+      border: 2px solid #6b46c1
+    }
+
+    .btn-outline:hover {
+      background: #6b46c1;
+      color: #fff;
+      transform: translateY(-3px)
+    }
+
+    /* CARDS */
+    .card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all .4s cubic-bezier(.2, .8, .2, 1);
+      position: relative;
+      display: flex;
+      flex-direction: column
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 4px;
+      width: 0;
+      background: linear-gradient(90deg, #6b46c1, #16a34a);
+      transition: width .5s;
+      z-index: 2
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: transparent;
+      box-shadow: 0 22px 50px rgba(31, 41, 55, .10)
+    }
+
+    .card:hover::before {
+      width: 100%
+    }
+
+    .card-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform .8s cubic-bezier(.2, .8, .2, 1)
+    }
+
+    .card:hover .card-img {
+      transform: scale(1.08)
+    }
+
+    .card-body {
+      padding: 1.8rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1
+    }
+
+    .card .icon {
+      font-size: 1.8rem;
+      display: inline-block;
+      transition: transform .4s;
+      margin-bottom: .4rem
+    }
+
+    .card:hover .icon {
+      transform: scale(1.18) rotate(-6deg)
+    }
+
+    .card .tag {
+      display: inline-block;
+      font-size: .72rem;
+      color: #553c9a;
+      background: #ede9fe;
+      padding: .25rem .65rem;
+      border-radius: 999px;
+      margin-top: .6rem;
+      margin-right: .3rem
+    }
+
+    .card.green-accent::before {
+      background: linear-gradient(90deg, #16a34a, #6b46c1)
+    }
+
+    .card.green-accent .tag {
+      color: #15803d;
+      background: #dcfce7
+    }
+
+    .card.simple {
+      padding: 2rem
+    }
+
+    .card.simple .card-body {
+      padding: 0
+    }
+
+    /* STAT */
+    .stat {
+      text-align: center;
+      padding: 2rem 1rem;
+      border-radius: 20px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      transition: all .4s
+    }
+
+    .stat:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 36px rgba(107, 70, 193, .12)
+    }
+
+    .stat:nth-child(even):hover {
+      box-shadow: 0 16px 36px rgba(22, 163, 74, .12)
+    }
+
+    .stat .num {
+      font-family: 'Fraunces', serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #6b46c1, #16a34a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text
+    }
+
+    .stat .label {
+      font-size: .95rem;
+      color: #374151;
+      margin-top: .4rem
+    }
+
+    .stat .src {
+      font-size: .7rem;
+      color: #6b7280;
+      margin-top: .6rem;
+      letter-spacing: .05em;
+      text-transform: uppercase
+    }
+
+    /* PULL QUOTE */
+    .pullquote {
+      padding: 5rem 6vw;
+      text-align: center;
+      background: linear-gradient(135deg, #f5f3ff 0%, #fff 50%, #f0fdf4 100%);
+      border-top: 1px solid #e5e7eb;
+      border-bottom: 1px solid #e5e7eb
+    }
+
+    .pullquote blockquote {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: clamp(1.4rem, 2.6vw, 2rem);
+      max-width: 920px;
+      margin: 0 auto;
+      color: #1f2937;
+      line-height: 1.4
+    }
+
+    /* STEP */
+    .step {
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+      padding: 1.6rem;
+      border-radius: 16px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      transition: all .35s
+    }
+
+    .step:hover {
+      transform: translateX(8px);
+      border-color: #6b46c1
+    }
+
+    .step-num {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #fff;
+      background: #6b46c1;
+      transition: all .4s
+    }
+
+    .step:nth-child(even) .step-num {
+      background: #16a34a
+    }
+
+    .step:hover .step-num {
+      transform: rotate(360deg) scale(1.1)
+    }
+
+    .step h3 {
+      margin-bottom: .4rem
+    }
+
+    /* TIER */
+    .tier {
+      padding: 2rem;
+      border-radius: 20px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      text-align: center;
+      transition: all .4s;
+      position: relative;
+      overflow: hidden
+    }
+
+    .tier::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(107, 70, 193, .06), rgba(22, 163, 74, .06));
+      opacity: 0;
+      transition: opacity .4s
+    }
+
+    .tier:hover {
+      transform: translateY(-6px);
+      border-color: transparent;
+      box-shadow: 0 22px 50px rgba(31, 41, 55, .10)
+    }
+
+    .tier:hover::after {
+      opacity: 1
+    }
+
+    .tier .amount {
+      font-family: 'Fraunces', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #6b46c1;
+      position: relative
+    }
+
+    .tier:nth-child(even) .amount {
+      color: #16a34a
+    }
+
+    .tier .approx {
+      font-size: .85rem;
+      color: #6b7280;
+      margin-bottom: .6rem;
+      position: relative
+    }
+
+    .tier .tier-name {
+      font-family: 'Fraunces', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: .5rem;
+      position: relative
+    }
+
+    .tier .tier-desc {
+      font-size: .92rem;
+      color: #4b5563;
+      position: relative
+    }
+
+    /* BAR */
+    .bar-row {
+      margin-bottom: 1.2rem
+    }
+
+    .bar-label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: .4rem;
+      font-weight: 600;
+      color: #1f2937
+    }
+
+    .bar {
+      height: 14px;
+      background: #f3f4f6;
+      border-radius: 99px;
+      overflow: hidden
+    }
+
+    .bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #6b46c1, #16a34a);
+      border-radius: 99px;
+      width: 0;
+      transition: width 1.4s cubic-bezier(.2, .8, .2, 1)
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      padding: 4rem 6vw 2rem;
+      width: 100%
+    }
+
+    footer h4 {
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: .95rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-bottom: 1rem
+    }
+
+    footer .f-grid {
+      display: grid;
+      gap: 2.4rem;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      margin-bottom: 3rem
+    }
+
+    @media(max-width:780px) {
+      footer .f-grid {
+        grid-template-columns: 1fr 1fr
+      }
+    }
+
+    footer a {
+      color: #cbd5e1;
+      display: block;
+      padding: .3rem 0;
+      font-size: .9rem;
+      transition: all .25s
+    }
+
+    footer a:hover {
+      color: #a78bfa;
+      transform: translateX(4px)
+    }
+
+    footer .brand-f {
+      color: #fff;
+      font-family: 'Fraunces', serif;
+      font-size: 1.4rem;
+      margin-bottom: .6rem
+    }
+
+    footer .tag-line {
+      color: #94a3b8;
+      font-style: italic;
+      font-size: .9rem;
+      margin-bottom: .6rem
+    }
+
+    footer .copy {
+      border-top: 1px solid #1e293b;
+      padding-top: 1.5rem;
+      text-align: center;
+      font-size: .82rem;
+      color: #64748b
+    }
+
+    /* ANIM */
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(24px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(-10px)
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: all .8s cubic-bezier(.2, .8, .2, 1)
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0)
+    }
+
+    .float {
+      animation: float 4s ease-in-out infinite
+    }
+
+    .divider-leaf {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      color: #16a34a;
+      font-size: 1.4rem;
+      margin: 1.5rem 0
+    }
+
+    .divider-leaf::before,
+    .divider-leaf::after {
+      content: '';
+      flex: 1;
+      max-width: 120px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #16a34a, transparent)
+    }
+
+    /* FORM */
+    .form {
+      display: grid;
+      gap: 1rem;
+      max-width: 680px;
+      margin: 0 auto
+    }
+
+    .form label {
+      font-size: .85rem;
+      font-weight: 600;
+      color: #374151;
+      display: block;
+      margin-bottom: .3rem
+    }
+
+    .form input,
+    .form select,
+    .form textarea {
+      width: 100%;
+      padding: .85rem 1rem;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 12px;
+      font-family: inherit;
+      font-size: 1rem;
+      background: #fff;
+      transition: all .25s
+    }
+
+    .form input:focus,
+    .form select:focus,
+    .form textarea:focus {
+      outline: none;
+      border-color: #6b46c1;
+      box-shadow: 0 0 0 4px #ede9fe
+    }
+
+    .form textarea {
+      min-height: 130px;
+      resize: vertical
+    }
+
+    .form-note {
+      font-size: .85rem;
+      color: #6b7280;
+      text-align: center;
+      margin-top: .6rem;
+      font-style: italic
+    }
+
+    /* note card */
+    .note {
+      background: #fefce8;
+      border-left: 4px solid #16a34a;
+      padding: 1.2rem 1.5rem;
+      border-radius: 12px;
+      color: #3f3f46;
+      font-size: .95rem
+    }
+
+    .note.purple {
+      background: #faf5ff;
+      border-left-color: #6b46c1
+    }
+
+    /* photo grid */
+    .photo {
+      width: 100%;
+      height: 240px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 18px;
+      position: relative;
+      overflow: hidden;
+      transition: transform .5s
+    }
+
+    .photo:hover {
+      transform: scale(1.02)
+    }
+
+    .photo::after {
+      content: attr(data-caption);
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 1rem;
+      color: #fff;
+      background: linear-gradient(transparent, rgba(0, 0, 0, .7));
+      font-size: .88rem;
+      font-weight: 500
+    }
+  </style>
 </head>
+
 <body>
-<nav class="top"><div class="wrap">
-  <a href="/home.html" class="brand"><span class="dot"></span> Nawiri Akili</a>
-  <button class="burger" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
-  <div class="links"><a href="/home.html">Home</a><a href="/about.html">About</a><a href="/services.html">Services</a><a href="/initiative.html">Initiative</a><a href="/walk-with-us.html">Walk With Us</a><a href="/blog.html">Blog</a><a href="/contact.html">Contact</a></div>
-  <a href="/book.html" class="nav-cta">Book a Session</a>
-</div></nav>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/home.html" class="brand"><span class="dot"></span>Nawiri Akili</a>
+      <button class="menu-toggle" onclick="document.getElementById('nav-links').classList.toggle('open')"
+        aria-label="Menu">☰</button>
+      <div id="nav-links" class="nav-links">
+        <a href="/home.html" class="">Home</a>
+        <a href="/about.html" class="">About</a>
+        <a href="/services.html" class="active">Services</a>
+        <a href="/initiative.html" class="">Initiative</a>
+        <a href="/walk-with-us.html" class="">Walk With Us</a>
+        <a href="/blog.html" class="">Blog</a>
+        <a href="/contact.html" class="">Contact</a>
 
-<section class="hero">
-  <span class="eyebrow">Services</span>
-  <h1>Professional <span class="grad">mental health care</span></h1>
-  <p class="lede"><em>Evidence-based. Compassionate. Confidential.</em> Our services are designed to meet you where you are — and support you toward where you want to be.</p>
-  <div class="notice"><strong>This page covers the professional services of Nawiri Akili-Care Africa.</strong> Subsidised and free care through the Nawiri Akili Initiative is covered on the <a href="/walk-with-us.html" style="color:var(--purple);font-weight:600">Walk With Us</a> page.</div>
-</section>
-
-<section>
-  <div class="cat-title reveal">Individual & Personal Support</div>
-  <div class="grid">
-    <div class="svc reveal"><div class="ic">🧠</div><h3>Individual Therapy & Counselling</h3><p>Professional, confidential support for individuals navigating emotional, psychological, and life challenges — evidence-based and tailored to you. We work with anxiety, depression, burnout, stress, trauma, grief, life transitions, and more. No presenting concern is too small or too complex.</p><div class="tags">In-person · Kilifi · Virtual · Trauma-informed · Confidential</div></div>
-    <div class="svc reveal"><div class="ic">👨‍👩‍👧</div><h3>Family Therapy</h3><p>Structured support for family systems navigating conflict, communication breakdown, grief, or significant life changes. We work with the family as a whole — helping members understand each other, rebuild trust, and develop healthier patterns together.</p><div class="tags">Family systems · Intergenerational · Communication · Healing</div></div>
-    <div class="svc reveal"><div class="ic">🫂</div><h3>Group Therapy & Support Groups</h3><p>Professionally facilitated therapeutic groups for individuals facing shared experiences — grief, anxiety, trauma, life transitions, or recovery. Group settings offer something individual therapy cannot: the understanding of people who truly know what you are carrying.</p><div class="tags">Facilitated · Peer support · Shared experience · Structured</div></div>
-    <div class="svc reveal"><div class="ic">🌱</div><h3>Wellness & Personal Development</h3><p>For individuals seeking growth beyond crisis. Emotional intelligence, stress management, resilience, self-awareness, and life direction support — for those who want to build, not just recover.</p><div class="tags">Growth-focused · Resilience · Self-awareness</div></div>
-  </div>
-</section>
-
-<section style="background:#fafafb">
-  <div class="cat-title reveal">Organisational & Institutional Services</div>
-  <div class="grid">
-    <div class="svc reveal"><div class="ic">🏛️</div><h3>Psychological Consultation</h3><p>Expert mental health support for organisations, schools, and institutions. We assist with mental health program design, clinical supervision and case consultation, staff wellbeing, and safeguarding policy guidance. We work with institutions to build systems that support people — not just respond to crises.</p><div class="tags">Schools · Organisations · Institutions · Supervision · Policy · Program design</div></div>
-    <div class="svc reveal"><div class="ic">🏢</div><h3>Corporate Wellness</h3><p>Organisations thrive when their people do. We work with workplaces and institutions to build cultures of genuine wellbeing — through employee wellness programs, burnout prevention, mental health awareness training, and CSR-aligned initiatives that create measurable, lasting impact.</p><div class="tags">Workplace · Workshops · EAP-style · CSR · Burnout prevention</div></div>
-  </div>
-</section>
-
-<section>
-  <div class="cat-title reveal">Virtual & Remote Care</div>
-  <div class="grid" style="grid-template-columns:1fr;max-width:900px">
-    <div class="svc reveal"><div class="ic">💻</div><h3>Virtual Therapy — Anywhere, Anytime</h3><p>All services are available fully online — the same professional quality, the same confidentiality, no geographic barrier. For clients across Kenya and internationally.</p><div class="tags">Online · Flexible scheduling · Kenya & international · Secure</div></div>
-  </div>
-</section>
-
-<section style="background:#fafafb">
-  <div class="glance reveal">
-    <h2>Make Care Possible</h2>
-    <p>Through the Nawiri Akili Initiative — funded by donors and partners — subsidised and free sessions are available for anyone who needs support but cannot afford it. No one is turned away. Reach out directly and we will find a way.</p>
-    <div class="btns">
-      <a href="/walk-with-us.html" class="btn btn-green">💛 Give →</a>
-      <a href="/contact.html" class="btn" style="background:#fff;color:var(--purple-deep)">Contact Us →</a>
+        <a href="/book.html" class="nav-cta">Book a Session</a>
+      </div>
     </div>
-  </div>
-</section>
+  </nav>
 
-<section>
-  <div style="text-align:center;max-width:900px;margin:0 auto 40px" class="reveal">
-    <span class="eyebrow">Frequently Asked</span>
-    <h2 style="font-size:clamp(32px,4vw,48px);margin-top:18px">Questions, answered honestly</h2>
-  </div>
-  <div class="faq">
-    <details class="q reveal"><summary>How do I know which service is right for me?</summary><div class="ans">Start with an initial consultation. We listen, then guide you toward the most appropriate support — no pressure, no jargon, no judgment.</div></details>
-    <details class="q reveal"><summary>What if I cannot afford therapy?</summary><div class="ans">Reach out directly. Subsidised and free options exist through the Nawiri Akili Initiative. We will find a way together.</div></details>
-    <details class="q reveal"><summary>Do you offer virtual sessions?</summary><div class="ans">Yes. All services are available online from anywhere in Kenya or internationally.</div></details>
-    <details class="q reveal"><summary>Is everything confidential?</summary><div class="ans">Absolutely. All services are held to strict professional and ethical confidentiality standards. Your trust is the foundation of everything we do.</div></details>
-  </div>
-</section>
+  <header class="banner" style="background-image:url('/images/banner-community.jpg')">
+    <div class="banner-inner">
+      <span class="eyebrow">Page 3 · Services · Nawiri Akili-Care Africa</span>
+      <h1>Professional Mental Health Care</h1>
+      <p class="lead"><em>Evidence-based. Compassionate. Confidential.</em> Our services are designed to meet you where
+        you are &mdash; and support you toward where you want to be.</p>
+      <div class="note purple" style="max-width:720px;margin:1.5rem auto 0;text-align:left"><strong>This page covers the
+          professional services of Nawiri Akili-Care Africa.</strong> Subsidised and free care through the Nawiri Akili
+        Initiative is covered on the <a href="/walk-with-us.html">Walk With Us</a> page.</div>
+    </div>
+  </header>
 
-<footer>
-  <div class="foot-grid">
-    <div><div class="foot-brand">Nawiri Akili-Care Africa</div><p style="font-style:italic;color:#a78bfa;margin-bottom:14px">Nurturing Minds, Transforming Communities</p><p style="font-size:14.5px">"Nawiri" — to bloom.</p></div>
-    <div><h5>Explore</h5><ul><li><a href="/home.html">Home</a></li><li><a href="/about.html">About Us</a></li><li><a href="/services.html">Services</a></li><li><a href="/initiative.html">Initiative</a></li><li><a href="/blog.html">Blog & Insights</a></li></ul></div>
-    <div><h5>Take Action</h5><ul><li><a href="/book.html">Book a Session</a></li><li><a href="/walk-with-us.html">🧡 Walk With Us</a></li><li><a href="/contact.html">Partner With Us</a></li><li><a href="/walk-with-us.html">Volunteer</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
-    <div><h5>Services</h5><ul><li>Individual Therapy</li><li>Family Therapy</li><li>Group Therapy</li><li>Organisational Wellness</li><li>Virtual Care</li><li>Subsidised or Free Care</li></ul></div>
-  </div>
-  <div class="copy">© 2025 Nawiri Akili-Care Africa · Kilifi, Kenya · Confidential · Compassionate · Accessible</div>
-</footer>
-<script>
-  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
-  document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4*60)+'ms';io.observe(el)});
-</script>
-</body></html>
+  <section class="section">
+    <div class="center reveal" style="margin-bottom:2.5rem">
+      <span class="eyebrow purple">Individual &amp; Personal Support</span>
+      <h2>For people, families, and groups</h2>
+    </div>
+    <div class="grid grid-2 reveal">
+      <article class="card"><img class="card-img" src="/images/card-individual.jpg" alt="Individual Therapy"
+          loading="lazy">
+        <div class="card-body"><span class="icon">🧠</span>
+          <h3>Individual Therapy &amp; Counselling</h3>
+          <p>Professional, confidential support for individuals navigating emotional, psychological, and life challenges
+            &mdash; evidence-based and tailored to you. We work with anxiety, depression, burnout, stress, trauma,
+            grief, life transitions, and more. No presenting concern is too small or too complex.</p>
+          <div><span class="tag">In-person · Kilifi</span><span class="tag">Virtual</span><span
+              class="tag">Trauma-informed</span><span class="tag">Confidential</span></div>
+        </div>
+      </article>
+      <article class="card green-accent"><img class="card-img" src="/images/card-family.jpg" alt="Family Therapy"
+          loading="lazy">
+        <div class="card-body"><span class="icon">👨‍👩‍👧</span>
+          <h3>Family Therapy</h3>
+          <p>Structured support for family systems navigating conflict, communication breakdown, grief, or significant
+            life changes. We work with the family as a whole &mdash; helping members understand each other, rebuild
+            trust, and develop healthier patterns together.</p>
+          <div><span class="tag">Family systems</span><span class="tag">Intergenerational</span><span
+              class="tag">Communication</span><span class="tag">Healing</span></div>
+        </div>
+      </article>
+      <article class="card"><img class="card-img" src="/images/card-group.jpg" alt="Group Therapy" loading="lazy">
+        <div class="card-body"><span class="icon">👥</span>
+          <h3>Group Therapy &amp; Support Groups</h3>
+          <p>Professionally facilitated therapeutic groups for individuals facing shared experiences &mdash; grief,
+            anxiety, trauma, life transitions, or recovery. Group settings offer something individual therapy cannot:
+            the understanding of people who truly know what you are carrying.</p>
+          <div><span class="tag">Facilitated</span><span class="tag">Peer support</span><span class="tag">Shared
+              experience</span><span class="tag">Structured</span></div>
+        </div>
+      </article>
+      <article class="card green-accent"><img class="card-img" src="/images/card-growth.jpg"
+          alt="Wellness &amp; Personal Development" loading="lazy">
+        <div class="card-body"><span class="icon">🌱</span>
+          <h3>Wellness &amp; Personal Development</h3>
+          <p>For individuals seeking growth beyond crisis. Emotional intelligence, stress management, resilience,
+            self-awareness, and life direction support &mdash; for those who want to build, not just recover.</p>
+          <div><span class="tag">Growth-focused</span><span class="tag">Resilience</span><span
+              class="tag">Self-awareness</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section purple-tint">
+    <div class="center reveal" style="margin-bottom:2.5rem">
+      <span class="eyebrow purple">Organisational &amp; Institutional Services</span>
+      <h2>Care that strengthens systems and the people in them</h2>
+    </div>
+    <div class="grid grid-2 reveal">
+      <article class="card"><img class="card-img" src="/images/card-org.jpg" alt="Psychological Consultation"
+          loading="lazy">
+        <div class="card-body"><span class="icon">🏢</span>
+          <h3>Psychological Consultation</h3>
+          <p>Expert mental health support for organisations, schools, and institutions. We assist with mental health
+            program design, clinical supervision and case consultation, staff wellbeing, and safeguarding policy
+            guidance. We work with institutions to build systems that support people &mdash; not just respond to crises.
+          </p>
+          <div><span class="tag">Schools</span><span class="tag">Organisations</span><span
+              class="tag">Supervision</span><span class="tag">Policy</span><span class="tag">Program design</span></div>
+        </div>
+      </article>
+      <article class="card green-accent"><img class="card-img" src="/images/card-school.jpg" alt="Corporate Wellness"
+          loading="lazy">
+        <div class="card-body"><span class="icon">💼</span>
+          <h3>Corporate Wellness</h3>
+          <p>Organisations thrive when their people do. We work with workplaces and institutions to build cultures of
+            genuine wellbeing &mdash; through employee wellness programs, burnout prevention, mental health awareness
+            training, and CSR-aligned initiatives that create measurable, lasting impact.</p>
+          <div><span class="tag">Workplace</span><span class="tag">Workshops</span><span
+              class="tag">EAP-style</span><span class="tag">CSR</span><span class="tag">Burnout prevention</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="center reveal" style="margin-bottom:2.5rem">
+      <span class="eyebrow">Virtual &amp; Remote Care</span>
+      <h2>Anywhere, anytime</h2>
+    </div>
+    <div class="grid reveal" style="max-width:760px;margin:0 auto">
+      <article class="card"><img class="card-img" src="/images/card-virtual.jpg" alt="Virtual Therapy" loading="lazy">
+        <div class="card-body"><span class="icon">💻</span>
+          <h3>Virtual Therapy &mdash; Anywhere, Anytime</h3>
+          <p>All services are available fully online &mdash; the same professional quality, the same confidentiality, no
+            geographic barrier. For clients across Kenya and internationally.</p>
+          <div><span class="tag">Online</span><span class="tag">Flexible scheduling</span><span class="tag">Kenya &amp;
+              international</span><span class="tag">Secure</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section green-tint">
+    <div class="reveal" style="max-width:880px;margin:0 auto;text-align:center">
+      <span class="eyebrow">Make Care Possible</span>
+      <h2>No one is turned away</h2>
+      <p class="lead-p">Through the Nawiri Akili Initiative &mdash; funded by community sponsorships and the
+        consultancy&rsquo;s revenue &mdash; subsidised and free sessions are available for anyone who needs support but
+        cannot afford it. Reach out directly and we will find a way.</p>
+      <div class="cta-row">
+        <a href="/walk-with-us.html" class="btn btn-secondary">💛 Give →</a>
+        <a href="/contact.html" class="btn btn-outline">Contact Us →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="center reveal" style="margin-bottom:2rem"><span class="eyebrow purple">Frequently Asked</span>
+      <h2>Questions, gently answered</h2>
+    </div>
+    <div class="grid grid-2 reveal" style="max-width:1100px;margin:0 auto">
+      <div class="card simple">
+        <h3>How do I know which service is right for me?</h3>
+        <p>Start with an initial consultation. We listen, then guide you toward the most appropriate support &mdash; no
+          pressure, no jargon, no judgment.</p>
+      </div>
+      <div class="card simple green-accent">
+        <h3>What if I cannot afford therapy?</h3>
+        <p>Reach out directly. Subsidised and free options exist through the Nawiri Akili Initiative. We will find a way
+          together.</p>
+      </div>
+      <div class="card simple">
+        <h3>Do you offer virtual sessions?</h3>
+        <p>Yes. All services are available online from anywhere in Kenya or internationally.</p>
+      </div>
+      <div class="card simple green-accent">
+        <h3>Is everything confidential?</h3>
+        <p>Absolutely. All services are held to strict professional and ethical confidentiality standards. Your trust is
+          the foundation of everything we do.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="f-grid">
+      <div>
+        <div class="brand-f">Nawiri Akili-Care Africa</div>
+        <p class="tag-line">Nurturing Minds, Transforming Communities</p>
+        <p style="font-size:.88rem;color:#94a3b8;line-height:1.6">&ldquo;Nawiri&rdquo; &mdash; to bloom. Empowering
+          growth, renewal and a mentally flourishing community.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="/home.html">Home</a>
+        <a href="/about.html">About Us</a>
+        <a href="/services.html">Services</a>
+        <a href="/initiative.html">Nawiri Akili Initiative</a>
+        <a href="/blog.html">Blog &amp; Insights</a>
+      </div>
+      <div>
+        <h4>Take Action</h4>
+        <a href="/book.html">Book a Session</a>
+        <a href="/walk-with-us.html">💛 Walk With Us</a>
+        <a href="/walk-with-us.html#partner">Partner With Us</a>
+        <a href="/walk-with-us.html#volunteer">Volunteer</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="/services.html">Individual Therapy</a>
+        <a href="/services.html">Family Therapy</a>
+        <a href="/services.html">Group Therapy</a>
+        <a href="/services.html">Organisational Wellness</a>
+        <a href="/services.html">Virtual Care</a>
+        <a href="/services.html">Subsidised or Free Care</a>
+      </div>
+    </div>
+    <div class="copy">© 2026 Nawiri Akili-Care Africa · Kilifi, Kenya · Confidential · Compassionate · Accessible</div>
+  </footer>
+  <script>
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          // animate bars
+          e.target.querySelectorAll('.bar-fill').forEach(b => { b.style.width = b.dataset.w });
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+
+</html>
