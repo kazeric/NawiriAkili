@@ -1,260 +1,1189 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8" />
-<title>Walk With Us — Give, Partner, Volunteer · Nawiri Akili</title>
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<meta name="description" content="Three ways to walk with Nawiri Akili: give, partner, or volunteer. Your support funds free care, school programs, and community outreach." />
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  html,body{width:100%;overflow-x:hidden;background:#fff;color:#1f2937;font-family:'Inter',system-ui,sans-serif;line-height:1.65}
-  a{color:inherit;text-decoration:none}h1,h2,h3,h4{font-family:'Fraunces',serif;line-height:1.18;letter-spacing:-.02em}
-  :root{--purple:#6D28D9;--purple-deep:#4C1D95;--purple-soft:#EDE9FE;--green:#059669;--green-soft:#D1FAE5}
-  nav.top{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid #f1f1f4}
-  nav.top .wrap{padding:18px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-  .brand{display:flex;align-items:center;gap:10px;font-family:'Fraunces',serif;font-weight:700;font-size:22px;color:var(--purple-deep)}
-  .brand .dot{width:14px;height:14px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--green));box-shadow:0 0 0 4px var(--purple-soft)}
-  .links{display:flex;gap:28px;font-size:14px;font-weight:500}.links a{color:#374151;padding:6px 0;position:relative}
-  .links a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--green);transition:width .25s}
-  .links a:hover{color:var(--purple)}.links a:hover::after{width:100%}
-  .nav-cta{background:var(--green);color:#fff;padding:10px 18px;border-radius:999px;font-size:13px;font-weight:600}
-  .burger{display:none;background:none;border:0;font-size:24px;color:var(--purple-deep);cursor:pointer}
-  @media(max-width:880px){.links,.nav-cta{display:none}.burger{display:block}.links.open{display:flex;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;padding:20px 40px}}
-  section{width:100%;padding:90px 40px}
-  .eyebrow{display:inline-block;background:var(--green-soft);color:#065f46;padding:8px 14px;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
-  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:999px;font-weight:600;font-size:14.5px;cursor:pointer;border:0;transition:transform .2s}
-  .btn-green{background:var(--green);color:#fff;box-shadow:0 14px 30px rgba(5,150,105,.3)}.btn-green:hover{transform:translateY(-2px)}
-  .btn-purple{background:var(--purple);color:#fff;box-shadow:0 14px 30px rgba(109,40,217,.3)}
-  /* hero */
-  .hero{padding:110px 40px 80px;background:linear-gradient(135deg,var(--purple-deep) 0%,var(--green) 120%);color:#fff;text-align:center;position:relative;overflow:hidden}
-  .hero::before{content:"";position:absolute;width:600px;height:600px;border-radius:50%;background:rgba(255,255,255,.06);top:-200px;right:-200px;animation:spin 30s linear infinite}
-  @keyframes spin{to{transform:rotate(360deg)}}
-  .hero .quote{position:relative;font-family:'Fraunces',serif;font-style:italic;font-size:clamp(28px,4vw,52px);max-width:1100px;margin:0 auto;line-height:1.25;color:#fff}
-  .hero .quote .em{color:#6ee7b7}
-  .hero .sub{position:relative;color:#e9d5ff;max-width:700px;margin:30px auto 0;font-size:17px}
-  /* reality */
-  .reality{text-align:center;max-width:1000px;margin:0 auto}
-  .reality h2{font-size:clamp(34px,4.5vw,56px);color:var(--purple-deep);margin-bottom:20px}
-  .reality p{color:#4b5563;font-size:17px;max-width:820px;margin:0 auto 18px}
-  /* costs */
-  .costs{background:#fafafb}
-  .costs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;max-width:1400px;margin:0 auto}
-  @media(max-width:1000px){.costs-grid{grid-template-columns:repeat(2,1fr)}}
-  .cost{padding:36px 28px;border-radius:24px;background:#fff;border:1px solid #ececf0;transition:transform .3s,border-color .3s,box-shadow .3s;position:relative;overflow:hidden}
-  .cost:nth-child(1){border-top:5px solid #fbbf24}
-  .cost:nth-child(2){border-top:5px solid var(--green)}
-  .cost:nth-child(3){border-top:5px solid var(--purple)}
-  .cost:nth-child(4){border-top:5px solid #0ea5e9}
-  .cost:hover{transform:translateY(-8px);box-shadow:0 24px 50px rgba(0,0,0,.08)}
-  .cost .amt{font-family:'Fraunces',serif;font-size:34px;font-weight:700;color:var(--purple-deep);margin-bottom:4px}
-  .cost .usd{font-size:13.5px;color:#6b7280;margin-bottom:18px}
-  .cost h4{font-size:17px;color:var(--purple-deep);margin-bottom:10px}
-  .cost p{font-size:14.5px;color:#4b5563}
-  .nopressure{margin:60px auto 0;max-width:900px;text-align:center;font-family:'Fraunces',serif;font-style:italic;font-size:clamp(20px,2.4vw,26px);color:var(--purple-deep);padding:32px;background:var(--purple-soft);border-radius:24px}
-  /* three ways */
-  .three{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1300px;margin:0 auto}
-  @media(max-width:900px){.three{grid-template-columns:1fr}}
-  .way{padding:44px 36px;border-radius:28px;background:linear-gradient(180deg,#fff,#fafafb);border:1px solid #ececf0;text-align:center;transition:transform .3s,box-shadow .3s}
-  .way:hover{transform:translateY(-8px);box-shadow:0 30px 60px rgba(109,40,217,.1)}
-  .way .ic{width:70px;height:70px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--green));display:grid;place-items:center;font-size:30px;color:#fff;margin:0 auto 20px}
-  .way h3{font-size:24px;color:var(--purple-deep);margin-bottom:12px}
-  .way p{color:#4b5563;font-size:15px}
-  /* tiers */
-  .tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1300px;margin:0 auto}
-  @media(max-width:900px){.tiers{grid-template-columns:repeat(2,1fr)}}
-  .tier{padding:32px 24px;border-radius:24px;background:#fff;text-align:center;border:2px solid var(--purple-soft);transition:all .3s;cursor:pointer}
-  .tier:hover{border-color:var(--green);transform:translateY(-6px);background:linear-gradient(180deg,#fff,#f0fdf4)}
-  .tier .amt{font-family:'Fraunces',serif;font-size:30px;font-weight:700;color:var(--purple-deep)}
-  .tier .usd{font-size:13px;color:#6b7280;margin:4px 0 14px}
-  .tier .label{font-weight:600;color:var(--green);font-size:13px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:10px}
-  .tier .what{font-size:14.5px;color:#4b5563}
-  .pay{margin:40px auto 0;text-align:center;color:#6b7280;font-size:14.5px}
-  /* partner / volunteer */
-  .grid2{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1400px;margin:0 auto}
-  @media(max-width:980px){.grid2{grid-template-columns:1fr 1fr}}@media(max-width:600px){.grid2{grid-template-columns:1fr}}
-  .card{padding:32px;border-radius:22px;background:#fff;border:1px solid #ececf0;transition:transform .3s,border-color .3s}
-  .card:hover{transform:translateY(-4px);border-color:var(--purple-soft)}
-  .card h4{font-size:18px;color:var(--purple-deep);margin-bottom:10px}
-  .card p{color:#4b5563;font-size:14.5px;margin-bottom:14px}
-  .card .skills{font-size:12.5px;color:var(--green);font-style:italic}
-  /* allocation */
-  .alloc{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
-  @media(max-width:900px){.alloc{grid-template-columns:1fr}}
-  .bar{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;background:#fafafb;border-radius:14px;margin-bottom:14px;border-left:5px solid var(--purple)}
-  .bar:nth-child(2){border-color:var(--green)}.bar:nth-child(3){border-color:#fbbf24}.bar:nth-child(4){border-color:#0ea5e9}
-  .bar .label{font-weight:500;color:#374151;font-size:15px}
-  .bar .pct{font-family:'Fraunces',serif;font-size:24px;font-weight:700;color:var(--purple-deep)}
-  /* final */
-  .final{background:var(--purple-deep);color:#fff;text-align:center;padding:120px 40px;position:relative;overflow:hidden}
-  .final::before{content:"";position:absolute;width:600px;height:600px;border-radius:50%;background:var(--green);opacity:.2;filter:blur(120px);top:-200px;left:50%;transform:translateX(-50%)}
-  .final h2{position:relative;color:#fff;font-size:clamp(34px,4.5vw,58px);max-width:1000px;margin:0 auto 16px}
-  .final h2 .green{color:#6ee7b7}
-  .final p{position:relative;color:#ddd6fe;max-width:700px;margin:0 auto 36px;font-style:italic}
-  footer{background:#0f0a1a;color:#cbb6ff;padding:80px 40px 30px}
-  .foot-grid{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:50px}
-  @media(max-width:880px){.foot-grid{grid-template-columns:1fr 1fr}}
-  footer h5{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:18px}
-  footer ul{list-style:none}footer li{margin-bottom:10px;font-size:14.5px}footer a:hover{color:#6ee7b7}
-  .foot-brand{font-family:'Fraunces',serif;color:#fff;font-size:24px;margin-bottom:12px}
-  .copy{max-width:1400px;margin:60px auto 0;padding-top:30px;border-top:1px solid rgba(255,255,255,.08);text-align:center;font-size:13px;color:#7c6ba8}
-  .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}.reveal.in{opacity:1;transform:none}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Walk With Us · Support · Partner · Volunteer · Nawiri Akili</title>
+  <meta name="description"
+    content="Give, partner, or volunteer with the Nawiri Akili Initiative. Tiered giving, CSR partnerships, school co-design, and volunteer opportunities.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    html,
+    body {
+      width: 100%;
+      overflow-x: hidden
+    }
+
+    body {
+      font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+      color: #1f2937;
+      background: #fff;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Fraunces', 'Georgia', serif;
+      font-weight: 600;
+      line-height: 1.2;
+      color: #111827
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 4rem)
+    }
+
+    h2 {
+      font-size: clamp(1.7rem, 3.2vw, 2.6rem);
+      margin-bottom: 1rem
+    }
+
+    h3 {
+      font-size: 1.35rem;
+      margin-bottom: .6rem
+    }
+
+    h4 {
+      font-size: 1.1rem;
+      margin-bottom: .5rem
+    }
+
+    p {
+      color: #374151
+    }
+
+    a {
+      color: #6b46c1;
+      text-decoration: none;
+      transition: color .2s
+    }
+
+    a:hover {
+      color: #15803d
+    }
+
+    img {
+      max-width: 100%;
+      display: block
+    }
+
+    .section {
+      width: 100%;
+      padding: 5rem 6vw
+    }
+
+    .section.alt {
+      background: linear-gradient(180deg, #fafaf9 0%, #fff 100%)
+    }
+
+    .section.purple-tint {
+      background: #f5f3ff
+    }
+
+    .section.green-tint {
+      background: #f0fdf4
+    }
+
+    .section.dual-tint {
+      background: linear-gradient(135deg, #f5f3ff 0%, #fff 50%, #f0fdf4 100%)
+    }
+
+    .grid {
+      display: grid;
+      gap: 2rem
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+    }
+
+    .grid-4 {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))
+    }
+
+    .center {
+      text-align: center
+    }
+
+    .lead-p {
+      font-size: 1.1rem;
+      color: #4b5563;
+      max-width: 820px;
+      margin: 0 auto 2.5rem
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: .78rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: #15803d;
+      background: #dcfce7;
+      padding: .4rem 1rem;
+      border-radius: 999px;
+      margin-bottom: 1.4rem;
+      font-weight: 600
+    }
+
+    .eyebrow.purple {
+      color: #6b46c1;
+      background: #ede9fe
+    }
+
+    /* NAV */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      width: 100%;
+      background: rgba(255, 255, 255, .92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #e5e7eb
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 6vw
+    }
+
+    .brand {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 1.35rem;
+      color: #6b46c1;
+      display: flex;
+      align-items: center;
+      gap: .5rem
+    }
+
+    .brand .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #16a34a;
+      display: inline-block;
+      transition: transform .4s
+    }
+
+    .brand:hover .dot {
+      transform: scale(1.6) rotate(180deg);
+      background: #6b46c1
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.4rem;
+      align-items: center;
+      flex-wrap: wrap
+    }
+
+    .nav-links a {
+      color: #1f2937;
+      font-size: .9rem;
+      font-weight: 500;
+      position: relative;
+      padding: .3rem 0
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #6b46c1, #16a34a);
+      transition: width .3s
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%
+    }
+
+    .nav-cta {
+      background: #6b46c1;
+      color: #fff !important;
+      padding: .55rem 1.1rem;
+      border-radius: 999px;
+      font-weight: 600;
+      transition: all .3s
+    }
+
+    .nav-cta:hover {
+      background: #15803d;
+      color: #fff !important;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(107, 70, 193, .25)
+    }
+
+    .nav-cta::after {
+      display: none
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.6rem;
+      color: #6b46c1;
+      cursor: pointer
+    }
+
+    @media(max-width:980px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        padding: 1.2rem 6vw;
+        border-bottom: 1px solid #e5e7eb;
+        gap: 1rem;
+        align-items: flex-start
+      }
+
+      .nav-links.open {
+        display: flex
+      }
+
+      .menu-toggle {
+        display: block
+      }
+    }
+
+    /* BANNER */
+    .banner {
+      position: relative;
+      width: 100%;
+      min-height: 78vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6rem 6vw;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden
+    }
+
+    .banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, rgba(255, 255, 255, .92) 0%, rgba(255, 255, 255, .7) 55%, rgba(237, 233, 254, .55) 100%)
+    }
+
+    .banner-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      width: 100%;
+      text-align: center;
+      animation: rise .9s ease-out both
+    }
+
+    .banner h1 {
+      margin-bottom: 1.2rem
+    }
+
+    .banner .lead {
+      font-size: 1.15rem;
+      max-width: 780px;
+      margin: 0 auto 2rem;
+      color: #4b5563
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .85rem 1.7rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: .95rem;
+      cursor: pointer;
+      border: none;
+      transition: all .35s cubic-bezier(.2, .8, .2, 1);
+      text-decoration: none
+    }
+
+    .btn-primary {
+      background: #6b46c1;
+      color: #fff
+    }
+
+    .btn-primary:hover {
+      background: #553c9a;
+      color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(107, 70, 193, .3)
+    }
+
+    .btn-secondary {
+      background: #16a34a;
+      color: #fff
+    }
+
+    .btn-secondary:hover {
+      background: #15803d;
+      color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(22, 163, 74, .3)
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #6b46c1;
+      border: 2px solid #6b46c1
+    }
+
+    .btn-outline:hover {
+      background: #6b46c1;
+      color: #fff;
+      transform: translateY(-3px)
+    }
+
+    /* CARDS */
+    .card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all .4s cubic-bezier(.2, .8, .2, 1);
+      position: relative;
+      display: flex;
+      flex-direction: column
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 4px;
+      width: 0;
+      background: linear-gradient(90deg, #6b46c1, #16a34a);
+      transition: width .5s;
+      z-index: 2
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: transparent;
+      box-shadow: 0 22px 50px rgba(31, 41, 55, .10)
+    }
+
+    .card:hover::before {
+      width: 100%
+    }
+
+    .card-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform .8s cubic-bezier(.2, .8, .2, 1)
+    }
+
+    .card:hover .card-img {
+      transform: scale(1.08)
+    }
+
+    .card-body {
+      padding: 1.8rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1
+    }
+
+    .card .icon {
+      font-size: 1.8rem;
+      display: inline-block;
+      transition: transform .4s;
+      margin-bottom: .4rem
+    }
+
+    .card:hover .icon {
+      transform: scale(1.18) rotate(-6deg)
+    }
+
+    .card .tag {
+      display: inline-block;
+      font-size: .72rem;
+      color: #553c9a;
+      background: #ede9fe;
+      padding: .25rem .65rem;
+      border-radius: 999px;
+      margin-top: .6rem;
+      margin-right: .3rem
+    }
+
+    .card.green-accent::before {
+      background: linear-gradient(90deg, #16a34a, #6b46c1)
+    }
+
+    .card.green-accent .tag {
+      color: #15803d;
+      background: #dcfce7
+    }
+
+    .card.simple {
+      padding: 2rem
+    }
+
+    .card.simple .card-body {
+      padding: 0
+    }
+
+    /* STAT */
+    .stat {
+      text-align: center;
+      padding: 2rem 1rem;
+      border-radius: 20px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      transition: all .4s
+    }
+
+    .stat:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 36px rgba(107, 70, 193, .12)
+    }
+
+    .stat:nth-child(even):hover {
+      box-shadow: 0 16px 36px rgba(22, 163, 74, .12)
+    }
+
+    .stat .num {
+      font-family: 'Fraunces', serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #6b46c1, #16a34a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text
+    }
+
+    .stat .label {
+      font-size: .95rem;
+      color: #374151;
+      margin-top: .4rem
+    }
+
+    .stat .src {
+      font-size: .7rem;
+      color: #6b7280;
+      margin-top: .6rem;
+      letter-spacing: .05em;
+      text-transform: uppercase
+    }
+
+    /* PULL QUOTE */
+    .pullquote {
+      padding: 5rem 6vw;
+      text-align: center;
+      background: linear-gradient(135deg, #f5f3ff 0%, #fff 50%, #f0fdf4 100%);
+      border-top: 1px solid #e5e7eb;
+      border-bottom: 1px solid #e5e7eb
+    }
+
+    .pullquote blockquote {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: clamp(1.4rem, 2.6vw, 2rem);
+      max-width: 920px;
+      margin: 0 auto;
+      color: #1f2937;
+      line-height: 1.4
+    }
+
+    /* STEP */
+    .step {
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+      padding: 1.6rem;
+      border-radius: 16px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      transition: all .35s
+    }
+
+    .step:hover {
+      transform: translateX(8px);
+      border-color: #6b46c1
+    }
+
+    .step-num {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #fff;
+      background: #6b46c1;
+      transition: all .4s
+    }
+
+    .step:nth-child(even) .step-num {
+      background: #16a34a
+    }
+
+    .step:hover .step-num {
+      transform: rotate(360deg) scale(1.1)
+    }
+
+    .step h3 {
+      margin-bottom: .4rem
+    }
+
+    /* TIER */
+    .tier {
+      padding: 2rem;
+      border-radius: 20px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      text-align: center;
+      transition: all .4s;
+      position: relative;
+      overflow: hidden
+    }
+
+    .tier::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(107, 70, 193, .06), rgba(22, 163, 74, .06));
+      opacity: 0;
+      transition: opacity .4s
+    }
+
+    .tier:hover {
+      transform: translateY(-6px);
+      border-color: transparent;
+      box-shadow: 0 22px 50px rgba(31, 41, 55, .10)
+    }
+
+    .tier:hover::after {
+      opacity: 1
+    }
+
+    .tier .amount {
+      font-family: 'Fraunces', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #6b46c1;
+      position: relative
+    }
+
+    .tier:nth-child(even) .amount {
+      color: #16a34a
+    }
+
+    .tier .approx {
+      font-size: .85rem;
+      color: #6b7280;
+      margin-bottom: .6rem;
+      position: relative
+    }
+
+    .tier .tier-name {
+      font-family: 'Fraunces', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: .5rem;
+      position: relative
+    }
+
+    .tier .tier-desc {
+      font-size: .92rem;
+      color: #4b5563;
+      position: relative
+    }
+
+    /* BAR */
+    .bar-row {
+      margin-bottom: 1.2rem
+    }
+
+    .bar-label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: .4rem;
+      font-weight: 600;
+      color: #1f2937
+    }
+
+    .bar {
+      height: 14px;
+      background: #f3f4f6;
+      border-radius: 99px;
+      overflow: hidden
+    }
+
+    .bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #6b46c1, #16a34a);
+      border-radius: 99px;
+      width: 0;
+      transition: width 1.4s cubic-bezier(.2, .8, .2, 1)
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      padding: 4rem 6vw 2rem;
+      width: 100%
+    }
+
+    footer h4 {
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: .95rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-bottom: 1rem
+    }
+
+    footer .f-grid {
+      display: grid;
+      gap: 2.4rem;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      margin-bottom: 3rem
+    }
+
+    @media(max-width:780px) {
+      footer .f-grid {
+        grid-template-columns: 1fr 1fr
+      }
+    }
+
+    footer a {
+      color: #cbd5e1;
+      display: block;
+      padding: .3rem 0;
+      font-size: .9rem;
+      transition: all .25s
+    }
+
+    footer a:hover {
+      color: #a78bfa;
+      transform: translateX(4px)
+    }
+
+    footer .brand-f {
+      color: #fff;
+      font-family: 'Fraunces', serif;
+      font-size: 1.4rem;
+      margin-bottom: .6rem
+    }
+
+    footer .tag-line {
+      color: #94a3b8;
+      font-style: italic;
+      font-size: .9rem;
+      margin-bottom: .6rem
+    }
+
+    footer .copy {
+      border-top: 1px solid #1e293b;
+      padding-top: 1.5rem;
+      text-align: center;
+      font-size: .82rem;
+      color: #64748b
+    }
+
+    /* ANIM */
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(24px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(-10px)
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: all .8s cubic-bezier(.2, .8, .2, 1)
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0)
+    }
+
+    .float {
+      animation: float 4s ease-in-out infinite
+    }
+
+    .divider-leaf {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      color: #16a34a;
+      font-size: 1.4rem;
+      margin: 1.5rem 0
+    }
+
+    .divider-leaf::before,
+    .divider-leaf::after {
+      content: '';
+      flex: 1;
+      max-width: 120px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #16a34a, transparent)
+    }
+
+    /* FORM */
+    .form {
+      display: grid;
+      gap: 1rem;
+      max-width: 680px;
+      margin: 0 auto
+    }
+
+    .form label {
+      font-size: .85rem;
+      font-weight: 600;
+      color: #374151;
+      display: block;
+      margin-bottom: .3rem
+    }
+
+    .form input,
+    .form select,
+    .form textarea {
+      width: 100%;
+      padding: .85rem 1rem;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 12px;
+      font-family: inherit;
+      font-size: 1rem;
+      background: #fff;
+      transition: all .25s
+    }
+
+    .form input:focus,
+    .form select:focus,
+    .form textarea:focus {
+      outline: none;
+      border-color: #6b46c1;
+      box-shadow: 0 0 0 4px #ede9fe
+    }
+
+    .form textarea {
+      min-height: 130px;
+      resize: vertical
+    }
+
+    .form-note {
+      font-size: .85rem;
+      color: #6b7280;
+      text-align: center;
+      margin-top: .6rem;
+      font-style: italic
+    }
+
+    /* note card */
+    .note {
+      background: #fefce8;
+      border-left: 4px solid #16a34a;
+      padding: 1.2rem 1.5rem;
+      border-radius: 12px;
+      color: #3f3f46;
+      font-size: .95rem
+    }
+
+    .note.purple {
+      background: #faf5ff;
+      border-left-color: #6b46c1
+    }
+
+    /* photo grid */
+    .photo {
+      width: 100%;
+      height: 240px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 18px;
+      position: relative;
+      overflow: hidden;
+      transition: transform .5s
+    }
+
+    .photo:hover {
+      transform: scale(1.02)
+    }
+
+    .photo::after {
+      content: attr(data-caption);
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 1rem;
+      color: #fff;
+      background: linear-gradient(transparent, rgba(0, 0, 0, .7));
+      font-size: .88rem;
+      font-weight: 500
+    }
+  </style>
 </head>
+
 <body>
-<nav class="top"><div class="wrap">
-  <a href="/home.html" class="brand"><span class="dot"></span> Nawiri Akili</a>
-  <button class="burger" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
-  <div class="links"><a href="/home.html">Home</a><a href="/about.html">About</a><a href="/services.html">Services</a><a href="/initiative.html">Initiative</a><a href="/walk-with-us.html">Walk With Us</a><a href="/blog.html">Blog</a><a href="/contact.html">Contact</a></div>
-  <a href="#give" class="nav-cta">❤ Give Now</a>
-</div></nav>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/home.html" class="brand"><span class="dot"></span>Nawiri Akili</a>
+      <button class="menu-toggle" onclick="document.getElementById('nav-links').classList.toggle('open')"
+        aria-label="Menu">☰</button>
+      <div id="nav-links" class="nav-links">
+        <a href="/home.html" class="">Home</a>
+        <a href="/about.html" class="">About</a>
+        <a href="/services.html" class="">Services</a>
+        <a href="/initiative.html" class="">Initiative</a>
+        <a href="/walk-with-us.html" class="active">Walk With Us</a>
+        <a href="/blog.html" class="">Blog</a>
+        <a href="/contact.html" class="">Contact</a>
 
-<section class="hero">
-  <div class="quote">"Somewhere right now, someone needs help they cannot afford. <span class="em">Your support changes that.</span>"</div>
-  <p class="sub">Walk with us — there is no right way to give. There is only giving.</p>
-</section>
-
-<section>
-  <div class="reality reveal">
-    <span class="eyebrow" style="background:var(--purple-soft);color:var(--purple-deep)">The Reality We Are Responding To</span>
-    <h2>Mental health care shouldn't cost someone their chance at it.</h2>
-    <p>Over 1 billion people worldwide are living with a mental health condition. Most will never receive care — not because care does not exist, but because it is out of reach. In coastal Kenya, in Kilifi, this is not a distant statistic. It is a person sitting with their pain, alone, because they cannot afford to go anywhere.</p>
-    <p>The Nawiri Akili Initiative was built to close that gap. Donor funding is the engine. <strong style="color:var(--green)">Every contribution is ring-fenced</strong> for free care, school programs, and community outreach.</p>
-  </div>
-</section>
-
-<section class="costs">
-  <div style="text-align:center;max-width:1000px;margin:0 auto 50px" class="reveal">
-    <span class="eyebrow">What Care Actually Costs</span>
-    <h2 style="font-size:clamp(32px,4vw,50px);margin-top:18px;color:var(--purple-deep)">Here is what your support unlocks</h2>
-    <p style="color:#4b5563">These are real costs, not aspirational figures. Small amounts have real consequences here.</p>
-  </div>
-  <div class="costs-grid">
-    <div class="cost reveal"><div class="amt">KSh 1,000</div><div class="usd">approx. $8 per session</div><h4>One free therapy session</h4><p>One person receives a complete free individual therapy session. Professional, evidence-based, confidential support. One hour that can change the direction of a life.</p></div>
-    <div class="cost reveal"><div class="amt">KSh 5,000</div><div class="usd">approx. $38 per workshop</div><h4>A school workshop</h4><p>A full psychoeducation session delivered in a school — reaching 20–50 students with mental health awareness and the language to speak about what they feel.</p></div>
-    <div class="cost reveal"><div class="amt">KSh 10,000</div><div class="usd">approx. $77 per month of care</div><h4>One month of subsidised care</h4><p>One person supported through a full month of subsidised therapy — initial consultation, ongoing sessions, and a follow-up check-in. Sustained care.</p></div>
-    <div class="cost reveal"><div class="amt">KSh 20,000</div><div class="usd">approx. $154 community outreach</div><h4>A community campaign</h4><p>A community awareness campaign reaching families, faith communities, and opinion leaders — reducing stigma at its source, where it actually lives.</p></div>
-  </div>
-  <div class="nopressure reveal">We are not asking you to solve the crisis. We are asking you to cover the cost of one person's care. That is enough to begin.</div>
-</section>
-
-<section>
-  <div style="text-align:center;max-width:1000px;margin:0 auto 50px" class="reveal">
-    <span class="eyebrow">Three Ways to Be Part of This</span>
-    <h2 style="font-size:clamp(32px,4vw,50px);margin-top:18px;color:var(--purple-deep)">Walk with us</h2>
-    <p style="color:#4b5563">There is no right way to give. There is only giving. Whether you contribute funds, bring your skills, or partner as an organisation — every form of support extends care to someone who needs it.</p>
-  </div>
-  <div class="three">
-    <div class="way reveal"><div class="ic">❤</div><h3>Give</h3><p>Fund free care directly. Every contribution funds the moment when someone gets the support they could not afford.</p></div>
-    <div class="way reveal"><div class="ic">🤝</div><h3>Partner</h3><p>Build with us as an organisation, school, foundation, or CSR program. Long-term commitment, shared impact.</p></div>
-    <div class="way reveal"><div class="ic">🙋</div><h3>Volunteer</h3><p>Bring your skills. We are early — we need people who care, who show up, who want to be part of this.</p></div>
-  </div>
-</section>
-
-<section id="give" style="background:linear-gradient(180deg,#fff,var(--purple-soft))">
-  <div style="text-align:center;max-width:1000px;margin:0 auto 50px" class="reveal">
-    <span class="eyebrow">Give — Individual Giving Tiers</span>
-    <h2 style="font-size:clamp(32px,4vw,50px);margin-top:18px;color:var(--purple-deep)">Every contribution has a name behind it</h2>
-    <p style="color:#4b5563">You are not donating to an organisation. You are funding the moment when someone who has been carrying their pain alone finally gets support.</p>
-  </div>
-  <div class="tiers">
-    <div class="tier reveal"><div class="amt">KSh 1,000</div><div class="usd">approx. $8</div><div class="label">First Step</div><div class="what">One person receives a complete free therapy session. Potentially the first honest conversation in years.</div></div>
-    <div class="tier reveal"><div class="amt">KSh 5,000</div><div class="usd">approx. $38</div><div class="label">A School Heard</div><div class="what">A full school mental health workshop reaching 20–50 young people who may never have had the language for what they feel.</div></div>
-    <div class="tier reveal"><div class="amt">KSh 10,000</div><div class="usd">approx. $77</div><div class="label">Ten Lives Reached</div><div class="what">Ten people access professional care this month because of your contribution.</div></div>
-    <div class="tier reveal"><div class="amt">KSh 20,000</div><div class="usd">approx. $154</div><div class="label">A Month of Bloom</div><div class="what">A full month of free community care — sessions, school visits, and outreach.</div></div>
-  </div>
-  <div style="max-width:600px;margin:30px auto 0" class="reveal">
-    <div class="tier" style="border-color:var(--green);background:linear-gradient(180deg,#fff,#f0fdf4)">
-      <div class="label">Your Choice</div>
-      <div class="amt" style="margin:8px 0">Your amount</div>
-      <div class="usd"><em>Any currency</em></div>
-      <div class="what">Whatever you give closes the gap. There is no amount too small when the alternative is nothing at all.</div>
-      <input type="number" placeholder="Enter amount (KSh / USD)" style="margin-top:18px;width:100%;padding:14px 16px;border-radius:14px;border:1.5px solid #e5e7eb;font-size:15px;font-family:Inter" />
-      <button class="btn btn-green" style="margin-top:14px;width:100%;justify-content:center" onclick="alert('Thank you. We will follow up via email with payment details.')">Give Now →</button>
-    </div>
-  </div>
-  <div class="pay">M-Pesa · Bank transfer · Card payments · International transfers welcome<br><span style="font-size:13px">All contributions are used exclusively for free care, school programs, and community outreach. We share how your support was used.</span></div>
-</section>
-
-<section>
-  <div style="text-align:center;max-width:1000px;margin:0 auto 50px" class="reveal">
-    <span class="eyebrow">Partner — Organisational Support</span>
-    <h2 style="font-size:clamp(30px,4vw,46px);margin-top:18px;color:var(--purple-deep)">Building with people who believe care should reach everyone</h2>
-    <p style="color:#4b5563">Partnership with Nawiri is a shared commitment to access. We work with organisations ready to move beyond statements about mental health into action.</p>
-  </div>
-  <div class="grid2">
-    <div class="card reveal"><h4>Corporate Social Responsibility</h4><p>Fund free care through your CSR program. We provide transparent reporting on sessions funded, communities reached, and people supported. Annual commitments, campaign-based giving, or matched staff contributions.</p><div class="skills">Impact reports · Acknowledgement · Co-branded visibility · Community event invitations</div></div>
-    <div class="card reveal"><h4>Institutional & Foundation Funding</h4><p>We welcome grant funding, programme partnerships, and multi-year institutional commitments. A full funding proposal, theory of change, and outcome frameworks are available on request.</p><div class="skills">Funding brief · Theory of change · Outcome frameworks · Progress reports · Learning documentation</div></div>
-    <div class="card reveal"><h4>School & Community Partnerships</h4><p>For schools and community organisations who want to embed mental health programs. We co-design with you, support your team, and build something the community owns.</p><div class="skills">Needs assessment · Program design · Facilitator support · Ongoing guidance · Evaluation</div></div>
-  </div>
-  <p style="text-align:center;margin-top:40px;color:#4b5563">To start a partnership conversation: <a href="mailto:hello@nawiriakili.co.ke" style="color:var(--purple);font-weight:600">hello@nawiriakili.co.ke</a></p>
-</section>
-
-<section style="background:#fafafb">
-  <div style="text-align:center;max-width:1000px;margin:0 auto 50px" class="reveal">
-    <span class="eyebrow">Volunteer — Bring Your Skills</span>
-    <h2 style="font-size:clamp(30px,4vw,46px);margin-top:18px;color:var(--purple-deep)">We are early. We need people who believe in this.</h2>
-    <p style="color:#4b5563">Volunteers are not a nice-to-have at this stage — they are part of how Nawiri grows. We are looking for people who care, who show up, and who want to be part of something that matters.</p>
-  </div>
-  <div class="grid2">
-    <div class="card reveal"><h4>Mental Health Education & Awareness</h4><p>Help develop and deliver mental health education for schools, communities, and online platforms. Facilitate awareness sessions, create content, or support workshop design.</p><div class="skills">Skills helpful: Psychology, counselling, community education, facilitation, content writing</div></div>
-    <div class="card reveal"><h4>Communications & Storytelling</h4><p>Help tell the story of Nawiri through social media, writing, photography, or design. We are building a brand that needs to feel human, warm, and credible.</p><div class="skills">Skills helpful: Writing, design, social media, photography, videography</div></div>
-    <div class="card reveal"><h4>Community Outreach & Mobilisation</h4><p>Help us reach communities in Kilifi and beyond — connecting us to schools, faith leaders, and local organisations, or supporting community events.</p><div class="skills">Skills helpful: Community work, local networks, event coordination, Swahili fluency a plus</div></div>
-    <div class="card reveal"><h4>Fundraising & Donor Relations</h4><p>Help identify funders, write grant applications, or manage donor relationships.</p><div class="skills">Skills helpful: Grant writing, fundraising, donor relations, nonprofit management</div></div>
-    <div class="card reveal"><h4>Technology & Digital</h4><p>Help build and maintain our digital presence — website, booking tools, or virtual access systems.</p><div class="skills">Skills helpful: Web development, UX, digital tools, systems thinking</div></div>
-    <div class="card reveal"><h4>Have a skill we have not listed?</h4><p>Tell us anyway. We are a new organisation and do not yet know everything we need. If you believe in this mission — reach out.</p><div class="skills">Skills helpful: Anything that serves the mission</div></div>
-  </div>
-  <p style="text-align:center;margin-top:40px;color:#4b5563"><strong>To volunteer:</strong> Send a short message to <a href="mailto:hello@nawiriakili.co.ke" style="color:var(--green);font-weight:600">hello@nawiriakili.co.ke</a> telling us who you are, what you can offer, and why Nawiri matters to you.</p>
-</section>
-
-<section>
-  <div style="text-align:center;max-width:1000px;margin:0 auto 50px" class="reveal">
-    <span class="eyebrow">Where Your Support Goes</span>
-    <h2 style="font-size:clamp(32px,4vw,50px);margin-top:18px;color:var(--purple-deep)">Transparent. Accountable. Impact-first.</h2>
-    <p style="color:#4b5563">Donor funding has one purpose: getting care to people who cannot afford it.</p>
-  </div>
-  <div class="alloc">
-    <div class="reveal">
-      <div class="bar"><span class="label">Free therapy sessions</span><span class="pct">45%</span></div>
-      <div class="bar"><span class="label">School programs & youth outreach</span><span class="pct">25%</span></div>
-      <div class="bar"><span class="label">Community awareness & stigma work</span><span class="pct">20%</span></div>
-      <div class="bar"><span class="label">Coordination & operations</span><span class="pct">10%</span></div>
-    </div>
-    <div class="reveal">
-      <div style="position:relative;width:260px;height:260px;margin:0 auto" id="donut">
-        <svg viewBox="0 0 36 36" style="width:100%;height:100%;transform:rotate(-90deg)">
-          <circle cx="18" cy="18" r="15.9155" fill="none" stroke="#ececf0" stroke-width="3.2"/>
-          <circle cx="18" cy="18" r="15.9155" fill="none" stroke="#6D28D9" stroke-width="3.2" stroke-dasharray="45 100"/>
-          <circle cx="18" cy="18" r="15.9155" fill="none" stroke="#059669" stroke-width="3.2" stroke-dasharray="25 100" stroke-dashoffset="-45"/>
-          <circle cx="18" cy="18" r="15.9155" fill="none" stroke="#fbbf24" stroke-width="3.2" stroke-dasharray="20 100" stroke-dashoffset="-70"/>
-          <circle cx="18" cy="18" r="15.9155" fill="none" stroke="#0ea5e9" stroke-width="3.2" stroke-dasharray="10 100" stroke-dashoffset="-90"/>
-        </svg>
-        <div style="position:absolute;inset:0;display:grid;place-items:center;text-align:center"><div><div style="font-family:Fraunces;font-size:44px;font-weight:700;color:var(--purple-deep)">100%</div><div style="font-size:13px;color:#6b7280">to the mission</div></div></div>
+        <a href="/book.html" class="nav-cta">Book a Session</a>
       </div>
-      <p style="text-align:center;margin-top:24px;color:#4b5563;font-size:14.5px">We publish an annual impact report. Donors of KSh 5,000 (approx. $38) or more receive a personal update on how their contribution was used.</p>
     </div>
-  </div>
-</section>
+  </nav>
 
-<section class="final">
-  <h2>When one mind flourishes, <span class="green">the whole community grows with it.</span></h2>
-  <p>You do not need to solve the crisis. You just need to show up for one person.<br><strong style="color:#fff">Walk with us.</strong></p>
-  <a href="#give" class="btn btn-green">❤ Give Now</a>
-  <a href="/contact.html" class="btn" style="background:#fff;color:var(--purple-deep);margin-left:10px">Partner With Us</a>
-</section>
+  <header class="banner" style="background-image:url('/images/banner-soft.jpg')">
+    <div class="banner-inner">
+      <span class="eyebrow">Page 5 · Walk With Us · Support &amp; Give</span>
+      <h1>Walk with us.</h1>
+      <p class="lead"><em>&ldquo;Somewhere right now, someone needs help they cannot afford. Your support changes
+          that.&rdquo;</em></p>
+      <div class="cta-row">
+        <a href="#give" class="btn btn-secondary">💛 Give</a>
+        <a href="#partner" class="btn btn-primary">Partner With Us</a>
+        <a href="#volunteer" class="btn btn-outline">Volunteer</a>
+      </div>
+    </div>
+  </header>
 
-<footer>
-  <div class="foot-grid">
-    <div><div class="foot-brand">Nawiri Akili-Care Africa</div><p style="font-style:italic;color:#a78bfa;margin-bottom:14px">Nurturing Minds, Transforming Communities</p><p style="font-size:14.5px">"Nawiri" — to bloom.</p></div>
-    <div><h5>Explore</h5><ul><li><a href="/home.html">Home</a></li><li><a href="/about.html">About Us</a></li><li><a href="/services.html">Services</a></li><li><a href="/initiative.html">Initiative</a></li><li><a href="/blog.html">Blog & Insights</a></li></ul></div>
-    <div><h5>Take Action</h5><ul><li><a href="/book.html">Book a Session</a></li><li><a href="/walk-with-us.html">🧡 Walk With Us</a></li><li><a href="/contact.html">Partner With Us</a></li><li><a href="/walk-with-us.html">Volunteer</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
-    <div><h5>Services</h5><ul><li>Individual Therapy</li><li>Family Therapy</li><li>Group Therapy</li><li>Organisational Wellness</li><li>Virtual Care</li><li>Subsidised or Free Care</li></ul></div>
-  </div>
-  <div class="copy">© 2025 Nawiri Akili-Care Africa · Kilifi, Kenya · Confidential · Compassionate · Accessible</div>
-</footer>
-<script>
-  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
-  document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4*60)+'ms';io.observe(el)});
-</script>
-</body></html>
+  <section class="section">
+    <div class="reveal" style="max-width:880px;margin:0 auto">
+      <div class="center"><span class="eyebrow">The reality we are changing</span>
+        <h2>Mental health care shouldn&rsquo;t cost someone their chance at it.</h2>
+      </div>
+      <p style="margin-top:1.4rem">Over 1 billion people worldwide are living with a mental health condition. Most will
+        never receive care &mdash; not because care does not exist, but because it is out of reach. In coastal Kenya, in
+        Kilifi, this is not a distant statistic. It is a person sitting with their pain, alone, because they cannot
+        afford to go anywhere. The Nawiri Akili Initiative was built to close that gap. Community sponsorships and
+        professional revenue are the engine. Every contribution is allocated directly to free care, school programs, and
+        community outreach.</p>
+    </div>
+  </section>
+
+  <section id="give" class="section purple-tint">
+    <div class="center reveal" style="margin-bottom:2.5rem">
+      <span class="eyebrow purple">Give &mdash; Individual Giving Tiers</span>
+      <h2>Every contribution has a name behind it</h2>
+      <p class="lead-p">You are not donating to an organisation. You are funding the moment when someone who has been
+        carrying their pain alone finally gets support.</p>
+    </div>
+    <div class="grid grid-3 reveal">
+      <div class="tier">
+        <div class="amount">KSh 1,000</div>
+        <div class="approx">approx. $8</div>
+        <div class="tier-name">First Step</div>
+        <div class="tier-desc">One person receives a complete free therapy session. Potentially the first honest
+          conversation someone has had in years.</div>
+      </div>
+      <div class="tier">
+        <div class="amount">KSh 5,000</div>
+        <div class="approx">approx. $38</div>
+        <div class="tier-name">A School Heard</div>
+        <div class="tier-desc">A full school mental health workshop reaching 20–50 young people who may never have had
+          the language for what they feel.</div>
+      </div>
+      <div class="tier">
+        <div class="amount">KSh 10,000</div>
+        <div class="approx">approx. $77</div>
+        <div class="tier-name">Ten Lives Reached</div>
+        <div class="tier-desc">Ten people access professional care this month because of your contribution.</div>
+      </div>
+      <div class="tier">
+        <div class="amount">KSh 20,000</div>
+        <div class="approx">approx. $154</div>
+        <div class="tier-name">A Month of Bloom</div>
+        <div class="tier-desc">A full month of free community care &mdash; sessions, school visits, and outreach.</div>
+      </div>
+      <div class="tier" style="grid-column:span 2">
+        <div class="amount">Your amount</div>
+        <div class="approx">Any currency · Your choice</div>
+        <div class="tier-name">Whatever you give closes the gap</div>
+        <div class="tier-desc">There is no amount too small when the alternative is nothing at all.</div>
+      </div>
+    </div>
+    <p class="reveal" style="text-align:center;margin-top:2rem;color:#4b5563"><em>M-Pesa · Bank transfer · Card payments
+        (via Paystack) · International transfers via PayPal · All currencies welcome</em></p>
+    <div class="note reveal" style="max-width:880px;margin:1.5rem auto 0">All contributions are tracked independently
+      and used exclusively for free care, school programs, and community outreach. Every sponsor of KSh 1,000 or more
+      receives a personal update on how their contribution was used. Funds are managed by Nawiri Akili-Care Africa on
+      behalf of the Initiative while CBO registration is in progress.</div>
+  </section>
+
+  <section id="partner" class="section">
+    <div class="center reveal" style="margin-bottom:2.5rem">
+      <span class="eyebrow">Partner &mdash; Organisational Support</span>
+      <h2>Building with people who believe care should reach everyone</h2>
+      <p class="lead-p">Partnership with Nawiri is a shared commitment to access. We work with organisations ready to
+        move beyond statements about mental health into action that actually reaches people.</p>
+    </div>
+    <div class="grid grid-3 reveal">
+      <article class="card"><img class="card-img" src="/images/card-org.jpg" alt="CSR" loading="lazy">
+        <div class="card-body">
+          <h3>Corporate Social Responsibility</h3>
+          <p>Fund free care through your CSR program. We provide transparent reporting on sessions funded, communities
+            reached, and people supported &mdash; so your organisation can demonstrate real, measurable impact.
+            Partnerships can be structured as annual commitments, campaign-based giving, or matched staff contributions.
+          </p>
+          <p style="margin-top:.8rem;font-size:.88rem;color:#553c9a"><strong>What partners receive:</strong> Impact
+            reports · Acknowledgement · Co-branded visibility · Community event invitations</p>
+        </div>
+      </article>
+      <article class="card green-accent"><img class="card-img" src="/images/card-school.jpg" alt="Schools"
+          loading="lazy">
+        <div class="card-body">
+          <h3>School &amp; Community Partnerships</h3>
+          <p>For schools and community organisations who want to embed mental health programs. We co-design with you,
+            support your team, and build something the community owns &mdash; not just something we deliver.</p>
+          <p style="margin-top:.8rem;font-size:.88rem;color:#15803d"><strong>What co-design includes:</strong> Needs
+            assessment · Program design · Facilitator support · Ongoing guidance · Evaluation</p>
+        </div>
+      </article>
+      <article class="card"><img class="card-img" src="/images/card-growth.jpg" alt="Institutional" loading="lazy">
+        <div class="card-body">
+          <h3>Institutional &amp; Foundation Funding</h3>
+          <p>We welcome grant funding, programme partnerships, and multi-year institutional commitments. A full funding
+            proposal, theory of change documentation, and outcome frameworks are available on request.</p>
+          <p style="margin-top:.8rem;font-size:.88rem;color:#553c9a"><strong>What we provide:</strong> Funding brief ·
+            Theory of change · Outcome frameworks · Progress reports · Learning documentation</p>
+        </div>
+      </article>
+    </div>
+    <p class="center reveal" style="margin-top:2rem">To start a partnership conversation: <a
+        href="mailto:hello@nawiriakili.co.ke"><strong>hello@nawiriakili.co.ke</strong></a></p>
+  </section>
+
+  <section id="volunteer" class="section green-tint">
+    <div class="center reveal" style="margin-bottom:2.5rem">
+      <span class="eyebrow">Volunteer &mdash; Bring Your Skills</span>
+      <h2>We are early. We need people who believe in this.</h2>
+      <p class="lead-p">Volunteers are not a nice-to-have at this stage &mdash; they are part of how Nawiri grows. We
+        are looking for people who care, who show up, and who want to be part of something that matters.</p>
+    </div>
+    <div class="grid grid-3 reveal">
+      <div class="card simple">
+        <h3>Mental Health Education &amp; Awareness</h3>
+        <p>Help develop and deliver mental health education for schools, communities, and online platforms. Facilitate
+          awareness sessions, create content, or support workshop design.</p>
+        <p style="margin-top:.6rem;font-size:.85rem;color:#6b7280"><strong>Skills helpful:</strong> Psychology,
+          counselling, community education, facilitation, content writing</p>
+      </div>
+      <div class="card simple green-accent">
+        <h3>Communications &amp; Storytelling</h3>
+        <p>Help tell the story of Nawiri through social media, writing, photography, or design. We are building a brand
+          that needs to feel human, warm, and credible.</p>
+        <p style="margin-top:.6rem;font-size:.85rem;color:#6b7280"><strong>Skills helpful:</strong> Writing, design,
+          social media, photography, videography</p>
+      </div>
+      <div class="card simple">
+        <h3>Community Outreach &amp; Mobilisation</h3>
+        <p>Help us reach communities in Kilifi and beyond &mdash; connecting us to schools, faith leaders, and local
+          organisations, or supporting community events.</p>
+        <p style="margin-top:.6rem;font-size:.85rem;color:#6b7280"><strong>Skills helpful:</strong> Community work,
+          local networks, event coordination, Swahili fluency a plus</p>
+      </div>
+      <div class="card simple green-accent">
+        <h3>Fundraising &amp; Donor Relations</h3>
+        <p>Help identify funders, write grant applications, or manage donor relationships.</p>
+        <p style="margin-top:.6rem;font-size:.85rem;color:#6b7280"><strong>Skills helpful:</strong> Grant writing,
+          fundraising, donor relations, nonprofit management</p>
+      </div>
+      <div class="card simple">
+        <h3>Technology &amp; Digital</h3>
+        <p>Help build and maintain our digital presence &mdash; website, booking tools, or virtual access systems.</p>
+        <p style="margin-top:.6rem;font-size:.85rem;color:#6b7280"><strong>Skills helpful:</strong> Web development, UX,
+          digital tools, systems thinking</p>
+      </div>
+      <div class="card simple green-accent">
+        <h3>Have a skill we have not listed?</h3>
+        <p>Tell us anyway. We are a new organisation and do not yet know everything we need. If you believe in this
+          mission &mdash; reach out.</p>
+        <p style="margin-top:.6rem;font-size:.85rem;color:#6b7280"><strong>Skills helpful:</strong> Anything that serves
+          the mission</p>
+      </div>
+    </div>
+    <div class="note reveal" style="max-width:880px;margin:2rem auto 0"><strong>To volunteer:</strong> Send a short
+      message to <a href="mailto:hello@nawiriakili.co.ke">hello@nawiriakili.co.ke</a> telling us who you are, what you
+      can offer, and why Nawiri matters to you.</div>
+  </section>
+
+  <section class="section">
+    <div class="center reveal" style="margin-bottom:2.5rem">
+      <span class="eyebrow purple">Where your support goes</span>
+      <h2>Transparent. Accountable. Impact-first.</h2>
+      <p class="lead-p">Every contribution has one purpose: getting care to people who cannot afford it.</p>
+    </div>
+    <div class="reveal" style="max-width:760px;margin:0 auto">
+      <div class="bar-row">
+        <div class="bar-label"><span>Free therapy sessions</span><span>45%</span></div>
+        <div class="bar">
+          <div class="bar-fill" data-w="45%"></div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label"><span>School programs &amp; youth outreach</span><span>25%</span></div>
+        <div class="bar">
+          <div class="bar-fill" data-w="25%"></div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label"><span>Community awareness &amp; stigma work</span><span>20%</span></div>
+        <div class="bar">
+          <div class="bar-fill" data-w="20%"></div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label"><span>Coordination &amp; operations</span><span>10%</span></div>
+        <div class="bar">
+          <div class="bar-fill" data-w="10%"></div>
+        </div>
+      </div>
+    </div>
+    <p class="center reveal" style="margin-top:1.5rem;color:#4b5563;max-width:780px;margin-left:auto;margin-right:auto">
+      <em>We publish an annual impact report. Donors of KSh 5,000 (approx. $38) or more receive a personal update on how
+        their contribution was used.</em></p>
+  </section>
+
+  <section class="section dual-tint">
+    <div class="center reveal" style="margin-bottom:2rem"><span class="eyebrow">Nawiri in the Community</span>
+      <h2>These are the moments this work is built for.</h2>
+      <p class="lead-p">A glimpse of the Nawiri Akili Initiative in action &mdash; in schools, communities, and the
+        spaces where mental health support is needed most.</p>
+    </div>
+    <div class="grid grid-3 reveal">
+      <div class="photo" data-caption="School outreach session" style="background-image:url('/images/card-school.jpg')">
+      </div>
+      <div class="photo" data-caption="Community awareness event"
+        style="background-image:url('/images/card-community.jpg')"></div>
+      <div class="photo" data-caption="Safe space session" style="background-image:url('/images/card-group.jpg')"></div>
+    </div>
+    <p class="center reveal" style="margin-top:1.2rem;font-size:.85rem;color:#6b7280"><em>Photos are updated as the
+        Initiative&rsquo;s work grows. Each image carries a one-line caption describing the moment.</em></p>
+  </section>
+
+  <section class="pullquote reveal">
+    <blockquote>&ldquo;When one mind flourishes, the whole community grows with it. You do not need to solve the crisis.
+      You just need to show up for one person. Walk with us.&rdquo;</blockquote>
+  </section>
+
+  <footer>
+    <div class="f-grid">
+      <div>
+        <div class="brand-f">Nawiri Akili-Care Africa</div>
+        <p class="tag-line">Nurturing Minds, Transforming Communities</p>
+        <p style="font-size:.88rem;color:#94a3b8;line-height:1.6">&ldquo;Nawiri&rdquo; &mdash; to bloom. Empowering
+          growth, renewal and a mentally flourishing community.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="/home.html">Home</a>
+        <a href="/about.html">About Us</a>
+        <a href="/services.html">Services</a>
+        <a href="/initiative.html">Nawiri Akili Initiative</a>
+        <a href="/blog.html">Blog &amp; Insights</a>
+      </div>
+      <div>
+        <h4>Take Action</h4>
+        <a href="/book.html">Book a Session</a>
+        <a href="/walk-with-us.html">💛 Walk With Us</a>
+        <a href="/walk-with-us.html#partner">Partner With Us</a>
+        <a href="/walk-with-us.html#volunteer">Volunteer</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="/services.html">Individual Therapy</a>
+        <a href="/services.html">Family Therapy</a>
+        <a href="/services.html">Group Therapy</a>
+        <a href="/services.html">Organisational Wellness</a>
+        <a href="/services.html">Virtual Care</a>
+        <a href="/services.html">Subsidised or Free Care</a>
+      </div>
+    </div>
+    <div class="copy">© 2026 Nawiri Akili-Care Africa · Kilifi, Kenya · Confidential · Compassionate · Accessible</div>
+  </footer>
+  <script>
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          // animate bars
+          e.target.querySelectorAll('.bar-fill').forEach(b => { b.style.width = b.dataset.w });
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+
+</html>

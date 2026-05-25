@@ -1,318 +1,1124 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8" />
-<title>Nawiri Akili — Nurturing Minds, Transforming Communities</title>
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<meta name="description" content="Nawiri Akili-Care Africa: professional, evidence-based mental health care, and the Nawiri Akili Initiative — community impact, accessible to all." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  html,body{width:100%;overflow-x:hidden;background:#fff;color:#1f2937;font-family:'Inter',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
-  a{color:inherit;text-decoration:none}
-  img{max-width:100%;display:block}
-  h1,h2,h3,h4{font-family:'Fraunces',serif;line-height:1.15;letter-spacing:-.02em;color:#1f2937}
-  :root{--purple:#6D28D9;--purple-deep:#4C1D95;--purple-soft:#EDE9FE;--green:#059669;--green-soft:#D1FAE5;--ink:#1F2937;--muted:#6B7280}
-  /* NAV */
-  nav.top{position:sticky;top:0;z-index:50;width:100%;background:rgba(255,255,255,.85);backdrop-filter:blur(14px);border-bottom:1px solid #f1f1f4}
-  nav.top .wrap{max-width:100%;padding:18px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-  .brand{display:flex;align-items:center;gap:10px;font-family:'Fraunces',serif;font-weight:700;font-size:22px;color:var(--purple-deep)}
-  .brand .dot{width:14px;height:14px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--green));box-shadow:0 0 0 4px var(--purple-soft)}
-  .links{display:flex;gap:28px;font-size:14px;font-weight:500}
-  .links a{position:relative;padding:6px 0;color:#374151;transition:color .2s}
-  .links a:hover{color:var(--purple)}
-  .links a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--green);transition:width .25s}
-  .links a:hover::after{width:100%}
-  .nav-cta{background:var(--purple);color:#fff;padding:10px 18px;border-radius:999px;font-size:13px;font-weight:600;transition:transform .2s,background .2s}
-  .nav-cta:hover{background:var(--purple-deep);transform:translateY(-1px)}
-  .burger{display:none;background:none;border:0;cursor:pointer;font-size:24px;color:var(--purple-deep)}
-  @media(max-width:880px){.links,.nav-cta{display:none}.burger{display:block}.links.open{display:flex;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;padding:20px 40px;gap:18px;border-bottom:1px solid #eee}}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Nawiri Akili-Care Africa · Nurturing Minds, Transforming Communities</title>
+  <meta name="description"
+    content="Nawiri Akili-Care Africa &amp; Nawiri Akili Initiative — professional therapy, organisational wellness, and accessible mental health care in Kilifi, Kenya.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
 
-  /* HERO */
-  .hero{position:relative;width:100%;min-height:92vh;display:flex;align-items:center;padding:80px 40px;background:radial-gradient(1200px 600px at 80% 0%,var(--purple-soft) 0%,transparent 60%),radial-gradient(900px 500px at 0% 100%,var(--green-soft) 0%,transparent 60%),#fff;overflow:hidden}
-  .hero .blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.5;animation:float 12s ease-in-out infinite}
-  .hero .b1{width:520px;height:520px;background:var(--purple);top:-120px;right:-120px;opacity:.18}
-  .hero .b2{width:420px;height:420px;background:var(--green);bottom:-100px;left:-80px;opacity:.18;animation-delay:-5s}
-  @keyframes float{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,-20px) scale(1.05)}}
-  .hero-grid{position:relative;z-index:2;width:100%;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
-  @media(max-width:980px){.hero-grid{grid-template-columns:1fr}}
-  .eyebrow{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--purple-soft);color:var(--purple-deep);padding:8px 14px;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 6px 20px rgba(109,40,217,.08)}
-  .eyebrow .pulse-dot{width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 1.8s infinite}
-  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(5,150,105,.6)}70%{box-shadow:0 0 0 12px rgba(5,150,105,0)}100%{box-shadow:0 0 0 0 rgba(5,150,105,0)}}
-  h1.headline{font-size:clamp(40px,6vw,84px);font-weight:700;margin:24px 0 22px}
-  h1.headline .grad{background:linear-gradient(120deg,var(--purple),var(--green));-webkit-background-clip:text;background-clip:text;color:transparent}
-  .lede{font-size:18px;color:#4b5563;max-width:600px}
-  .lede mark{background:linear-gradient(180deg,transparent 60%,var(--green-soft) 60%);color:var(--purple-deep);font-weight:600;padding:0 4px}
-  .quote{margin-top:28px;font-family:'Fraunces',serif;font-style:italic;font-size:20px;color:var(--purple-deep)}
-  .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
-  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:999px;font-weight:600;font-size:14.5px;transition:transform .2s,box-shadow .2s;cursor:pointer;border:0}
-  .btn-primary{background:var(--purple);color:#fff;box-shadow:0 14px 30px rgba(109,40,217,.3)}
-  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 36px rgba(109,40,217,.38)}
-  .btn-green{background:var(--green);color:#fff;box-shadow:0 14px 30px rgba(5,150,105,.28)}
-  .btn-green:hover{transform:translateY(-2px)}
-  .btn-ghost{background:#fff;color:var(--purple-deep);border:1.5px solid var(--purple-soft)}
-  .btn-ghost:hover{background:var(--purple-soft)}
-  /* hero card */
-  .hero-card{position:relative;border-radius:32px;padding:36px;background:linear-gradient(160deg,var(--purple-deep),var(--purple) 60%,#7c3aed);color:#fff;box-shadow:0 30px 60px rgba(76,29,149,.35);overflow:hidden;transform:rotate(-2deg)}
-  .hero-card::after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;background:var(--green);right:-100px;bottom:-100px;opacity:.3;filter:blur(20px)}
-  .hero-card h3{color:#fff;font-size:28px;margin-bottom:12px}
-  .hero-card p{color:#e9d5ff;font-size:15px;margin-bottom:22px}
-  .hero-card .mini{display:flex;gap:14px;flex-wrap:wrap}
-  .chip{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:8px 14px;border-radius:999px;font-size:12.5px;backdrop-filter:blur(6px)}
+    html,
+    body {
+      width: 100%;
+      overflow-x: hidden
+    }
 
-  /* PANDEMIC BANNER */
-  .banner{width:100%;padding:60px 40px;background:linear-gradient(90deg,var(--purple-deep),var(--purple));color:#fff;text-align:center}
-  .banner .icon{font-size:42px;margin-bottom:14px}
-  .banner h2{color:#fff;font-size:clamp(26px,3vw,38px);max-width:1100px;margin:0 auto 18px}
-  .banner p{color:#ddd6fe;max-width:900px;margin:0 auto;font-size:16.5px}
+    body {
+      font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+      color: #1f2937;
+      background: #fff;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased
+    }
 
-  /* NUMBERS */
-  section{width:100%;padding:90px 40px}
-  .section-head{max-width:900px;margin:0 auto 50px;text-align:center}
-  .section-head .eyebrow{margin-bottom:18px}
-  .section-head h2{font-size:clamp(32px,4vw,52px);font-weight:700;margin-bottom:14px}
-  .section-head p{color:var(--muted);font-size:16.5px}
-  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;max-width:1400px;margin:0 auto}
-  @media(max-width:900px){.stats{grid-template-columns:repeat(2,1fr)}}
-  .stat{padding:34px 28px;border-radius:24px;background:#fff;border:1px solid #f1f1f4;transition:transform .3s,box-shadow .3s,border-color .3s;position:relative;overflow:hidden}
-  .stat:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(109,40,217,.12);border-color:var(--purple-soft)}
-  .stat::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,var(--purple),var(--green));transform:scaleX(0);transform-origin:left;transition:transform .4s}
-  .stat:hover::before{transform:scaleX(1)}
-  .stat .num{font-family:'Fraunces',serif;font-size:46px;font-weight:700;color:var(--purple-deep);margin-bottom:10px;letter-spacing:-.02em}
-  .stat .desc{font-size:14.5px;color:#374151;margin-bottom:14px;line-height:1.5}
-  .stat .src{font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
-  .pull{margin:60px auto 0;max-width:1000px;text-align:center;font-family:'Fraunces',serif;font-style:italic;font-size:clamp(20px,2.4vw,28px);color:var(--purple-deep);padding:34px 30px;background:var(--purple-soft);border-radius:24px;position:relative}
-  .pull::before,.pull::after{content:"\201C";font-size:80px;color:var(--purple);opacity:.18;position:absolute;font-family:Fraunces;line-height:1;top:10px;left:20px}
-  .pull::after{content:"\201D";left:auto;right:20px;top:auto;bottom:-20px}
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Fraunces', 'Georgia', serif;
+      font-weight: 600;
+      line-height: 1.2;
+      color: #111827
+    }
 
-  /* ECOSYSTEM */
-  .eco{background:#fafafb}
-  .eco-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;max-width:1300px;margin:0 auto}
-  @media(max-width:880px){.eco-grid{grid-template-columns:1fr}}
-  .eco-card{padding:44px;border-radius:28px;background:#fff;border:1px solid #ececf0;transition:transform .3s,box-shadow .3s}
-  .eco-card:hover{transform:translateY(-4px);box-shadow:0 24px 48px rgba(0,0,0,.06)}
-  .eco-card .pill{display:inline-block;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-bottom:18px}
-  .eco-card.purple .pill{background:var(--purple-soft);color:var(--purple-deep)}
-  .eco-card.green .pill{background:var(--green-soft);color:#065f46}
-  .eco-card h3{font-size:28px;margin-bottom:14px}
-  .eco-card p{color:#4b5563}
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 4rem)
+    }
 
-  /* PATHWAY */
-  .pathway{display:flex;flex-direction:column;gap:18px;max-width:900px;margin:0 auto}
-  .step{padding:30px 24px;border-radius:22px;background:linear-gradient(180deg,#fff,#fafafb);border:1px solid #ececf0;position:relative;transition:transform .3s}
-  .step:hover{transform:translateY(-6px)}
-  .step .n{font-family:'Fraunces',serif;font-size:54px;font-weight:700;background:linear-gradient(135deg,var(--purple),var(--green));-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
-  .step h4{font-size:18px;margin:14px 0 10px;color:var(--purple-deep)}
-  .step p{font-size:14px;color:#4b5563;line-height:1.55}
+    h2 {
+      font-size: clamp(1.7rem, 3.2vw, 2.6rem);
+      margin-bottom: 1rem
+    }
 
-  /* SERVICES GLANCE */
-  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1400px;margin:0 auto}
-  @media(max-width:980px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:600px){.svc-grid{grid-template-columns:1fr}}
-  .svc{padding:32px;border-radius:22px;background:#fff;border:1px solid #ececf0;transition:all .3s;cursor:pointer}
-  .svc:hover{border-color:var(--green);background:linear-gradient(180deg,#fff,#f0fdf4);transform:translateY(-4px)}
-  .svc .ic{width:48px;height:48px;border-radius:14px;background:var(--purple-soft);display:grid;place-items:center;font-size:22px;margin-bottom:18px;transition:background .3s}
-  .svc:hover .ic{background:var(--green-soft)}
-  .svc h4{font-size:20px;margin-bottom:10px}
-  .svc p{color:#4b5563;font-size:14.5px}
+    h3 {
+      font-size: 1.35rem;
+      margin-bottom: .6rem
+    }
 
-  /* GIVE TIERS */
-  .give{background:linear-gradient(180deg,#fff,var(--purple-soft))}
-  .tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1300px;margin:0 auto}
-  @media(max-width:900px){.tiers{grid-template-columns:repeat(2,1fr)}}
-  .tier{padding:34px 26px;border-radius:24px;background:#fff;text-align:center;border:2px solid transparent;transition:all .3s;position:relative;overflow:hidden}
-  .tier:hover{border-color:var(--green);transform:translateY(-6px);box-shadow:0 20px 40px rgba(5,150,105,.15)}
-  .tier .amt{font-family:'Fraunces',serif;font-size:34px;font-weight:700;color:var(--purple-deep)}
-  .tier .usd{font-size:13px;color:var(--muted);margin:6px 0 16px}
-  .tier .what{font-size:14.5px;color:#1f2937;font-weight:500}
+    h4 {
+      font-size: 1.1rem;
+      margin-bottom: .5rem
+    }
 
-  /* CTA */
-  .final{background:var(--purple-deep);color:#fff;text-align:center;padding:120px 40px;position:relative;overflow:hidden}
-  .final::before{content:"";position:absolute;width:600px;height:600px;border-radius:50%;background:var(--green);opacity:.2;filter:blur(120px);top:-200px;left:50%;transform:translateX(-50%)}
-  .final h2{color:#fff;font-size:clamp(34px,4.5vw,60px);max-width:1000px;margin:0 auto 16px;position:relative}
-  .final h2 .green{color:#6ee7b7}
-  .final p{color:#ddd6fe;max-width:700px;margin:0 auto 36px;font-size:17px;position:relative}
+    p {
+      color: #374151
+    }
 
-  /* FOOTER */
-  footer{background:#0f0a1a;color:#cbb6ff;width:100%;padding:80px 40px 30px}
-  .foot-grid{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:50px}
-  @media(max-width:880px){.foot-grid{grid-template-columns:1fr 1fr}}
-  footer h5{color:#fff;font-family:'Inter',sans-serif;font-size:14px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:18px}
-  footer ul{list-style:none}
-  footer li{margin-bottom:10px;font-size:14.5px}
-  footer a:hover{color:#6ee7b7}
-  footer .foot-brand{font-family:'Fraunces',serif;color:#fff;font-size:24px;margin-bottom:12px}
-  footer .tag{font-style:italic;color:#a78bfa;margin-bottom:14px}
-  .copy{max-width:1400px;margin:60px auto 0;padding-top:30px;border-top:1px solid rgba(255,255,255,.08);text-align:center;font-size:13px;color:#7c6ba8}
+    a {
+      color: #6b46c1;
+      text-decoration: none;
+      transition: color .2s
+    }
 
-  /* reveal */
-  .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
-  .reveal.in{opacity:1;transform:none}
-</style>
+    a:hover {
+      color: #15803d
+    }
+
+    img {
+      max-width: 100%;
+      display: block
+    }
+
+    .section {
+      width: 100%;
+      padding: 5rem 6vw
+    }
+
+    .section.alt {
+      background: linear-gradient(180deg, #fafaf9 0%, #fff 100%)
+    }
+
+    .section.purple-tint {
+      background: #f5f3ff
+    }
+
+    .section.green-tint {
+      background: #f0fdf4
+    }
+
+    .section.dual-tint {
+      background: linear-gradient(135deg, #f5f3ff 0%, #fff 50%, #f0fdf4 100%)
+    }
+
+    .grid {
+      display: grid;
+      gap: 2rem
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+    }
+
+    .grid-4 {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))
+    }
+
+    .center {
+      text-align: center
+    }
+
+    .lead-p {
+      font-size: 1.1rem;
+      color: #4b5563;
+      max-width: 820px;
+      margin: 0 auto 2.5rem
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: .78rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: #15803d;
+      background: #dcfce7;
+      padding: .4rem 1rem;
+      border-radius: 999px;
+      margin-bottom: 1.4rem;
+      font-weight: 600
+    }
+
+    .eyebrow.purple {
+      color: #6b46c1;
+      background: #ede9fe
+    }
+
+    /* NAV */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      width: 100%;
+      background: rgba(255, 255, 255, .92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #e5e7eb
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 6vw
+    }
+
+    .brand {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 1.35rem;
+      color: #6b46c1;
+      display: flex;
+      align-items: center;
+      gap: .5rem
+    }
+
+    .brand .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #16a34a;
+      display: inline-block;
+      transition: transform .4s
+    }
+
+    .brand:hover .dot {
+      transform: scale(1.6) rotate(180deg);
+      background: #6b46c1
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.4rem;
+      align-items: center;
+      flex-wrap: wrap
+    }
+
+    .nav-links a {
+      color: #1f2937;
+      font-size: .9rem;
+      font-weight: 500;
+      position: relative;
+      padding: .3rem 0
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #6b46c1, #16a34a);
+      transition: width .3s
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%
+    }
+
+    .nav-cta {
+      background: #6b46c1;
+      color: #fff !important;
+      padding: .55rem 1.1rem;
+      border-radius: 999px;
+      font-weight: 600;
+      transition: all .3s
+    }
+
+    .nav-cta:hover {
+      background: #15803d;
+      color: #fff !important;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(107, 70, 193, .25)
+    }
+
+    .nav-cta::after {
+      display: none
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.6rem;
+      color: #6b46c1;
+      cursor: pointer
+    }
+
+    @media(max-width:980px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        padding: 1.2rem 6vw;
+        border-bottom: 1px solid #e5e7eb;
+        gap: 1rem;
+        align-items: flex-start
+      }
+
+      .nav-links.open {
+        display: flex
+      }
+
+      .menu-toggle {
+        display: block
+      }
+    }
+
+    /* BANNER */
+    .banner {
+      position: relative;
+      width: 100%;
+      min-height: 78vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6rem 6vw;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden
+    }
+
+    .banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, rgba(255, 255, 255, .92) 0%, rgba(255, 255, 255, .7) 55%, rgba(237, 233, 254, .55) 100%)
+    }
+
+    .banner-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      width: 100%;
+      text-align: center;
+      animation: rise .9s ease-out both
+    }
+
+    .banner h1 {
+      margin-bottom: 1.2rem
+    }
+
+    .banner .lead {
+      font-size: 1.15rem;
+      max-width: 780px;
+      margin: 0 auto 2rem;
+      color: #4b5563
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .85rem 1.7rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: .95rem;
+      cursor: pointer;
+      border: none;
+      transition: all .35s cubic-bezier(.2, .8, .2, 1);
+      text-decoration: none
+    }
+
+    .btn-primary {
+      background: #6b46c1;
+      color: #fff
+    }
+
+    .btn-primary:hover {
+      background: #553c9a;
+      color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(107, 70, 193, .3)
+    }
+
+    .btn-secondary {
+      background: #16a34a;
+      color: #fff
+    }
+
+    .btn-secondary:hover {
+      background: #15803d;
+      color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(22, 163, 74, .3)
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #6b46c1;
+      border: 2px solid #6b46c1
+    }
+
+    .btn-outline:hover {
+      background: #6b46c1;
+      color: #fff;
+      transform: translateY(-3px)
+    }
+
+    /* CARDS */
+    .card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all .4s cubic-bezier(.2, .8, .2, 1);
+      position: relative;
+      display: flex;
+      flex-direction: column
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 4px;
+      width: 0;
+      background: linear-gradient(90deg, #6b46c1, #16a34a);
+      transition: width .5s;
+      z-index: 2
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: transparent;
+      box-shadow: 0 22px 50px rgba(31, 41, 55, .10)
+    }
+
+    .card:hover::before {
+      width: 100%
+    }
+
+    .card-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform .8s cubic-bezier(.2, .8, .2, 1)
+    }
+
+    .card:hover .card-img {
+      transform: scale(1.08)
+    }
+
+    .card-body {
+      padding: 1.8rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1
+    }
+
+    .card .icon {
+      font-size: 1.8rem;
+      display: inline-block;
+      transition: transform .4s;
+      margin-bottom: .4rem
+    }
+
+    .card:hover .icon {
+      transform: scale(1.18) rotate(-6deg)
+    }
+
+    .card .tag {
+      display: inline-block;
+      font-size: .72rem;
+      color: #553c9a;
+      background: #ede9fe;
+      padding: .25rem .65rem;
+      border-radius: 999px;
+      margin-top: .6rem;
+      margin-right: .3rem
+    }
+
+    .card.green-accent::before {
+      background: linear-gradient(90deg, #16a34a, #6b46c1)
+    }
+
+    .card.green-accent .tag {
+      color: #15803d;
+      background: #dcfce7
+    }
+
+    .card.simple {
+      padding: 2rem
+    }
+
+    .card.simple .card-body {
+      padding: 0
+    }
+
+    /* STAT */
+    .stat {
+      text-align: center;
+      padding: 2rem 1rem;
+      border-radius: 20px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      transition: all .4s
+    }
+
+    .stat:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 36px rgba(107, 70, 193, .12)
+    }
+
+    .stat:nth-child(even):hover {
+      box-shadow: 0 16px 36px rgba(22, 163, 74, .12)
+    }
+
+    .stat .num {
+      font-family: 'Fraunces', serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #6b46c1, #16a34a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text
+    }
+
+    .stat .label {
+      font-size: .95rem;
+      color: #374151;
+      margin-top: .4rem
+    }
+
+    .stat .src {
+      font-size: .7rem;
+      color: #6b7280;
+      margin-top: .6rem;
+      letter-spacing: .05em;
+      text-transform: uppercase
+    }
+
+    /* PULL QUOTE */
+    .pullquote {
+      padding: 5rem 6vw;
+      text-align: center;
+      background: linear-gradient(135deg, #f5f3ff 0%, #fff 50%, #f0fdf4 100%);
+      border-top: 1px solid #e5e7eb;
+      border-bottom: 1px solid #e5e7eb
+    }
+
+    .pullquote blockquote {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: clamp(1.4rem, 2.6vw, 2rem);
+      max-width: 920px;
+      margin: 0 auto;
+      color: #1f2937;
+      line-height: 1.4
+    }
+
+    /* STEP */
+    .step {
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+      padding: 1.6rem;
+      border-radius: 16px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      transition: all .35s
+    }
+
+    .step:hover {
+      transform: translateX(8px);
+      border-color: #6b46c1
+    }
+
+    .step-num {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #fff;
+      background: #6b46c1;
+      transition: all .4s
+    }
+
+    .step:nth-child(even) .step-num {
+      background: #16a34a
+    }
+
+    .step:hover .step-num {
+      transform: rotate(360deg) scale(1.1)
+    }
+
+    .step h3 {
+      margin-bottom: .4rem
+    }
+
+    /* TIER */
+    .tier {
+      padding: 2rem;
+      border-radius: 20px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      text-align: center;
+      transition: all .4s;
+      position: relative;
+      overflow: hidden
+    }
+
+    .tier::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(107, 70, 193, .06), rgba(22, 163, 74, .06));
+      opacity: 0;
+      transition: opacity .4s
+    }
+
+    .tier:hover {
+      transform: translateY(-6px);
+      border-color: transparent;
+      box-shadow: 0 22px 50px rgba(31, 41, 55, .10)
+    }
+
+    .tier:hover::after {
+      opacity: 1
+    }
+
+    .tier .amount {
+      font-family: 'Fraunces', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #6b46c1;
+      position: relative
+    }
+
+    .tier:nth-child(even) .amount {
+      color: #16a34a
+    }
+
+    .tier .approx {
+      font-size: .85rem;
+      color: #6b7280;
+      margin-bottom: .6rem;
+      position: relative
+    }
+
+    .tier .tier-name {
+      font-family: 'Fraunces', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: .5rem;
+      position: relative
+    }
+
+    .tier .tier-desc {
+      font-size: .92rem;
+      color: #4b5563;
+      position: relative
+    }
+
+    /* BAR */
+    .bar-row {
+      margin-bottom: 1.2rem
+    }
+
+    .bar-label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: .4rem;
+      font-weight: 600;
+      color: #1f2937
+    }
+
+    .bar {
+      height: 14px;
+      background: #f3f4f6;
+      border-radius: 99px;
+      overflow: hidden
+    }
+
+    .bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #6b46c1, #16a34a);
+      border-radius: 99px;
+      width: 0;
+      transition: width 1.4s cubic-bezier(.2, .8, .2, 1)
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      padding: 4rem 6vw 2rem;
+      width: 100%
+    }
+
+    footer h4 {
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: .95rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-bottom: 1rem
+    }
+
+    footer .f-grid {
+      display: grid;
+      gap: 2.4rem;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      margin-bottom: 3rem
+    }
+
+    @media(max-width:780px) {
+      footer .f-grid {
+        grid-template-columns: 1fr 1fr
+      }
+    }
+
+    footer a {
+      color: #cbd5e1;
+      display: block;
+      padding: .3rem 0;
+      font-size: .9rem;
+      transition: all .25s
+    }
+
+    footer a:hover {
+      color: #a78bfa;
+      transform: translateX(4px)
+    }
+
+    footer .brand-f {
+      color: #fff;
+      font-family: 'Fraunces', serif;
+      font-size: 1.4rem;
+      margin-bottom: .6rem
+    }
+
+    footer .tag-line {
+      color: #94a3b8;
+      font-style: italic;
+      font-size: .9rem;
+      margin-bottom: .6rem
+    }
+
+    footer .copy {
+      border-top: 1px solid #1e293b;
+      padding-top: 1.5rem;
+      text-align: center;
+      font-size: .82rem;
+      color: #64748b
+    }
+
+    /* ANIM */
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(24px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(-10px)
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: all .8s cubic-bezier(.2, .8, .2, 1)
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0)
+    }
+
+    .float {
+      animation: float 4s ease-in-out infinite
+    }
+
+    .divider-leaf {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      color: #16a34a;
+      font-size: 1.4rem;
+      margin: 1.5rem 0
+    }
+
+    .divider-leaf::before,
+    .divider-leaf::after {
+      content: '';
+      flex: 1;
+      max-width: 120px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #16a34a, transparent)
+    }
+
+    /* FORM */
+    .form {
+      display: grid;
+      gap: 1rem;
+      max-width: 680px;
+      margin: 0 auto
+    }
+
+    .form label {
+      font-size: .85rem;
+      font-weight: 600;
+      color: #374151;
+      display: block;
+      margin-bottom: .3rem
+    }
+
+    .form input,
+    .form select,
+    .form textarea {
+      width: 100%;
+      padding: .85rem 1rem;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 12px;
+      font-family: inherit;
+      font-size: 1rem;
+      background: #fff;
+      transition: all .25s
+    }
+
+    .form input:focus,
+    .form select:focus,
+    .form textarea:focus {
+      outline: none;
+      border-color: #6b46c1;
+      box-shadow: 0 0 0 4px #ede9fe
+    }
+
+    .form textarea {
+      min-height: 130px;
+      resize: vertical
+    }
+
+    .form-note {
+      font-size: .85rem;
+      color: #6b7280;
+      text-align: center;
+      margin-top: .6rem;
+      font-style: italic
+    }
+
+    /* note card */
+    .note {
+      background: #fefce8;
+      border-left: 4px solid #16a34a;
+      padding: 1.2rem 1.5rem;
+      border-radius: 12px;
+      color: #3f3f46;
+      font-size: .95rem
+    }
+
+    .note.purple {
+      background: #faf5ff;
+      border-left-color: #6b46c1
+    }
+
+    /* photo grid */
+    .photo {
+      width: 100%;
+      height: 240px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 18px;
+      position: relative;
+      overflow: hidden;
+      transition: transform .5s
+    }
+
+    .photo:hover {
+      transform: scale(1.02)
+    }
+
+    .photo::after {
+      content: attr(data-caption);
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 1rem;
+      color: #fff;
+      background: linear-gradient(transparent, rgba(0, 0, 0, .7));
+      font-size: .88rem;
+      font-weight: 500
+    }
+  </style>
 </head>
+
 <body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/home.html" class="brand"><span class="dot"></span>Nawiri Akili</a>
+      <button class="menu-toggle" onclick="document.getElementById('nav-links').classList.toggle('open')"
+        aria-label="Menu">☰</button>
+      <div id="nav-links" class="nav-links">
+        <a href="/home.html" class="active">Home</a>
+        <a href="/about.html" class="">About</a>
+        <a href="/services.html" class="">Services</a>
+        <a href="/initiative.html" class="">Initiative</a>
+        <a href="/walk-with-us.html" class="">Walk With Us</a>
+        <a href="/blog.html" class="">Blog</a>
+        <a href="/contact.html" class="">Contact</a>
 
-<nav class="top">
-  <div class="wrap">
-    <a href="/home.html" class="brand"><span class="dot"></span> Nawiri Akili</a>
-    <button class="burger" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
-    <div class="links">
-      <a href="/home.html">Home</a>
-      <a href="/about.html">About</a>
-      <a href="/services.html">Services</a>
-      <a href="/initiative.html">Initiative</a>
-      <a href="/walk-with-us.html">Walk With Us</a>
-      <a href="/blog.html">Blog</a>
-      <a href="/contact.html">Contact</a>
+        <a href="/book.html" class="nav-cta">Book a Session</a>
+      </div>
     </div>
-    <a href="/book.html" class="nav-cta">Book a Session</a>
-  </div>
-</nav>
+  </nav>
 
-<header class="hero">
-  <div class="blob b1"></div>
-  <div class="blob b2"></div>
-  <div class="hero-grid">
-    <div>
-      <span class="eyebrow"><span class="pulse-dot"></span> Mental wellness for everyone</span>
-      <h1 class="headline">Nurturing Minds, <span class="grad">Transforming Communities</span></h1>
-      <p class="lede"><strong>"Nawiri"</strong> means to bloom. Empowering growth, renewal, and a mentally flourishing community. We believe every person deserves quality mental health care. <mark>Nawiri Akili-Care Africa</mark> delivers expert, evidence-based support — and through the <mark>Nawiri Akili Initiative</mark>, that commitment reaches into communities: making care accessible, affordable, and subsidised or free where it needs to be.</p>
-      <p class="quote">"Nawiri" — to bloom.</p>
+  <header class="banner" style="background-image:url('/images/banner-bloom.jpg')">
+    <div class="banner-inner">
+      <span class="eyebrow">Nawiri Akili-Care Africa &amp; Nawiri Akili Initiative</span>
+      <h1>Nurturing Minds, Transforming Communities</h1>
+      <p class="lead"><em>&ldquo;Nawiri&rdquo; means to bloom.</em> Empowering growth, renewal, and a mentally
+        flourishing community. Nawiri exists to ensure quality mental health care is a right, not a privilege. Through
+        the <strong>Nawiri Akili Initiative</strong>, we provide mental health education and subsidised or free care to
+        communities &mdash; funded by community sponsorships and the professional expertise of <strong>Nawiri Akili-Care
+          Africa</strong>, our consultancy arm. Together, one ecosystem. One mission.</p>
       <div class="cta-row">
-        <a href="/book.html" class="btn btn-primary">Book a Session →</a>
-        <a href="/walk-with-us.html" class="btn btn-green">❤ Join the Cause</a>
-        <a href="/initiative.html" class="btn btn-ghost">Nawiri Akili Initiative →</a>
+        <a href="/walk-with-us.html" class="btn btn-secondary">💛 Support the Initiative</a>
+        <a href="/book.html" class="btn btn-primary">Book a Session</a>
+        <a href="/initiative.html" class="btn btn-outline">Learn About Our Impact →</a>
       </div>
     </div>
-    <div class="hero-card">
-      <h3>One vision. Two arms.</h3>
-      <p>Professional consultancy meets community impact — built together for a future where blooming is the expectation, not the exception.</p>
-      <div class="mini">
-        <span class="chip">Evidence-based</span>
-        <span class="chip">Confidential</span>
-        <span class="chip">Community-rooted</span>
-        <span class="chip">Kilifi · Kenya · Worldwide</span>
+  </header>
+
+  <section class="section dual-tint">
+    <div class="reveal center" style="max-width:920px;margin:0 auto">
+      <span class="eyebrow purple">The crisis we are responding to</span>
+      <h2>🌍 Mental health is the defining health crisis of our generation.</h2>
+      <p class="lead-p">Over 1 billion people worldwide are living with a mental health condition. COVID-19 drove a 25%
+        global surge in anxiety, depression, and other mental health conditions &mdash; and the world has yet to
+        recover. This is not a distant crisis. It is a reality that touches every family, every community, every
+        generation. Nawiri exists to meet it &mdash; one child, one community, one conversation at a time.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="center reveal" style="margin-bottom:2rem">
+      <span class="eyebrow">The Numbers &mdash; 2025</span>
+      <h2>The reality we are changing</h2>
+      <p style="font-size:.85rem;color:#6b7280;max-width:780px;margin:.6rem auto 0">Sources: WHO World Mental Health
+        Today, September 2025 · JAMA Psychiatry 2025 · Project HOPE 2024 · The Lancet 2024</p>
+    </div>
+    <div class="grid grid-4 reveal">
+      <div class="stat">
+        <div class="num">1B+</div>
+        <div class="label">People living with a mental health condition worldwide</div>
+        <div class="src">WHO, 2025</div>
+      </div>
+      <div class="stat">
+        <div class="num">91%</div>
+        <div class="label">Of people with depression have no access to care</div>
+        <div class="src">WHO, 2025</div>
+      </div>
+      <div class="stat">
+        <div class="num">6.9%</div>
+        <div class="label">Of those who need treatment actually receive it</div>
+        <div class="src">JAMA Psychiatry, 2025</div>
+      </div>
+      <div class="stat">
+        <div class="num">1 in 7</div>
+        <div class="label">Young people aged 10–19 have a mental health condition</div>
+        <div class="src">Project HOPE, 2024</div>
       </div>
     </div>
-  </div>
-</header>
+  </section>
 
-<section class="banner">
-  <div class="icon">🌍</div>
-  <h2>Mental health is the defining health crisis of our generation.</h2>
-  <p>Over 1 billion people worldwide are living with a mental health condition. COVID-19 drove a 25% global surge in anxiety, depression, and other mental health conditions — and the world has yet to recover. This is not a distant crisis. It is a reality that touches every family, every community, every generation. Nawiri exists to meet it — one child, one community, one conversation at a time.</p>
-</section>
-
-<section>
-  <div class="section-head reveal">
-    <span class="eyebrow">The Numbers — 2025</span>
-    <h2>The reality we are responding to</h2>
-    <p><em>Sources: WHO World Mental Health Today, September 2025 · JAMA Psychiatry 2025 · Project HOPE 2024 · The Lancet 2024</em></p>
-  </div>
-  <div class="stats">
-    <div class="stat reveal"><div class="num">1B+</div><div class="desc">People living with a mental health condition worldwide</div><div class="src">WHO, 2025</div></div>
-    <div class="stat reveal"><div class="num">91%</div><div class="desc">Of people with depression have no access to care</div><div class="src">WHO, 2025</div></div>
-    <div class="stat reveal"><div class="num">6.9%</div><div class="desc">Of those who need treatment actually receive it</div><div class="src">JAMA Psychiatry, 2025</div></div>
-    <div class="stat reveal"><div class="num">1 in 7</div><div class="desc">Young people aged 10–19 have a mental health condition</div><div class="src">Project HOPE, 2024</div></div>
-  </div>
-  <div class="pull reveal">Mental health is not a private burden to be carried alone. It is a shared reality and a shared responsibility — one that touches every family, every community, every generation.</div>
-</section>
-
-<section class="eco">
-  <div class="section-head reveal">
-    <span class="eyebrow">The Nawiri Ecosystem</span>
-    <h2>One vision. Two arms. Built together.</h2>
-    <p>The consultancy and the initiative are distinct entities serving different functions — but they share a mission, a name, and a commitment to the same community.</p>
-  </div>
-  <div class="eco-grid">
-    <div class="eco-card purple reveal">
-      <span class="pill">Professional Consultancy</span>
-      <h3>Nawiri Akili-Care Africa</h3>
-      <p>Expert therapy, psychological consultation, and organisational wellness. Delivers professional-grade care. Generates revenue that sustains the ecosystem.</p>
+  <section class="section purple-tint">
+    <div class="center reveal" style="margin-bottom:2.5rem">
+      <span class="eyebrow purple">Services at a glance</span>
+      <h2>How we support individuals and organisations</h2>
+      <p class="lead-p">Professional, confidential support tailored to you &mdash; and accessible programs that bring
+        mental wellness into the spaces where people live, learn, and grow.</p>
     </div>
-    <div class="eco-card green reveal">
-      <span class="pill">Community Impact</span>
-      <h3>Nawiri Akili Initiative</h3>
-      <p>Mental health education, stigma reduction, school and community programs, and subsidised or free care for those who cannot afford it. Funded by donors and partners.</p>
+    <div class="grid grid-3 reveal">
+      <article class="card"><img class="card-img" src="/images/card-individual.jpg" alt="Individual Therapy"
+          loading="lazy">
+        <div class="card-body"><span class="icon">🧠</span>
+          <h3>Individual Therapy</h3>
+          <p>Professional, confidential support for individuals navigating emotional, psychological, and life challenges
+            &mdash; evidence-based and tailored to you.</p>
+        </div>
+      </article>
+      <article class="card green-accent"><img class="card-img" src="/images/card-family.jpg" alt="Family Therapy"
+          loading="lazy">
+        <div class="card-body"><span class="icon">👨‍👩‍👧</span>
+          <h3>Family Therapy</h3>
+          <p>Structured support for family systems &mdash; communication, healing, and healthier relationships across
+            generations.</p>
+        </div>
+      </article>
+      <article class="card"><img class="card-img" src="/images/card-org.jpg" alt="Organisational Wellness"
+          loading="lazy">
+        <div class="card-body"><span class="icon">🏢</span>
+          <h3>Organisational Wellness</h3>
+          <p>Organisations thrive when their people do. Tailored mental health programs, staff support, and sustainable
+            wellness solutions.</p>
+        </div>
+      </article>
+      <article class="card green-accent"><img class="card-img" src="/images/card-school.jpg"
+          alt="School &amp; Community Programs" loading="lazy">
+        <div class="card-body"><span class="icon">🏫</span>
+          <h3>School &amp; Community Programs</h3>
+          <p>Mental health education, stigma reduction, and accessible support directly into the spaces where people
+            live, learn, and grow.</p>
+        </div>
+      </article>
+      <article class="card"><img class="card-img" src="/images/card-virtual.jpg" alt="Virtual Care" loading="lazy">
+        <div class="card-body"><span class="icon">💻</span>
+          <h3>Virtual Care</h3>
+          <p>Fully confidential online sessions from anywhere in Kenya or internationally.</p>
+        </div>
+      </article>
+      <article class="card green-accent"><img class="card-img" src="/images/card-growth.jpg"
+          alt="Subsidised or Free Care" loading="lazy">
+        <div class="card-body"><span class="icon">🌱</span>
+          <h3>Subsidised or Free Care</h3>
+          <p>Care without conditions. Through the Nawiri Akili Initiative, subsidised and free sessions are available
+            &mdash; because mental wellness belongs to everyone, without exception.</p>
+        </div>
+      </article>
     </div>
-  </div>
-</section>
-
-<section>
-  <div class="section-head reveal">
-    <span class="eyebrow">The Nawiri Pathway</span>
-    <h2>From first awareness to lasting change</h2>
-    <p>Every part of the ecosystem connects. Each stage flows into the next.</p>
-  </div>
-  <div class="pathway">
-    <div class="step reveal"><div class="n">1</div><h4>Know</h4><p>Mental health education & awareness in schools, communities, and homes.</p></div>
-    <div class="step reveal"><div class="n">2</div><h4>Speak</h4><p>Breaking stigma — safe conversations that replace silence with understanding.</p></div>
-    <div class="step reveal"><div class="n">3</div><h4>Reach</h4><p>Accessible, affordable, subsidised or free care. No one turned away.</p></div>
-    <div class="step reveal"><div class="n">4</div><h4>Grow</h4><p>Evidence-based, professional care — in person in Kilifi, virtually anywhere.</p></div>
-    <div class="step reveal"><div class="n">5</div><h4>Bloom</h4><p>Mentally healthy communities — where blooming is the expectation.</p></div>
-  </div>
-</section>
-
-<section style="background:#fafafb">
-  <div class="section-head reveal">
-    <span class="eyebrow">Services at a Glance</span>
-    <h2>How we support individuals and organisations</h2>
-  </div>
-  <div class="svc-grid">
-    <div class="svc reveal"><div class="ic">🧠</div><h4>Individual Therapy</h4><p>Professional, confidential support — evidence-based and tailored to you.</p></div>
-    <div class="svc reveal"><div class="ic">👨‍👩‍👧</div><h4>Family Therapy</h4><p>Structured support for family systems — communication, healing, healthier relationships.</p></div>
-    <div class="svc reveal"><div class="ic">🏢</div><h4>Organisational Wellness</h4><p>Tailored mental health programs, staff support, and sustainable wellness solutions.</p></div>
-    <div class="svc reveal"><div class="ic">🏫</div><h4>School & Community Programs</h4><p>Mental health education, stigma reduction, accessible support where people live and learn.</p></div>
-    <div class="svc reveal"><div class="ic">💻</div><h4>Virtual Care</h4><p>Fully confidential online sessions from anywhere in Kenya or internationally.</p></div>
-    <div class="svc reveal"><div class="ic">💚</div><h4>Subsidised or Free Care</h4><p>Care without conditions. Through the Initiative, mental wellness belongs to everyone.</p></div>
-  </div>
-  <div style="text-align:center;margin-top:40px"><a href="/services.html" class="btn btn-primary">All Services →</a> <a href="/book.html" class="btn btn-ghost">Book a Session →</a></div>
-</section>
-
-<section class="give">
-  <div class="section-head reveal">
-    <span class="eyebrow">Walk With Us</span>
-    <h2>Mental health care should reach everyone.</h2>
-    <p>Through the Nawiri Akili Initiative, it does — one session, one school, one community at a time. Your contribution is what makes that possible.</p>
-  </div>
-  <div class="tiers">
-    <div class="tier reveal"><div class="amt">KSh 1,000</div><div class="usd">approx. $8</div><div class="what">One person receives a free session</div></div>
-    <div class="tier reveal"><div class="amt">KSh 5,000</div><div class="usd">approx. $38</div><div class="what">A school community gets a workshop</div></div>
-    <div class="tier reveal"><div class="amt">KSh 10,000</div><div class="usd">approx. $77</div><div class="what">Ten people access free care</div></div>
-    <div class="tier reveal"><div class="amt">KSh 20,000</div><div class="usd">approx. $154</div><div class="what">A full month of free community care</div></div>
-  </div>
-  <div style="text-align:center;margin-top:40px"><a href="/walk-with-us.html" class="btn btn-green">See All Ways to Give →</a></div>
-</section>
-
-<section class="final">
-  <h2>When one mind flourishes, <span class="green">the whole community grows with it.</span></h2>
-  <p>We exist to make sure nothing stands in the way of it.</p>
-  <div class="cta-row" style="justify-content:center">
-    <a href="/book.html" class="btn btn-green">Book a Session</a>
-    <a href="/walk-with-us.html" class="btn" style="background:#fff;color:var(--purple-deep)">❤️ Give</a>
-    <a href="/contact.html" class="btn btn-ghost" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.3)">Partner With Us</a>
-  </div>
-</section>
-
-<footer>
-  <div class="foot-grid">
-    <div>
-      <div class="foot-brand">Nawiri Akili-Care Africa</div>
-      <p class="tag">Nurturing Minds, Transforming Communities</p>
-      <p style="font-size:14.5px">"Nawiri" — to bloom. Empowering growth, renewal and a mentally flourishing community.</p>
+    <div class="center" style="margin-top:2.5rem">
+      <a href="/services.html" class="btn btn-primary">All Services →</a>
+      <a href="/book.html" class="btn btn-secondary">Book a Session →</a>
     </div>
-    <div><h5>Explore</h5><ul><li><a href="/home.html">Home</a></li><li><a href="/about.html">About Us</a></li><li><a href="/services.html">Services</a></li><li><a href="/initiative.html">Nawiri Akili Initiative</a></li><li><a href="/blog.html">Blog & Insights</a></li></ul></div>
-    <div><h5>Take Action</h5><ul><li><a href="/book.html">Book a Session</a></li><li><a href="/walk-with-us.html">🧡 Walk With Us</a></li><li><a href="/contact.html">Partner With Us</a></li><li><a href="/walk-with-us.html">Volunteer</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
-    <div><h5>Services</h5><ul><li>Individual Therapy</li><li>Family Therapy</li><li>Group Therapy</li><li>Organisational Wellness</li><li>Virtual Care</li><li>Subsidised or Free Care</li></ul></div>
-  </div>
-  <div class="copy">© 2025 Nawiri Akili-Care Africa · Kilifi, Kenya · Confidential · Compassionate · Accessible</div>
-</footer>
+  </section>
 
-<script>
-  const io = new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
-  document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4*60)+'ms';io.observe(el)});
-</script>
+  <section class="section green-tint">
+    <div class="grid grid-2 reveal" style="align-items:center;gap:3rem">
+      <div>
+        <span class="eyebrow">Walk With Us</span>
+        <h2>Mental health care should reach everyone.</h2>
+        <p style="margin-bottom:1.6rem">Through the Nawiri Akili Initiative, it does &mdash; one session, one school,
+          one community at a time. Your contribution is what makes that possible.</p>
+        <a href="/walk-with-us.html" class="btn btn-secondary">See All Ways to Give →</a>
+      </div>
+      <div class="grid" style="gap:1rem">
+        <div class="tier">
+          <div class="amount">KSh 1,000</div>
+          <div class="approx">approx. $8</div>
+          <div class="tier-name">Sponsor a Session</div>
+          <div class="tier-desc">Fund one person&rsquo;s free therapy</div>
+        </div>
+        <div class="tier">
+          <div class="amount">KSh 5,000</div>
+          <div class="approx">approx. $38</div>
+          <div class="tier-name">Community Workshop Support</div>
+          <div class="tier-desc">Bring mental health education to a school</div>
+        </div>
+        <div class="tier">
+          <div class="amount">KSh 10,000</div>
+          <div class="approx">approx. $77</div>
+          <div class="tier-name">Subsidised Care Bundle</div>
+          <div class="tier-desc">Cover ten people&rsquo;s access to care</div>
+        </div>
+        <div class="tier">
+          <div class="amount">KSh 20,000</div>
+          <div class="approx">approx. $154</div>
+          <div class="tier-name">Impact Partner Tier</div>
+          <div class="tier-desc">A full month of community care and outreach</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pullquote reveal">
+    <blockquote>&ldquo;When one mind flourishes, the whole community grows with it. We exist to make sure nothing stands
+      in the way of it.&rdquo;</blockquote>
+    <div class="cta-row" style="margin-top:2rem">
+      <a href="/walk-with-us.html" class="btn btn-secondary">💛 Sponsor an Initiative</a>
+      <a href="/book.html" class="btn btn-primary">Book a Session</a>
+      <a href="/walk-with-us.html#partner" class="btn btn-outline">Partner With Us</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="f-grid">
+      <div>
+        <div class="brand-f">Nawiri Akili-Care Africa</div>
+        <p class="tag-line">Nurturing Minds, Transforming Communities</p>
+        <p style="font-size:.88rem;color:#94a3b8;line-height:1.6">&ldquo;Nawiri&rdquo; &mdash; to bloom. Empowering
+          growth, renewal and a mentally flourishing community.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="/home.html">Home</a>
+        <a href="/about.html">About Us</a>
+        <a href="/services.html">Services</a>
+        <a href="/initiative.html">Nawiri Akili Initiative</a>
+        <a href="/blog.html">Blog &amp; Insights</a>
+      </div>
+      <div>
+        <h4>Take Action</h4>
+        <a href="/book.html">Book a Session</a>
+        <a href="/walk-with-us.html">💛 Walk With Us</a>
+        <a href="/walk-with-us.html#partner">Partner With Us</a>
+        <a href="/walk-with-us.html#volunteer">Volunteer</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="/services.html">Individual Therapy</a>
+        <a href="/services.html">Family Therapy</a>
+        <a href="/services.html">Group Therapy</a>
+        <a href="/services.html">Organisational Wellness</a>
+        <a href="/services.html">Virtual Care</a>
+        <a href="/services.html">Subsidised or Free Care</a>
+      </div>
+    </div>
+    <div class="copy">© 2026 Nawiri Akili-Care Africa · Kilifi, Kenya · Confidential · Compassionate · Accessible</div>
+  </footer>
+  <script>
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          // animate bars
+          e.target.querySelectorAll('.bar-fill').forEach(b => { b.style.width = b.dataset.w });
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
 </body>
+
 </html>
