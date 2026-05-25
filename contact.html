@@ -108,11 +108,11 @@
     }
 
     .grid-2 {
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))
+      grid-template-columns: repeat(2, minmax(320px, 1fr))
     }
 
     .grid-3 {
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+      grid-template-columns: repeat(3, minmax(280px, 1fr))
     }
 
     .grid-4 {
@@ -432,7 +432,7 @@
     }
 
     .card:hover .icon {
-      transform: scale(1.18) rotate(-6deg)
+      transform: scale(1.01) rotate(2deg)
     }
 
     .card .tag {
@@ -904,7 +904,7 @@
 
   <header class="banner" style="background-image:url('/images/banner-care.jpg')">
     <div class="banner-inner">
-      <span class="eyebrow">Page 8 · Contact &amp; Partner With Us</span>
+      <span class="eyebrow"> Contact &amp; Partner With Us</span>
       <h1>Let&rsquo;s talk.</h1>
       <p class="lead">Clients, partners, schools, donors, volunteers, researchers, or curious minds &mdash; every
         conversation is welcome here.</p>
@@ -912,22 +912,12 @@
   </header>
 
   <section class="section">
-    <div class="grid grid-2 reveal" style="gap:3rem;align-items:start">
-      <div>
-        <h2>Reach us</h2>
-        <div class="card simple" style="margin-top:1rem"><span class="icon">📍</span>
-          <h3>Location</h3>
-          <p>Kilifi, Kenya<br><span style="color:#6b7280">Virtual services available worldwide</span></p>
-        </div>
-        <div class="card simple green-accent" style="margin-top:1rem"><span class="icon">📧</span>
-          <h3>Email</h3>
-          <p><a href="mailto:hello@nawiriakili.co.ke">hello@nawiriakili.co.ke</a></p>
-        </div>
-        <div class="card simple" style="margin-top:1rem"><span class="icon">💬</span>
-          <h3>WhatsApp</h3>
-          <p><a href="tel:+254700000000">+254 700 000 000</a></p>
-        </div>
+    <h2>Reach us</h2>
 
+    <div class="grid grid-2 reveal" style="gap:3rem;align-items:start; margin-top:3rem">
+      
+      <div class="card simple" style="padding:2rem">
+        
         <h3 style="margin-top:2rem">💛 Partnership opportunities</h3>
         <ul style="padding-left:1.2rem;margin-top:.5rem;color:#374151;line-height:2">
           <li>I would like to support the Initiative</li>
@@ -937,6 +927,7 @@
           <li>Training &amp; capacity building</li>
           <li>Community outreach co-design</li>
           <li>Institutional grant partnerships</li>
+
         </ul>
       </div>
 
@@ -965,7 +956,24 @@
             💛 Thank you for reaching out. We&rsquo;ll be in touch soon.</p>
         </form>
       </div>
+               
     </div>
+
+        <div class="grid grid-3" style="margin-top: 80px;">
+          <div class="card simple" style="margin-top:1rem"><span class="icon">📍</span>
+            <h3>Location</h3>
+            <p>Kilifi, Kenya<br><span style="color:#6b7280">Virtual services available worldwide</span></p>
+          </div>
+          <div class="card simple green-accent" style="margin-top:1rem"><span class="icon">📧</span>
+            <h3>Email</h3>
+            <p><a href="mailto:hello@nawiriakili.co.ke">hello@nawiriakili.co.ke</a></p>
+          </div>
+          <div class="card simple" style="margin-top:1rem"><span class="icon">💬</span>
+            <h3>WhatsApp</h3>
+            <p><a href="tel:+254700000000">+254 700 000 000</a></p>
+          </div>
+        </div>
+
   </section>
 
   <footer>

@@ -102,9 +102,12 @@
       background: linear-gradient(135deg, #f5f3ff 0%, #fff 50%, #f0fdf4 100%)
     }
 
+    /* FIX: all grids center their items so orphaned last-row items are always centred */
     .grid {
       display: grid;
-      gap: 2rem
+      gap: 2rem;
+      justify-items: center;     /* centre each cell's content */
+      justify-content: center    /* centre the track group itself */
     }
 
     .grid-2 {
@@ -112,11 +115,19 @@
     }
 
     .grid-3 {
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+      grid-template-columns: repeat(3, minmax(280px, 1fr))
     }
 
     .grid-4 {
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))
+      grid-template-columns: repeat(4, minmax(220px, 1fr))
+    }
+
+    /* ensure cards fill their grid cell even when justify-items:center is set */
+    .grid > .card,
+    .grid > .tier,
+    .grid > .stat,
+    .grid > article {
+      width: 100%
     }
 
     .center {
@@ -634,6 +645,21 @@
       position: relative
     }
 
+    /* FIX: tier grid — use a dedicated wrapper with max-width and centred flex-wrap
+       so the "any amount" card sits centred rather than left-aligned */
+    .tier-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      align-items: stretch
+    }
+
+    .tier-grid .tier {
+      flex: 1 1 280px;
+      max-width: 360px
+    }
+
     /* BAR */
     .bar-row {
       margin-bottom: 1.2rem
@@ -896,7 +922,6 @@
         <a href="/walk-with-us.html" class="active">Walk With Us</a>
         <a href="/blog.html" class="">Blog</a>
         <a href="/contact.html" class="">Contact</a>
-
         <a href="/book.html" class="nav-cta">Book a Session</a>
       </div>
     </div>
@@ -904,7 +929,7 @@
 
   <header class="banner" style="background-image:url('/images/banner-soft.jpg')">
     <div class="banner-inner">
-      <span class="eyebrow">Page 5 · Walk With Us · Support &amp; Give</span>
+      <span class="eyebrow">Walk With Us · Support &amp; Give</span>
       <h1>Walk with us.</h1>
       <p class="lead"><em>&ldquo;Somewhere right now, someone needs help they cannot afford. Your support changes
           that.&rdquo;</em></p>
@@ -937,7 +962,9 @@
       <p class="lead-p">You are not donating to an organisation. You are funding the moment when someone who has been
         carrying their pain alone finally gets support.</p>
     </div>
-    <div class="grid grid-3 reveal">
+
+    <!-- FIX: replaced grid grid-3 with tier-grid so the last "any amount" card centres correctly -->
+    <div class="tier-grid reveal">
       <div class="tier">
         <div class="amount">KSh 1,000</div>
         <div class="approx">approx. $8</div>
@@ -964,13 +991,16 @@
         <div class="tier-name">A Month of Bloom</div>
         <div class="tier-desc">A full month of free community care &mdash; sessions, school visits, and outreach.</div>
       </div>
-      <div class="tier" style="grid-column:span 2">
-        <div class="amount">Your amount</div>
-        <div class="approx">Any currency · Your choice</div>
-        <div class="tier-name">Whatever you give closes the gap</div>
-        <div class="tier-desc">There is no amount too small when the alternative is nothing at all.</div>
-      </div>
     </div>
+      
+
+          <div class="tier reveal" style="max-width:720px;margin:2rem auto 0">
+            <div class="amount">Your amount</div>
+            <div class="approx">Any currency · Your choice</div>
+            <div class="tier-name">Whatever you give closes the gap</div>
+            <div class="tier-desc">There is no amount too small when the alternative is nothing at all.</div>
+          </div>
+
     <p class="reveal" style="text-align:center;margin-top:2rem;color:#4b5563"><em>M-Pesa · Bank transfer · Card payments
         (via Paystack) · International transfers via PayPal · All currencies welcome</em></p>
     <div class="note reveal" style="max-width:880px;margin:1.5rem auto 0">All contributions are tracked independently
@@ -1108,7 +1138,8 @@
         </div>
       </div>
     </div>
-    <p class="center reveal" style="margin-top:1.5rem;color:#4b5563;max-width:780px;margin-left:auto;margin-right:auto">
+    <!-- FIX: removed conflicting margin-top inline style; margin:auto handles centring -->
+    <p class="center reveal" style="margin:1.5rem auto 0;color:#4b5563;max-width:780px">
       <em>We publish an annual impact report. Donors of KSh 5,000 (approx. $38) or more receive a personal update on how
         their contribution was used.</em></p>
   </section>
@@ -1176,7 +1207,6 @@
       entries.forEach(e => {
         if (e.isIntersecting) {
           e.target.classList.add('in');
-          // animate bars
           e.target.querySelectorAll('.bar-fill').forEach(b => { b.style.width = b.dataset.w });
           io.unobserve(e.target);
         }
