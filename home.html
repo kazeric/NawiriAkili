@@ -112,11 +112,11 @@
     }
 
     .grid-3 {
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+      grid-template-columns: repeat(3, minmax(320px, 1fr))
     }
 
     .grid-4 {
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))
+      grid-template-columns: repeat(4, minmax(280px, 1fr))
     }
 
     .center {
@@ -432,7 +432,7 @@
     }
 
     .card:hover .icon {
-      transform: scale(1.18) rotate(-6deg)
+      transform: scale(1.04) rotate(-1deg)
     }
 
     .card .tag {
@@ -883,26 +883,9 @@
 </head>
 
 <body>
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="/home.html" class="brand"><span class="dot"></span>Nawiri Akili</a>
-      <button class="menu-toggle" onclick="document.getElementById('nav-links').classList.toggle('open')"
-        aria-label="Menu">☰</button>
-      <div id="nav-links" class="nav-links">
-        <a href="/home.html" class="active">Home</a>
-        <a href="/about.html" class="">About</a>
-        <a href="/services.html" class="">Services</a>
-        <a href="/initiative.html" class="">Nawiri Akili initiative</a>
-        <a href="/walk-with-us.html" class="">Walk With Us</a>
-        <a href="/blog.html" class="">Blog</a>
-        <a href="/contact.html" class="">Contact</a>
 
-        <a href="/book.html" class="nav-cta">Book a Session</a>
-      </div>
-    </div>
-  </nav>
-
-  <header class="banner" style="background-image:url('/images/banner-bloom.jpg')">
+  <header class="banner"
+    style="background-image:url('https://nawiriakili.org/wp-content/uploads/2026/05/banner-bloom.jpg')">
     <div class="banner-inner">
       <span class="eyebrow">Nawiri Akili-Care Africa &amp; Nawiri Akili Initiative</span>
       <h1>Nurturing Minds, Transforming Communities</h1>
@@ -912,9 +895,9 @@
         communities ; funded by community sponsorships and the professional expertise of <strong>Nawiri Akili-Care
           Africa</strong>, our consultancy arm. Together, one ecosystem. One mission.</p>
       <div class="cta-row">
-        <a href="/walk-with-us.html" class="btn btn-secondary">💛 Support the Initiative</a>
-        <a href="/book.html" class="btn btn-primary">Book a Session</a>
-        <a href="/initiative.html" class="btn btn-outline">Learn About Our Impact →</a>
+        <a href="walk-with-us/" class="btn btn-secondary">💛 Support the Initiative</a>
+        <a href="book/" class="btn btn-primary">Book a Session</a>
+        <a href="nawiri-akili-initiative/" class="btn btn-outline">Learn About Our Impact →</a>
       </div>
     </div>
   </header>
@@ -968,70 +951,81 @@
       <p class="lead-p">Professional, confidential support tailored to you ; and accessible programs that bring
         mental wellness into the spaces where people live, learn, and grow.</p>
     </div>
-    <div class="grid grid-3 reveal">
-      <article class="card"><img class="card-img" src="/images/card-individual.jpg" alt="Individual Therapy"
-          loading="lazy">
+    <div style="display:flex; flex-wrap:wrap; gap:2rem;">
+
+      <article class="card" style="flex: 1 1 480px;"><img class="card-img"
+          src="https://nawiriakili.org/wp-content/uploads/2026/05/card-individual.jpg" alt="Individual" loading="lazy">
         <div class="card-body"><span class="icon">🧠</span>
           <h3>Individual Therapy</h3>
-          <p>Professional, confidential support for individuals navigating emotional, psychological, and life challenges
-            ; evidence-based and tailored to you.</p>
+          <p>Evidence-based one-on-one support. In-person or virtual.</p>
+          <div><span class="tag">Anxiety</span><span class="tag">Trauma</span><span class="tag">Depression</span><span
+              class="tag">Burnout</span><span class="tag">Life transitions</span></div>
         </div>
       </article>
-      <article class="card green-accent"><img class="card-img" src="/images/card-family.jpg" alt="Family Therapy"
-          loading="lazy">
+      <article class="card green-accent" style="flex: 1 1 480px;"><img class="card-img"
+          src="https://nawiriakili.org/wp-content/uploads/2026/05/card-family.jpg" alt="Family" loading="lazy">
         <div class="card-body"><span class="icon">👨‍👩‍👧</span>
           <h3>Family Therapy</h3>
-          <p>Structured support for family systems ; communication, healing, and healthier relationships across
-            generations.</p>
+          <p>Support for family systems navigating conflict, grief, or significant change.</p>
+          <div><span class="tag">Family systems</span><span class="tag">Communication</span><span
+              class="tag">Intergenerational</span></div>
         </div>
       </article>
-      <article class="card"><img class="card-img" src="/images/card-org.jpg" alt="Organisational Wellness"
-          loading="lazy">
+      <article class="card" style="flex: 1 1 480px;"><img class="card-img"
+          src="https://nawiriakili.org/wp-content/uploads/2026/05/card-group.jpg" alt="Group" loading="lazy">
+        <div class="card-body"><span class="icon">👥</span>
+          <h3>Group Therapy</h3>
+          <p>Professionally facilitated groups for shared experiences.</p>
+          <div><span class="tag">Grief</span><span class="tag">Anxiety</span><span class="tag">Trauma</span><span
+              class="tag">Transitions</span></div>
+        </div>
+      </article>
+      <article class="card green-accent" style="flex: 1 1 480px;"><img class="card-img"
+          src="https://nawiriakili.org/wp-content/uploads/2026/05/card-org.jpg" alt="Consultation" loading="lazy">
         <div class="card-body"><span class="icon">🏢</span>
-          <h3>Organisational Wellness</h3>
-          <p>Organisations thrive when their people do. Tailored mental health programs, staff support, and sustainable
-            wellness solutions.</p>
+          <h3>Psychological Consultation</h3>
+          <p>Mental health expertise for organisations, schools, and institutions.</p>
+          <div><span class="tag">Program design</span><span class="tag">Supervision</span><span
+              class="tag">Institutional
+              wellness</span></div>
         </div>
       </article>
-      <article class="card green-accent"><img class="card-img" src="/images/card-school.jpg"
-          alt="School &amp; Community Programs" loading="lazy">
-        <div class="card-body"><span class="icon">🏫</span>
-          <h3>School &amp; Community Programs</h3>
-          <p>Mental health education, stigma reduction, and accessible support directly into the spaces where people
-            live, learn, and grow.</p>
-        </div>
-      </article>
-      <article class="card"><img class="card-img" src="/images/card-virtual.jpg" alt="Virtual Care" loading="lazy">
+      <article class="card" style="flex: 1 1 480px;"><img class="card-img"
+          src="https://nawiriakili.org/wp-content/uploads/2026/05/card-virtual.jpg" alt="Virtual" loading="lazy">
         <div class="card-body"><span class="icon">💻</span>
-          <h3>Virtual Care</h3>
-          <p>Fully confidential online sessions from anywhere in Kenya or internationally.</p>
+          <h3>Virtual Session</h3>
+          <p>Online from anywhere ; Kenya or internationally. All services available.</p>
+          <div><span class="tag">Flexible</span><span class="tag">Secure</span><span class="tag">All services</span>
+          </div>
         </div>
       </article>
-      <article class="card green-accent"><img class="card-img" src="/images/card-growth.jpg"
-          alt="Subsidised or Free Care" loading="lazy">
+      <article class="card green-accent" style="flex: 1 1 480px;"><img class="card-img"
+          src="https://nawiriakili.org/wp-content/uploads/2026/05/card-growth.jpg" alt="Subsidised" loading="lazy">
         <div class="card-body"><span class="icon">🌱</span>
-          <h3>Subsidised or Free Care</h3>
-          <p>Care without conditions. Through the Nawiri Akili Initiative, subsidised and free sessions are available
-            ; because mental wellness belongs to everyone, without exception.</p>
+          <h3>Subsidised or Free Support</h3>
+          <p>Cannot afford care? We will find a way. Subsidised and free sessions are available through the Initiative.
+            No one is turned away.</p>
+          <div><span class="tag">Free sessions</span><span class="tag">Subsidised care</span><span class="tag">Emergency
+              support</span><span class="tag">No barriers</span></div>
         </div>
       </article>
     </div>
     <div class="center" style="margin-top:2.5rem">
-      <a href="/services.html" class="btn btn-primary">All Services →</a>
-      <a href="/book.html" class="btn btn-secondary">Book a Session →</a>
+      <a href="services/" class="btn btn-primary">All Services →</a>
+      <a href="book/" class="btn btn-secondary">Book a Session →</a>
     </div>
   </section>
 
   <section class="section green-tint">
-    <div class="grid grid-2 reveal" style="align-items:center;gap:3rem">
-      <div>
+    <div class="grid reveal" style="align-items:center;gap:3rem;justify-content: center;">
+      <div style=" display:flex; flex-direction: column; align-items: center; justify-content: center;">
         <span class="eyebrow">Walk With Us</span>
         <h2>Mental health care should reach everyone.</h2>
         <p style="margin-bottom:1.6rem">Through the Nawiri Akili Initiative, it does ; one session, one school,
           one community at a time. Your contribution is what makes that possible.</p>
-        <a href="/walk-with-us.html" class="btn btn-secondary">See All Ways to Give →</a>
+        <a href="walk-with-us/" class="btn btn-secondary">See All Ways to Give →</a>
       </div>
-      <div class="grid" style="gap:1rem">
+      <div class="grid grid-4" style="gap:1rem">
         <div class="tier">
           <div class="amount">KSh 1,000</div>
           <div class="approx">approx. $8</div>
@@ -1064,48 +1058,13 @@
     <blockquote>&ldquo;When one mind flourishes, the whole community grows with it. We exist to make sure nothing stands
       in the way of it.&rdquo;</blockquote>
     <div class="cta-row" style="margin-top:2rem">
-      <a href="/walk-with-us.html" class="btn btn-secondary">💛 Sponsor an Initiative</a>
-      <a href="/book.html" class="btn btn-primary">Book a Session</a>
-      <a href="/walk-with-us.html#partner" class="btn btn-outline">Partner With Us</a>
+      <a href="walk-with-us/" class="btn btn-secondary">💛 Sponsor an Initiative</a>
+      <a href="book/" class="btn btn-primary">Book a Session</a>
+      <a href="walk-with-us/#partner" class="btn btn-outline">Partner With Us</a>
     </div>
   </section>
 
-  <footer>
-    <div class="f-grid">
-      <div>
-        <div class="brand-f">Nawiri Akili-Care Africa</div>
-        <p class="tag-line">Nurturing Minds, Transforming Communities</p>
-        <p style="font-size:.88rem;color:#94a3b8;line-height:1.6">&ldquo;Nawiri&rdquo; ; to bloom. Empowering
-          growth, renewal and a mentally flourishing community.</p>
-      </div>
-      <div>
-        <h4>Explore</h4>
-        <a href="/home.html">Home</a>
-        <a href="/about.html">About Us</a>
-        <a href="/services.html">Services</a>
-        <a href="/initiative.html">Nawiri Akili Initiative</a>
-        <a href="/blog.html">Blog &amp; Insights</a>
-      </div>
-      <div>
-        <h4>Take Action</h4>
-        <a href="/book.html">Book a Session</a>
-        <a href="/walk-with-us.html">💛 Walk With Us</a>
-        <a href="/walk-with-us.html#partner">Partner With Us</a>
-        <a href="/walk-with-us.html#volunteer">Volunteer</a>
-        <a href="/contact.html">Contact</a>
-      </div>
-      <div>
-        <h4>Services</h4>
-        <a href="/services.html">Individual Therapy</a>
-        <a href="/services.html">Family Therapy</a>
-        <a href="/services.html">Group Therapy</a>
-        <a href="/services.html">Organisational Wellness</a>
-        <a href="/services.html">Virtual Care</a>
-        <a href="/services.html">Subsidised or Free Care</a>
-      </div>
-    </div>
-    <div class="copy">© 2026 Nawiri Akili-Care Africa · Kilifi, Kenya · Confidential · Compassionate · Accessible</div>
-  </footer>
+
   <script>
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => {

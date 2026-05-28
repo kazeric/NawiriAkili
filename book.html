@@ -883,26 +883,10 @@
 </head>
 
 <body>
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="/home.html" class="brand"><span class="dot"></span>Nawiri Akili</a>
-      <button class="menu-toggle" onclick="document.getElementById('nav-links').classList.toggle('open')"
-        aria-label="Menu">☰</button>
-      <div id="nav-links" class="nav-links">
-        <a href="/home.html" class="">Home</a>
-        <a href="/about.html" class="">About</a>
-        <a href="/services.html" class="">Services</a>
-        <a href="/initiative.html" class="">Nawiri Akili initiative</a>
-        <a href="/walk-with-us.html" class="">Walk With Us</a>
-        <a href="/blog.html" class="">Blog</a>
-        <a href="/contact.html" class="">Contact</a>
 
-        <a href="/book.html" class="nav-cta">Book a Session</a>
-      </div>
-    </div>
-  </nav>
 
-  <header class="banner" style="background-image:url('/images/banner-soft.jpg')">
+  <header class="banner"
+    style="background-image:url('https://nawiriakili.org/wp-content/uploads/2026/05/banner-soft.jpg')">
     <div class="banner-inner">
       <span class="eyebrow">Book a Session</span>
       <h1>Your journey to wellness starts here.</h1>
@@ -915,7 +899,7 @@
     <div class="center reveal" style="margin-bottom:2.5rem"><span class="eyebrow purple">Three simple steps</span>
       <h2>How it works</h2>
     </div>
-    <div class="grid grid-3 reveal">
+<div class="reveal" style="display:grid; gap:2rem; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
       <div class="step">
         <div class="step-num">1</div>
         <div>
@@ -945,8 +929,10 @@
     <div class="center reveal" style="margin-bottom:2.5rem"><span class="eyebrow purple">Available services</span>
       <h2>Choose your first step</h2>
     </div>
-    <div class="grid grid-3 reveal">
-      <article class="card"><img class="card-img" src="/images/card-individual.jpg" alt="Individual" loading="lazy">
+<div style="display:flex; flex-wrap:wrap; gap:2rem;">
+
+        <article class="card" style="flex: 1 1 480px;"><img class="card-img"
+          src="https://nawiriakili.org/wp-content/uploads/2026/05/card-individual.jpg" alt="Individual" loading="lazy">
         <div class="card-body"><span class="icon">🧠</span>
           <h3>Individual Therapy</h3>
           <p>Evidence-based one-on-one support. In-person or virtual.</p>
@@ -954,8 +940,8 @@
               class="tag">Burnout</span><span class="tag">Life transitions</span></div>
         </div>
       </article>
-      <article class="card green-accent"><img class="card-img" src="/images/card-family.jpg" alt="Family"
-          loading="lazy">
+      <article class="card green-accent" style="flex: 1 1 480px;"><img class="card-img"
+          src="https://nawiriakili.org/wp-content/uploads/2026/05/card-family.jpg" alt="Family" loading="lazy">
         <div class="card-body"><span class="icon">👨‍👩‍👧</span>
           <h3>Family Therapy</h3>
           <p>Support for family systems navigating conflict, grief, or significant change.</p>
@@ -963,7 +949,8 @@
               class="tag">Intergenerational</span></div>
         </div>
       </article>
-      <article class="card"><img class="card-img" src="/images/card-group.jpg" alt="Group" loading="lazy">
+      <article class="card" style="flex: 1 1 480px;"><img class="card-img"
+          src="https://nawiriakili.org/wp-content/uploads/2026/05/card-group.jpg" alt="Group" loading="lazy">
         <div class="card-body"><span class="icon">👥</span>
           <h3>Group Therapy</h3>
           <p>Professionally facilitated groups for shared experiences.</p>
@@ -971,8 +958,8 @@
               class="tag">Transitions</span></div>
         </div>
       </article>
-      <article class="card green-accent"><img class="card-img" src="/images/card-org.jpg" alt="Consultation"
-          loading="lazy">
+      <article class="card green-accent" style="flex: 1 1 480px;"><img class="card-img"
+          src="https://nawiriakili.org/wp-content/uploads/2026/05/card-org.jpg" alt="Consultation" loading="lazy">
         <div class="card-body"><span class="icon">🏢</span>
           <h3>Psychological Consultation</h3>
           <p>Mental health expertise for organisations, schools, and institutions.</p>
@@ -980,7 +967,8 @@
               class="tag">Institutional wellness</span></div>
         </div>
       </article>
-      <article class="card"><img class="card-img" src="/images/card-virtual.jpg" alt="Virtual" loading="lazy">
+      <article class="card" style="flex: 1 1 480px;"><img class="card-img"
+          src="https://nawiriakili.org/wp-content/uploads/2026/05/card-virtual.jpg" alt="Virtual" loading="lazy">
         <div class="card-body"><span class="icon">💻</span>
           <h3>Virtual Session</h3>
           <p>Online from anywhere ; Kenya or internationally. All services available.</p>
@@ -988,8 +976,8 @@
           </div>
         </div>
       </article>
-      <article class="card green-accent"><img class="card-img" src="/images/card-growth.jpg" alt="Subsidised"
-          loading="lazy">
+      <article class="card green-accent" style="flex: 1 1 480px;"><img class="card-img"
+          src="https://nawiriakili.org/wp-content/uploads/2026/05/card-growth.jpg" alt="Subsidised" loading="lazy">
         <div class="card-body"><span class="icon">🌱</span>
           <h3>Subsidised or Free Support</h3>
           <p>Cannot afford care? We will find a way. Subsidised and free sessions are available through the Initiative.
@@ -1039,42 +1027,7 @@
     </div>
   </section>
 
-  <footer>
-    <div class="f-grid">
-      <div>
-        <div class="brand-f">Nawiri Akili-Care Africa</div>
-        <p class="tag-line">Nurturing Minds, Transforming Communities</p>
-        <p style="font-size:.88rem;color:#94a3b8;line-height:1.6">&ldquo;Nawiri&rdquo; ; to bloom. Empowering
-          growth, renewal and a mentally flourishing community.</p>
-      </div>
-      <div>
-        <h4>Explore</h4>
-        <a href="/home.html">Home</a>
-        <a href="/about.html">About Us</a>
-        <a href="/services.html">Services</a>
-        <a href="/initiative.html">Nawiri Akili Initiative</a>
-        <a href="/blog.html">Blog &amp; Insights</a>
-      </div>
-      <div>
-        <h4>Take Action</h4>
-        <a href="/book.html">Book a Session</a>
-        <a href="/walk-with-us.html">💛 Walk With Us</a>
-        <a href="/walk-with-us.html#partner">Partner With Us</a>
-        <a href="/walk-with-us.html#volunteer">Volunteer</a>
-        <a href="/contact.html">Contact</a>
-      </div>
-      <div>
-        <h4>Services</h4>
-        <a href="/services.html">Individual Therapy</a>
-        <a href="/services.html">Family Therapy</a>
-        <a href="/services.html">Group Therapy</a>
-        <a href="/services.html">Organisational Wellness</a>
-        <a href="/services.html">Virtual Care</a>
-        <a href="/services.html">Subsidised or Free Care</a>
-      </div>
-    </div>
-    <div class="copy">© 2026 Nawiri Akili-Care Africa · Kilifi, Kenya · Confidential · Compassionate · Accessible</div>
-  </footer>
+
   <script>
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => {
