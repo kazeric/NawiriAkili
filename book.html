@@ -860,11 +860,24 @@
       border-radius: 18px;
       position: relative;
       overflow: hidden;
-      transition: transform .5s
+      transition: transform .5s;
+    }
+
+    .photo img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .photo p {
+      margin: 0;
     }
 
     .photo:hover {
-      transform: scale(1.02)
+      transform: scale(1.02);
     }
 
     .photo::after {
@@ -877,7 +890,7 @@
       color: #fff;
       background: linear-gradient(transparent, rgba(0, 0, 0, .7));
       font-size: .88rem;
-      font-weight: 500
+      font-weight: 500;
     }
   </style>
 </head>
@@ -899,7 +912,7 @@
     <div class="center reveal" style="margin-bottom:2.5rem"><span class="eyebrow purple">Three simple steps</span>
       <h2>How it works</h2>
     </div>
-<div class="reveal" style="display:grid; gap:2rem; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+    <div class="reveal" style="display:grid; gap:2rem; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
       <div class="step">
         <div class="step-num">1</div>
         <div>
@@ -929,9 +942,9 @@
     <div class="center reveal" style="margin-bottom:2.5rem"><span class="eyebrow purple">Available services</span>
       <h2>Choose your first step</h2>
     </div>
-<div style="display:flex; flex-wrap:wrap; gap:2rem;">
+    <div style="display:flex; flex-wrap:wrap; gap:2rem;">
 
-        <article class="card" style="flex: 1 1 480px;"><img class="card-img"
+      <article class="card" style="flex: 1 1 480px;"><img class="card-img"
           src="https://nawiriakili.org/wp-content/uploads/2026/05/card-individual.jpg" alt="Individual" loading="lazy">
         <div class="card-body"><span class="icon">🧠</span>
           <h3>Individual Therapy</h3>

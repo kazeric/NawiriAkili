@@ -888,11 +888,24 @@
       border-radius: 18px;
       position: relative;
       overflow: hidden;
-      transition: transform .5s
+      transition: transform .5s;
+    }
+
+    .photo img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .photo p {
+      margin: 0;
     }
 
     .photo:hover {
-      transform: scale(1.02)
+      transform: scale(1.02);
     }
 
     .photo::after {
@@ -905,7 +918,7 @@
       color: #fff;
       background: linear-gradient(transparent, rgba(0, 0, 0, .7));
       font-size: .88rem;
-      font-weight: 500
+      font-weight: 500;
     }
   </style>
 </head>
@@ -946,7 +959,6 @@
     <div class="center reveal" style="margin-bottom:2.5rem">
       <span class="eyebrow purple">Give ; Individual Giving Tiers</span>
       <h2>Every contribution has a name behind it</h2>
-      <p class="lead-p">Your support changes lives.</p>
     </div>
 
     <!-- FIX: replaced grid grid-3 with tier-grid so the last "any amount" card centres correctly -->
@@ -1003,8 +1015,8 @@
         move beyond statements about mental health into action that actually reaches people.</p>
     </div>
     <div class="reveal" style="display:flex; flex-wrap:wrap; gap:2rem;">
-      <article class="card" style="flex: 1 1 480px;"><img class="card-img" src="https://nawiriakili.org/wp-content/uploads/2026/05/card-org.jpg"
-          alt="CSR" loading="lazy">
+      <article class="card" style="flex: 1 1 480px;"><img class="card-img"
+          src="https://nawiriakili.org/wp-content/uploads/2026/05/card-org.jpg" alt="CSR" loading="lazy">
         <div class="card-body">
           <h3>Corporate Social Responsibility</h3>
           <p>Fund free care through your CSR program. We provide transparent reporting on sessions funded, communities
@@ -1044,8 +1056,6 @@
     <div class="center reveal" style="margin-bottom:2.5rem">
       <span class="eyebrow">Volunteer ; Bring Your Skills</span>
       <h2>We are early. We need people who believe in this.</h2>
-      <p class="lead-p">. We
-        are looking for people who care, who show up, and who want to be part of something that matters.</p>
     </div>
     <div class="reveal" style="display:flex; flex-wrap:wrap; gap:2rem;">
       <div class="card simple" style="flex: 1 1 480px;">
@@ -1144,12 +1154,13 @@
         style="background-image:url('https://nawiriakili.org/wp-content/uploads/2026/05/card-school.jpg'); flex: 1 1 480px;">
       </div>
       <div class="photo" data-caption="Community awareness event"
-        style="background-image:url('https://nawiriakili.org/wp-content/uploads/2026/05/card-community.jpg'); flex: 1 1 480px;"></div>
+        style="background-image:url('https://nawiriakili.org/wp-content/uploads/2026/05/card-community.jpg'); flex: 1 1 480px;">
+      </div>
       <div class="photo" data-caption="Safe space session"
-        style="background-image:url('https://nawiriakili.org/wp-content/uploads/2026/05/card-group.jpg'); flex: 1 1 480px;"></div>
+        style="background-image:url('https://nawiriakili.org/wp-content/uploads/2026/05/card-group.jpg'); flex: 1 1 480px;">
+      </div>
     </div>
-    <p class="center reveal" style="margin-top:1.2rem;font-size:.85rem;color:#6b7280"><em>Photos are updated as the
-        Initiative&rsquo;s work grows. Each image carries a one-line caption describing the moment.</em></p>
+
   </section>
 
   <section class="pullquote reveal">
