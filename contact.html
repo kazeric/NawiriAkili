@@ -407,15 +407,24 @@
       width: 100%
     }
 
-    .card-img {
+    .card-img,
+    .card>img,
+    .card>p>img {
       width: 100%;
       height: 200px;
       object-fit: cover;
-      transition: transform .8s cubic-bezier(.2, .8, .2, 1)
+      transition: transform .8s cubic-bezier(.2, .8, .2, 1);
     }
 
-    .card:hover .card-img {
-      transform: scale(1.08)
+    .card>p {
+      margin: 0;
+      line-height: 0;
+    }
+
+    .card:hover .card-img,
+    .card:hover>img,
+    .card:hover>p>img {
+      transform: scale(1.08);
     }
 
     .card-body {
