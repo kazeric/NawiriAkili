@@ -1,0 +1,1172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script id="nawiri-scroll-top">
+(function () {
+  if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+  }
+  window.scrollTo(0, 0);
+  window.addEventListener(
+    "pageshow",
+    function () {
+      window.scrollTo(0, 0);
+    },
+    { passive: true }
+  );
+})();
+</script>
+
+<meta charset="utf-8" />
+<title>Blog & Insights · Nawiri Akili</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="description" content="A safe space for conversations on mental health, self-care, and holistic wellbeing." />
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{font-size:17px}
+  :root{
+    --primary:#4CB894;--brand-dark:#3A9A7A;--brand-darkest:#1E4A3A;
+    --tint:#EDF8F2;--purple:#421f66;--purple-tint:#e4daee;--section-purple:#E8E0F5;
+    --white:#ffffff;--body:#4a5568;--border:#e2ede4;
+    --chip-purple-bg:#d6cae6;--chip-purple-fg:#2f1748;
+    --purple-deep:#251238;--green:#4CB894;
+    --hero-image:url("https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1920&q=80");
+    --final-bg:url("https://images.unsplash.com/photo-1507842217122-154dbe4fd6a1?auto=format&fit=crop&w=1920&q=80");
+  }
+  html,body{width:100%;overflow-x:hidden;background:var(--white);color:var(--body);font-family:'Nunito',sans-serif;font-weight:400;line-height:1.8}
+  h1,h2,h3{font-family:'DM Serif Display',serif;font-weight:400;color:var(--brand-darkest);line-height:1.22}
+  h1{font-size:clamp(2.5rem,3.2vw,3rem)}
+  h2{font-size:1.4rem}
+  h3{font-size:1.2rem}
+  a{color:inherit;text-decoration:none}
+
+  nav.top{position:sticky;top:0;z-index:50;background:var(--white);border-bottom:0.5px solid var(--border)}
+  nav.top .wrap{padding:1.1rem 2.75rem;display:flex;align-items:center;justify-content:space-between;gap:24px}
+  @media(max-width:640px){nav.top .wrap{padding:0.875rem 1.25rem}}
+  .brand{display:flex;align-items:center;gap:10px;font-family:'Nunito',sans-serif;font-weight:700;font-size:1.125rem;color:var(--brand-dark)}
+  .links{display:flex;gap:28px;font-family:'Nunito',sans-serif;font-size:14px;font-weight:400}
+  .links a{color:var(--body);padding:6px 0}
+  .links a:hover{color:var(--primary)}
+  .nav-cta{background:var(--primary);color:var(--white);padding:9px 22px;border-radius:100px;font-size:14px;font-weight:600}
+  .nav-cta:hover{background:var(--brand-dark)}
+  .burger{display:none;background:none;border:0;font-size:24px;color:var(--brand-dark);cursor:pointer}
+  @media(max-width:880px){.links,.nav-cta{display:none}.burger{display:block}.links.open{display:flex;position:absolute;top:100%;left:0;right:0;background:var(--white);flex-direction:column;padding:1.25rem 2.5rem;border-bottom:0.5px solid var(--border)}}
+
+  .eyebrow{display:inline-block;background:var(--chip-purple-bg);color:var(--chip-purple-fg);padding:9px 16px;border-radius:100px;font-family:'Nunito',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase}
+  .hero{padding:4rem min(5vw,3.25rem) 3rem;text-align:center;border-bottom:0.5px solid var(--border)}
+  .hero h1{margin:18px auto;max-width:1100px}
+  .hero h1 .grad{color:var(--brand-dark);font-style:italic}
+  .hero p{max-width:44rem;margin:0 auto 16px;color:var(--body);font-size:1.125rem;font-weight:400}
+
+  .filter{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:32px}
+  .chip{background:var(--white);border:1.5px solid var(--purple);color:var(--purple);padding:8px 18px;border-radius:100px;font-family:'Nunito',sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+  .chip:hover,.chip.active{background:var(--primary);color:var(--white);border-color:var(--primary)}
+
+  .cats{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;background:transparent;border:0}
+  @media(max-width:980px){.cats{grid-template-columns:1fr}}
+  .cat{padding:2.75rem 2.5rem;background:var(--white);border:0.5px solid var(--border);border-radius:18px}
+  .cat .ic{width:56px;height:56px;border-radius:8px;display:grid;place-items:center;font-size:24px;margin-bottom:18px;border:0.5px solid var(--border);background:var(--tint)}
+  .cat:nth-child(1) .ic{background:var(--purple-tint);border-color:var(--border)}
+  .cat:nth-child(2) .ic{background:var(--tint)}
+  .cat:nth-child(3) .ic{background:var(--purple-tint)}
+  .cat:nth-child(4) .ic{background:var(--tint)}
+  .cat:nth-child(5) .ic{background:var(--purple-tint)}
+  .cat:nth-child(6) .ic{background:var(--tint)}
+  .cat h3{font-size:1.1875rem;color:var(--brand-darkest);margin-bottom:10px}
+  .cat .desc{color:var(--body);font-size:1.0625rem;margin-bottom:22px;font-weight:400;line-height:1.75}
+  .cat ul{list-style:none}
+  .cat li{padding:14px 0;border-top:0.5px solid var(--border);color:var(--body);font-size:1.0625rem;align-items:flex-start;gap:12px;cursor:pointer;font-weight:400;line-height:1.55}
+  .cat li:hover{color:var(--primary)}
+  .cat li::before{content:"→";color:var(--primary);font-weight:700;flex-shrink:0}
+
+  .cta{background-color:var(--brand-dark);color:var(--white);text-align:center;padding:4rem min(5vw,3.25rem);border-top:0.5px solid var(--border);position:relative;isolation:isolate}
+  .cta h2{color:var(--white);font-size:1.4rem;margin-bottom:18px;font-family:'DM Serif Display',serif}
+  .cta p{color:rgba(255,255,255,0.92);max-width:40rem;margin:0 auto 26px;font-weight:400;font-size:1.0625rem;line-height:1.75}
+  .cta form{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px}
+  .cta input{padding:12px 18px;border-radius:100px;border:0.5px solid var(--border);font-size:15px;font-family:'Nunito',sans-serif;width:300px;max-width:100%;background:var(--white);color:var(--body)}
+  .cta input:focus{outline:none;border-color:var(--primary)}
+  .cta button{padding:12px 28px;border-radius:100px;border:0;background:var(--primary);color:var(--white);font-family:'Nunito',sans-serif;font-weight:700;font-size:14px;cursor:pointer}
+  .cta button:hover{background:var(--brand-dark)}
+
+  footer{background:var(--brand-darkest);color:#D4F0E6;padding:3.5rem 2.5rem 2rem}
+  .foot-grid{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:50px}
+  @media(max-width:880px){.foot-grid{grid-template-columns:1fr 1fr}}
+  footer h5{color:var(--white);font-size:14px;font-family:'Nunito',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:18px}
+  footer ul{list-style:none}footer li{margin-bottom:10px;font-size:1rem;font-weight:400}footer a:hover{color:var(--white)}
+  .foot-brand{font-family:'Nunito',sans-serif;font-weight:700;color:var(--white);font-size:1.25rem;margin-bottom:12px}
+  .copy{max-width:1400px;margin:3rem auto 0;padding-top:2rem;border-top:0.5px solid rgba(255,255,255,0.15);text-align:center;font-size:13px;color:rgba(255,255,255,0.65);font-weight:300}
+</style>
+<!-- build:css:start -->
+<style>
+/* Shared layout: nav band, section rhythm, hero/banner/final bands, components */
+/* Shared utilities — crisis/info strip + display headings (linked after design tokens in each page’s :root) */
+
+/* -------------------------------------------------------------------------- */
+/* Readability: slightly larger type, more line-height, roomier sections         */
+/* -------------------------------------------------------------------------- */
+html {
+  font-size: 17px;
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  line-height: 1.82;
+  font-weight: 400;
+}
+
+/* Default section rhythm (overrides first inline block when this file loads later) */
+section {
+  padding: 4.25rem min(5vw, 3.25rem);
+}
+
+@media (max-width: 640px) {
+  section {
+    padding: 2.85rem 1.35rem;
+  }
+}
+
+/*
+ * Nav: fixed bar height. Inner content height = --nav-bar-inner-h; logo height matches it exactly.
+ * Change --nav-bar-inner-h (and optionally --nav-pad-y) to resize bar + logo together.
+ */
+nav.top .wrap {
+  --nav-pad-y: 0.65rem;
+  /* Inner band = logo height; larger value = taller fixed bar + bigger logo (same rule) */
+  --nav-bar-inner-h: 3.875rem;
+  box-sizing: border-box;
+  padding-top: var(--nav-pad-y);
+  padding-bottom: var(--nav-pad-y);
+  height: calc(var(--nav-bar-inner-h) + 2 * var(--nav-pad-y));
+  min-height: calc(var(--nav-bar-inner-h) + 2 * var(--nav-pad-y));
+  max-height: calc(var(--nav-bar-inner-h) + 2 * var(--nav-pad-y));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+nav.top .links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(0.6rem, 1.2vw, 1.35rem);
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+nav.top .links a {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+nav.top .burger {
+  display: none;
+  flex-shrink: 0;
+}
+
+nav.top .nav-cta {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* Mobile: row nav + CTA hidden; burger opens full-width dropdown (needs nav.top .wrap position) */
+@media (max-width: 880px) {
+  nav.top .wrap {
+    position: relative;
+  }
+
+  nav.top .burger {
+    display: block;
+  }
+
+  nav.top .links:not(.open) {
+    display: none;
+  }
+
+  nav.top .nav-cta {
+    display: none;
+  }
+
+  nav.top .links.open {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 14px;
+    padding: 1.25rem min(2.5rem, 5vw);
+    margin: 0;
+    background: var(--white, #ffffff);
+    border-bottom: 0.5px solid var(--border, #e2ede4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  nav.top .links.open a {
+    white-space: normal;
+  }
+}
+
+/* Logo height === inner nav band (between vertical padding) */
+nav.top .brand {
+  gap: 0;
+  line-height: 0;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  height: var(--nav-bar-inner-h);
+}
+
+nav.top .brand .brand-logo {
+  display: block;
+  height: var(--nav-bar-inner-h);
+  width: auto;
+  max-height: var(--nav-bar-inner-h);
+  max-width: min(100%, 30rem);
+  object-fit: contain;
+  object-position: left center;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Brand mix: ~60% green family / ~40% purple (borders, overlays, accents)    */
+/* -------------------------------------------------------------------------- */
+
+nav.top {
+  border-bottom-color: color-mix(
+    in srgb,
+    color-mix(in srgb, var(--border, #e2ede4) 70%, var(--primary, #4CB894) 30%) 60%,
+    var(--purple, #421f66) 40%
+  );
+}
+
+nav.top .links a:hover {
+  color: color-mix(in srgb, var(--primary, #4CB894) 60%, var(--purple, #421f66) 40%);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Photography: hero / banner / closing band backgrounds                     */
+/* Set --hero-image, optional --banner-image / --final-bg per page in :root   */
+/* -------------------------------------------------------------------------- */
+
+.hero-bg {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--tint, #EDF8F2);
+  background-image: var(--hero-image, none);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: color-mix(
+    in srgb,
+    var(--hero-overlay, rgba(237, 248, 242, 0.72)) 60%,
+    rgba(66, 31, 102, 0.2) 40%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Slightly stronger overlay for text-heavy heroes (still lets photo show) */
+.hero-bg--soft::after {
+  background: color-mix(
+    in srgb,
+    var(--hero-overlay-strong, rgba(237, 248, 242, 0.78)) 60%,
+    rgba(66, 31, 102, 0.18) 40%
+  );
+}
+
+/* Initiative hero: still purple-forward, with explicit 60/40 green-violet / ink */
+.hero-bg--purple::after {
+  background: color-mix(
+    in srgb,
+    var(--hero-overlay-purple, rgba(245, 240, 252, 0.92)) 60%,
+    rgba(66, 31, 102, 0.28) 40%
+  );
+}
+
+/* Banner strip: optional background photo under blue tint */
+.banner-visual {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--blue-tint, #eaf4fd);
+  background-image: var(--banner-image, none);
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: color-mix(
+    in srgb,
+    var(--banner-overlay, rgba(234, 244, 253, 0.92)) 60%,
+    rgba(66, 31, 102, 0.16) 40%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+.banner-visual > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Dark CTA band with optional texture */
+.final-bg {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--brand-dark, #3A9A7A);
+  background-image: var(--final-bg, none);
+  background-size: cover;
+  background-position: center;
+}
+
+.final-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: color-mix(
+    in srgb,
+    var(--final-overlay, rgba(58, 154, 122, 0.92)) 60%,
+    rgba(66, 31, 102, 0.38) 40%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+.final-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* CTA rows: space between buttons on mobile (no clamping) */
+.cta-row,
+.final-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 1.25rem;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 640px) {
+  .cta-row,
+  .final-ctas {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    width: 100%;
+    max-width: 22rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cta-row > a,
+  .cta-row > .btn,
+  .final-ctas > a,
+  .final-ctas > .btn {
+    margin-left: 0 !important;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+
+/* Site sections: white band backgrounds → soft purple */
+.section--white {
+  background: var(--section-purple, var(--purple-tint));
+}
+section[style*="background:var(--white)"] {
+  background: var(--section-purple, var(--purple-tint)) !important;
+}
+section.name,
+section.costs {
+  background: var(--section-purple, var(--purple-tint));
+}
+section:not(.hero):not(.hero-bg):not(.final):not(.final-bg):not(.banner):not(.banner-visual):not(.section-crisis-info):not(.section--tint):not(.give):not(.form-wrap):not(.founder-wrap):not(.vmv):not(.path):not(.model-wrap):not(.cta):not([class*="hero"]):not([id="give"]):not([style*="background"]) {
+  background-color: var(--section-purple, var(--purple-tint));
+}
+
+
+/* Hero figure (home): photo card */
+.hero-figure {
+  margin: 0 0 1.25rem;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 0.5px solid var(--border, #e2ede4);
+  aspect-ratio: 4 / 3;
+}
+
+.hero-figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Service card thumbnails: show full photo (no crop); width matches card */
+figure.svc-thumb {
+  margin: 0 0 1rem;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 0.5px solid color-mix(
+    in srgb,
+    color-mix(in srgb, var(--border, #e2ede4) 70%, var(--primary, #4CB894) 30%) 60%,
+    var(--purple, #421f66) 40%
+  );
+  background: color-mix(in srgb, var(--tint, #EDF8F2) 60%, var(--purple-tint, #e4daee) 40%);
+}
+
+figure.svc-thumb img {
+  width: 100%;
+  display: block;
+  height: auto;
+  object-fit: contain;
+}
+
+.blog-list-thumb {
+  flex-shrink: 0;
+  width: 5.75rem;
+  height: 4.25rem;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 0.5px solid var(--border, #e2ede4);
+}
+
+.cats .cat li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.cats .cat li .blog-list-thumb {
+  order: -1;
+}
+
+.cats .cat li .blog-post-title {
+  flex: 1;
+  min-width: 0;
+}
+
+.cats .cat li::before {
+  margin-top: 0.15rem;
+}
+
+
+.section-crisis-info {
+  background: color-mix(in srgb, var(--blue-tint, #eaf4fd) 60%, var(--purple-tint, #e4daee) 40%);
+  border-top: 0.5px solid color-mix(
+    in srgb,
+    color-mix(in srgb, var(--border, #e2ede4) 70%, var(--primary, #4CB894) 30%) 60%,
+    var(--purple, #421f66) 40%
+  );
+  border-bottom: 0.5px solid color-mix(
+    in srgb,
+    color-mix(in srgb, var(--border, #e2ede4) 70%, var(--primary, #4CB894) 30%) 60%,
+    var(--purple, #421f66) 40%
+  );
+  padding: 4rem min(5vw, 3.25rem);
+}
+@media (max-width: 640px) {
+  .section-crisis-info {
+    padding: 2.85rem 1.35rem;
+  }
+}
+
+/**
+ * Display section titles — larger than body h2 (22px), without changing semantic structure.
+ * Specificity beats bare `h2 { font-size: 22px }` in page stylesheets.
+ */
+h2.heading-display {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(1.625rem, 2.6vw, 2.05rem);
+  font-weight: 400;
+  line-height: 1.28;
+  color: color-mix(in srgb, var(--brand-darkest, #1E4A3A) 60%, var(--purple, #421f66) 40%);
+}
+
+/* Crisis / global-messaging banner (ocean headline) — beats .banner h2 { font-size } from page CSS */
+.banner h2.heading-display,
+.section-crisis-banner h2.heading-display {
+  color: var(--blue);
+  font-size: clamp(1.625rem, 2.6vw, 2.05rem);
+}
+
+/* On tinted or blue info sections, keep strong contrast */
+.section-crisis-info h2.heading-display {
+  color: var(--brand-darkest);
+}
+
+/* Display headings on dark or filled bands */
+.glance h2.heading-display,
+.founder h2.heading-display,
+.build h2.heading-display,
+.cta h2.heading-display {
+  color: var(--white);
+  font-size: clamp(1.625rem, 2.6vw, 2.05rem);
+}
+
+footer {
+  border-top: 2px solid color-mix(in srgb, var(--primary, #4CB894) 60%, var(--purple, #421f66) 40%);
+}
+
+.cats .cat {
+  border: 0.5px solid color-mix(
+    in srgb,
+    color-mix(in srgb, var(--border, #e2ede4) 70%, var(--primary, #4CB894) 30%) 60%,
+    var(--purple, #421f66) 40%
+  );
+}
+
+/* White-filled CTAs → purple on hover (matches hero outline buttons) */
+.btn-on-light,
+.btn-light,
+.btn-outline-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--white, #fff);
+  color: var(--brand-dark, #3a9a7a);
+  padding: 12px 28px;
+  border-radius: 100px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.btn-on-light:hover,
+.btn-light:hover,
+.btn-outline-white:hover,
+.final .btn-on-light:hover {
+  background: var(--purple-deep, #251238);
+  color: var(--white, #fff);
+  border-color: var(--purple-deep, #251238);
+}
+
+.btn-on-white:hover {
+  background: var(--purple-deep, #251238);
+  color: var(--white, #fff);
+  border-color: var(--purple-deep, #251238);
+}
+</style>
+<!-- build:css:end -->
+
+<style id="nawiri-animations">
+/* ── Motion: scroll reveals, hovers, hero entrance (respects reduced motion) ── */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+  header.hero > *,
+  header.hero .hero-grid > * { opacity: 1 !important; transform: none !important; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0);
+    transition:
+      opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: calc(var(--reveal-i, 0) * 85ms);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  /* Hero entrance — flat heroes and .hero-grid layouts */
+  header.hero > *:not(.blob):not(.hero-grid) {
+    opacity: 0;
+    transform: translate3d(0, 22px, 0);
+  }
+  header.hero .hero-grid > * {
+    opacity: 0;
+    transform: translate3d(0, 22px, 0);
+  }
+  header.hero.hero-ready > *:not(.blob):not(.hero-grid),
+  header.hero.hero-ready .hero-grid > * {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  header.hero.hero-ready .hero-grid > *:nth-child(1) { transition-delay: 0.06s; }
+  header.hero.hero-ready .hero-grid > *:nth-child(2) { transition-delay: 0.2s; }
+  header.hero.hero-ready > .eyebrow { transition-delay: 0.04s; }
+  header.hero.hero-ready > h1 { transition-delay: 0.1s; }
+  header.hero.hero-ready > p,
+  header.hero.hero-ready > .lede { transition-delay: 0.16s; }
+  header.hero.hero-ready > .intro,
+  header.hero.hero-ready > .notice,
+  header.hero.hero-ready > .quote { transition-delay: 0.14s; }
+  header.hero.hero-ready > .cta-row { transition-delay: 0.24s; }
+  header.hero.hero-ready .filter { transition-delay: 0.2s; }
+
+  /* Sticky nav */
+  nav.top {
+    transition: box-shadow 0.35s ease, background-color 0.35s ease;
+  }
+  nav.top.is-scrolled {
+    box-shadow: 0 6px 28px rgba(37, 18, 56, 0.1);
+  }
+
+  /* Interactive cards & panels */
+  .svc,
+  .tier,
+  .stat,
+  .val,
+  .who-card,
+  .vmv-card,
+  .model,
+  .step,
+  .ic-card,
+  .pick,
+  .stp,
+  .way,
+  .cost,
+  .card,
+  .cat,
+  .q,
+  .partner-list,
+  .hero-card,
+  .quote-card,
+  .build,
+  .glance,
+  .pull,
+  .banner-visual {
+    transition:
+      transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.4s ease,
+      border-color 0.35s ease;
+  }
+
+  .svc:hover,
+  .tier:hover,
+  .stat:hover,
+  .val:hover,
+  .who-card:hover,
+  .vmv-card:hover,
+  .model:hover,
+  .step:hover,
+  .ic-card:hover,
+  .pick:hover,
+  .stp:hover,
+  .way:hover,
+  .cost:hover,
+  .card:hover,
+  .cat:hover,
+  .partner-list:hover,
+  form.contact:hover,
+  form.book:hover,
+  .hero-card:hover,
+  .quote-card:hover,
+  .build:hover {
+    transform: translate3d(0, -8px, 0);
+    box-shadow:
+      0 16px 40px rgba(37, 18, 56, 0.12),
+      0 4px 12px rgba(76, 184, 148, 0.08);
+    border-color: color-mix(in srgb, var(--primary, #4CB894) 35%, var(--border, #e2ede4) 65%);
+  }
+
+  .tier.highlight:hover {
+    border-color: color-mix(in srgb, var(--purple, #421f66) 40%, var(--border, #e2ede4) 60%);
+  }
+
+  /* Image zoom inside cards */
+  figure.svc-thumb,
+  .hero-figure {
+    overflow: hidden;
+    border-radius: inherit;
+  }
+  figure.svc-thumb img,
+  .hero-figure img {
+    transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .svc:hover figure.svc-thumb img,
+  .pick:hover figure.svc-thumb img,
+  .hero-card:hover .hero-figure img {
+    transform: scale(1.05);
+  }
+
+  /* Buttons */
+  .btn,
+  .nav-cta,
+  .submit,
+  .btn-on-light,
+  .btn-light,
+  .btn-outline-white,
+  .btn-on-dark,
+  .btn-on-white,
+  .btn-ghost-outline {
+    transition:
+      transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.28s ease,
+      background 0.2s ease,
+      color 0.2s ease,
+      border-color 0.2s ease;
+  }
+  .btn:hover,
+  .nav-cta:hover,
+  .submit:hover,
+  .btn-on-light:hover,
+  .btn-light:hover,
+  .btn-outline-white:hover,
+  .btn-on-dark:hover,
+  .btn-on-white:hover,
+  .btn-ghost-outline:hover {
+    transform: translate3d(0, -3px, 0);
+    box-shadow: 0 10px 24px rgba(37, 18, 56, 0.14);
+  }
+  .btn:active,
+  .nav-cta:active,
+  .submit:active {
+    transform: translate3d(0, -1px, 0);
+  }
+
+  /* Nav links */
+  nav.top .links a {
+    position: relative;
+    transition: color 0.25s ease;
+  }
+  nav.top .links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 100%;
+    height: 2px;
+    background: var(--primary, #4CB894);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  nav.top .links a:hover::after {
+    transform: scaleX(1);
+  }
+
+  /* Blog filter chips */
+  .filter .chip {
+    transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+  }
+  .filter .chip:hover {
+    transform: translate3d(0, -2px, 0);
+    box-shadow: 0 6px 16px rgba(37, 18, 56, 0.1);
+  }
+
+  /* FAQ accordion */
+  details.q {
+    transition: border-color 0.3s ease, box-shadow 0.35s ease, transform 0.35s ease;
+  }
+  details.q:hover {
+    box-shadow: 0 8px 24px rgba(37, 18, 56, 0.08);
+  }
+  details.q[open] {
+    box-shadow: 0 10px 28px rgba(76, 184, 148, 0.1);
+  }
+  details.q summary {
+    transition: color 0.25s ease;
+  }
+
+  /* Section headings pulse-in */
+  .section-head.reveal.in .eyebrow {
+    animation: nawiri-fade-in 0.6s ease 0.1s both;
+  }
+  .section-head.reveal.in .heading-display {
+    animation: nawiri-fade-in 0.7s ease 0.15s both;
+  }
+
+  @keyframes nawiri-fade-in {
+    from { opacity: 0; transform: translate3d(0, 12px, 0); }
+    to { opacity: 1; transform: translate3d(0, 0, 0); }
+  }
+
+  /* Banner subtle scale on scroll */
+  .banner-visual.is-visible {
+    animation: nawiri-banner-in 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  @keyframes nawiri-banner-in {
+    from { opacity: 0.85; transform: scale(1.02); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  /* Mobile: same animations, tuned for small viewports */
+  @media (max-width: 880px) {
+    .reveal {
+      transform: translate3d(0, 20px, 0);
+    }
+    .svc:hover,
+    .tier:hover,
+    .stat:hover,
+    .val:hover,
+    .who-card:hover,
+    .vmv-card:hover,
+    .model:hover,
+    .step:hover,
+    .ic-card:hover,
+    .pick:hover,
+    .stp:hover,
+    .way:hover,
+    .cost:hover,
+    .card:hover,
+    .cat:hover,
+    .partner-list:hover,
+    form.contact:hover,
+    form.book:hover,
+    .hero-card:hover,
+    .quote-card:hover,
+    .build:hover {
+      transform: translate3d(0, -5px, 0);
+    }
+  }
+
+  /* Touch: tap feedback where hover is unavailable */
+  @media (hover: none), (pointer: coarse) {
+    .svc:active,
+    .tier:active,
+    .stat:active,
+    .val:active,
+    .who-card:active,
+    .vmv-card:active,
+    .model:active,
+    .step:active,
+    .ic-card:active,
+    .pick:active,
+    .stp:active,
+    .way:active,
+    .cost:active,
+    .card:active,
+    .cat:active,
+    .partner-list:active,
+    form.contact:active,
+    form.book:active,
+    .hero-card:active,
+    .quote-card:active,
+    .build:active {
+      transform: translate3d(0, -4px, 0);
+      box-shadow: 0 12px 28px rgba(37, 18, 56, 0.1);
+    }
+    .filter .chip:active {
+      transform: scale(0.97);
+    }
+    .svc:active figure.svc-thumb img,
+    .pick:active figure.svc-thumb img {
+      transform: scale(1.03);
+    }
+    details.q:active {
+      box-shadow: 0 8px 24px rgba(37, 18, 56, 0.08);
+    }
+  }
+}
+</style>
+
+</head>
+<body>
+<nav class="top"><div class="wrap">
+  <a href="/home.html" class="brand"><img class="brand-logo" src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_320,f_auto,q_auto/v1779775193/nawiri_logo_v8dqxt.jpg" width="320" height="320" alt="Nawiri Akili · Care Africa" decoding="async" /></a>
+  <button class="burger" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
+  <div class="links"><a href="/home.html">Home</a><a href="/about.html">About</a><a href="/services.html">Services</a><a href="/initiative.html">Nawiri Akili Initiative</a><a href="/walk-with-us.html">Walk With Us</a><a href="/blog.html">Blog</a><a href="/contact.html">Contact</a></div>
+  <a href="/book.html" class="nav-cta">Book a Session</a>
+</div></nav>
+
+<section class="hero hero-bg hero-bg--soft">
+  <span class="eyebrow">Blog & Insights</span>
+  <h1>Understanding is the <span class="grad">first act of care.</span></h1>
+  <p>Your safe space for conversations on mental health, self-care, and holistic wellbeing. Here, we explore ways to nurture the mind, heal the mind and body, and get empowered together as a community. Wherever you are on your journey, this is a place of support, reflection, and hope.</p>
+  <p style="font-style:italic;color:var(--body);opacity:0.9">Every article is a door. Written in clear, warm, accessible language, to inform, normalise, and invite. Not just for those already in therapy, but for anyone curious, unsure, or simply looking for a place to begin.</p>
+  <div class="filter">
+    <button type="button" class="chip active" data-cat="all">All</button>
+    <button type="button" class="chip" data-cat="mind">Mind & Emotions</button>
+    <button type="button" class="chip" data-cat="healing">Healing & Growth</button>
+    <button type="button" class="chip" data-cat="rel">Relationships</button>
+    <button type="button" class="chip" data-cat="work">Work & Burnout</button>
+    <button type="button" class="chip" data-cat="young">Young People</button>
+    <button type="button" class="chip" data-cat="comm">Community</button>
+  </div>
+</section>
+
+<section>
+  <div class="cats">
+    <div class="cat reveal" data-cat="mind">
+      <div class="ic">🧠</div>
+      <h3>Mind & Emotions</h3>
+      <p class="desc">Understanding what you feel and why: anxiety, depression, stress, grief, and the full range of the human emotional experience.</p>
+      <ul>
+        <li><img class="blog-list-thumb" src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_400,h_300,c_fill,f_auto,q_auto/v1779772298/post_thumbnail_filcil.jpg" alt="" width="92" height="69" loading="lazy" decoding="async" /><span class="blog-post-title">What does it mean to be mentally well, and why it is not about being happy all the time</span></li>
+        <li><img class="blog-list-thumb" src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_400,h_300,c_fill,f_auto,q_auto/v1779772298/post_thumbnail_filcil.jpg" alt="" width="92" height="69" loading="lazy" decoding="async" /><span class="blog-post-title">The difference between stress and anxiety: what your body is trying to tell you</span></li>
+        <li><img class="blog-list-thumb" src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_400,h_300,c_fill,f_auto,q_auto/v1779772298/post_thumbnail_filcil.jpg" alt="" width="92" height="69" loading="lazy" decoding="async" /><span class="blog-post-title">Five things everyone should know about mental health but were never taught</span></li>
+      </ul>
+    </div>
+    <div class="cat reveal" data-cat="healing">
+      <div class="ic">🌱</div>
+      <h3>Healing & Growth</h3>
+      <p class="desc">What recovery, resilience, and personal development actually look like: honest, practical, and grounded in real experience.</p>
+      <ul>
+        <li><img class="blog-list-thumb" src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_400,h_300,c_fill,f_auto,q_auto/v1779772298/post_thumbnail_filcil.jpg" alt="" width="92" height="69" loading="lazy" decoding="async" /><span class="blog-post-title">What healing actually looks like, and why it is rarely linear</span></li>
+        <li><img class="blog-list-thumb" src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_400,h_300,c_fill,f_auto,q_auto/v1779772298/post_thumbnail_filcil.jpg" alt="" width="92" height="69" loading="lazy" decoding="async" /><span class="blog-post-title">The difference between coping and flourishing</span></li>
+        <li><img class="blog-list-thumb" src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_400,h_300,c_fill,f_auto,q_auto/v1779772298/post_thumbnail_filcil.jpg" alt="" width="92" height="69" loading="lazy" decoding="async" /><span class="blog-post-title">Burnout is not a badge of honour: recognising it before it breaks you</span></li>
+      </ul>
+    </div>
+    <div class="cat reveal" data-cat="rel">
+      <div class="ic">👨‍👩‍👧</div>
+      <h3>Relationships & Family</h3>
+      <p class="desc">The people we love and the patterns we carry: communication, conflict, family systems, and the connections that shape us.</p>
+      <ul>
+        <li><img class="blog-list-thumb" src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_400,h_300,c_fill,f_auto,q_auto/v1779772298/post_thumbnail_filcil.jpg" alt="" width="92" height="69" loading="lazy" decoding="async" /><span class="blog-post-title">What healthy conflict looks like, and how to tell when it has crossed a line</span></li>
+        <li><img class="blog-list-thumb" src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_400,h_300,c_fill,f_auto,q_auto/v1779772298/post_thumbnail_filcil.jpg" alt="" width="92" height="69" loading="lazy" decoding="async" /><span class="blog-post-title">Parenting through your own unhealed wounds</span></li>
+        <li><img class="blog-list-thumb" src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_400,h_300,c_fill,f_auto,q_auto/v1779772298/post_thumbnail_filcil.jpg" alt="" width="92" height="69" loading="lazy" decoding="async" /><span class="blog-post-title">How to support someone you love without losing yourself</span></li>
+      </ul>
+    </div>
+    <div class="cat reveal" data-cat="work">
+      <div class="ic">💼</div>
+      <h3>Work & Burnout</h3>
+      <p class="desc">Pressure, performance, and finding balance in a world that rarely slows down.</p>
+      <ul>
+        <li><img class="blog-list-thumb" src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_400,h_300,c_fill,f_auto,q_auto/v1779772298/post_thumbnail_filcil.jpg" alt="" width="92" height="69" loading="lazy" decoding="async" /><span class="blog-post-title">Burnout at work: what it actually feels like and what to do about it</span></li>
+        <li><img class="blog-list-thumb" src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_400,h_300,c_fill,f_auto,q_auto/v1779772298/post_thumbnail_filcil.jpg" alt="" width="92" height="69" loading="lazy" decoding="async" /><span class="blog-post-title">The mental health cost of always being available</span></li>
+        <li><img class="blog-list-thumb" src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_400,h_300,c_fill,f_auto,q_auto/v1779772298/post_thumbnail_filcil.jpg" alt="" width="92" height="69" loading="lazy" decoding="async" /><span class="blog-post-title">Setting boundaries at work without guilt</span></li>
+      </ul>
+    </div>
+    <div class="cat reveal" data-cat="young">
+      <div class="ic">🎒</div>
+      <h3>Young People & Schools</h3>
+      <p class="desc">For students, parents, and educators navigating mental health in learning environments.</p>
+      <ul>
+        <li><img class="blog-list-thumb" src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_400,h_300,c_fill,f_auto,q_auto/v1779772298/post_thumbnail_filcil.jpg" alt="" width="92" height="69" loading="lazy" decoding="async" /><span class="blog-post-title">Teachers are not therapists, but they are often the first to notice</span></li>
+        <li><img class="blog-list-thumb" src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_400,h_300,c_fill,f_auto,q_auto/v1779772298/post_thumbnail_filcil.jpg" alt="" width="92" height="69" loading="lazy" decoding="async" /><span class="blog-post-title">Exam pressure, social media, and the growing mental health crisis in schools</span></li>
+        <li><img class="blog-list-thumb" src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_400,h_300,c_fill,f_auto,q_auto/v1779772298/post_thumbnail_filcil.jpg" alt="" width="92" height="69" loading="lazy" decoding="async" /><span class="blog-post-title">What to do when your teenager shuts down completely</span></li>
+      </ul>
+    </div>
+    <div class="cat reveal" data-cat="comm">
+      <div class="ic">🫂</div>
+      <h3>Community & Conversation</h3>
+      <p class="desc">Mental health in the spaces we share: opening the conversation, reducing stigma, and building communities that hold each other.</p>
+      <ul>
+        <li><img class="blog-list-thumb" src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_400,h_300,c_fill,f_auto,q_auto/v1779772298/post_thumbnail_filcil.jpg" alt="" width="92" height="69" loading="lazy" decoding="async" /><span class="blog-post-title">Why talking about how you feel is still a radical act in many communities</span></li>
+        <li><img class="blog-list-thumb" src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_400,h_300,c_fill,f_auto,q_auto/v1779772298/post_thumbnail_filcil.jpg" alt="" width="92" height="69" loading="lazy" decoding="async" /><span class="blog-post-title">Mental health is a pandemic. Why are we still treating it like a secret?</span></li>
+        <li><img class="blog-list-thumb" src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_400,h_300,c_fill,f_auto,q_auto/v1779772298/post_thumbnail_filcil.jpg" alt="" width="92" height="69" loading="lazy" decoding="async" /><span class="blog-post-title">What collective healing looks like, and how communities can lead it</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="cta final-bg">
+  <h2 class="heading-display">Get insights in your inbox</h2>
+  <p>Thoughtful, occasional notes on mental wellness. No spam. Unsubscribe anytime.</p>
+  <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Thank you ✓';this.querySelector('input').value=''">
+    <input type="email" placeholder="your@email.com" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div><div class="foot-brand">Nawiri Akili-Care Africa</div><p style="font-style:italic;color:#D4F0E6;margin-bottom:14px">Nurturing Minds, Transforming Communities</p><p style="font-size:15px;font-weight:300">"Nawiri" means to bloom.</p></div>
+    <div><h5>Explore</h5><ul><li><a href="/home.html">Home</a></li><li><a href="/about.html">About Us</a></li><li><a href="/services.html">Services</a></li><li><a href="/initiative.html">Nawiri Akili Initiative</a></li><li><a href="/blog.html">Blog & Insights</a></li></ul></div>
+    <div><h5>Take Action</h5><ul><li><a href="/book.html">Book a Session</a></li><li><a href="/walk-with-us.html">💛 Walk With Us</a></li><li><a href="/contact.html">Partner With Us</a></li><li><a href="/walk-with-us.html">Volunteer</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
+    <div><h5>Services</h5><ul><li>Individual Therapy</li><li>Family Therapy</li><li>Group Therapy</li><li>Organisational Wellness</li><li>Virtual Care</li><li>Subsidised or Free Care</li></ul></div>
+  </div>
+  <div class="copy">© 2026 Nawiri Akili-Care Africa · Kilifi, Kenya · Confidential · Compassionate · Accessible</div>
+</footer>
+<script id="nawiri-animations-js">
+(function () {
+  "use strict";
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var mobileMq = window.matchMedia("(max-width: 880px)");
+  var coarseMq = window.matchMedia("(pointer: coarse)");
+
+  function isMobileViewport() {
+    return mobileMq.matches || coarseMq.matches;
+  }
+
+  function revealIn(el, observer) {
+    el.classList.add("in");
+    if (observer) observer.unobserve(el);
+  }
+
+  function isInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    var edge = isMobileViewport() ? 12 : 40;
+    return rect.top < vh - edge && rect.bottom > edge;
+  }
+
+  function revealOptions() {
+    var mobile = isMobileViewport();
+    return {
+      threshold: mobile ? 0.05 : 0.1,
+      rootMargin: mobile ? "0px 0px 0px 0px" : "0px 0px -50px 0px",
+    };
+  }
+
+  /* Sticky nav shadow */
+  var nav = document.querySelector("nav.top");
+  if (nav) {
+    var onScroll = function () {
+      nav.classList.toggle("is-scrolled", window.scrollY > 20);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
+
+  /* Hero entrance */
+  var hero = document.querySelector("header.hero");
+  if (hero) {
+    var readyHero = function () {
+      hero.classList.add("hero-ready");
+    };
+    if (reduced) {
+      readyHero();
+    } else {
+      requestAnimationFrame(function () {
+        requestAnimationFrame(readyHero);
+      });
+    }
+    window.addEventListener(
+      "pageshow",
+      function (e) {
+        if (e.persisted) readyHero();
+      },
+      { passive: true }
+    );
+  }
+
+  /* Scroll reveals with stagger within parent */
+  var reveals = document.querySelectorAll(".reveal");
+  if (reduced) {
+    reveals.forEach(function (el) {
+      el.classList.add("in");
+    });
+    return;
+  }
+
+  reveals.forEach(function (el) {
+    var parent = el.parentElement;
+    if (parent) {
+      var siblings = Array.prototype.filter.call(parent.children, function (c) {
+        return c.classList && c.classList.contains("reveal");
+      });
+      var idx = siblings.indexOf(el);
+      if (idx >= 0) el.style.setProperty("--reveal-i", String(idx));
+    }
+  });
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      revealIn(entry.target, io);
+    });
+  }, revealOptions());
+
+  reveals.forEach(function (el) {
+    if (isInViewport(el)) {
+      revealIn(el, io);
+    } else {
+      io.observe(el);
+    }
+  });
+
+  var resizeTimer;
+  window.addEventListener(
+    "resize",
+    function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () {
+        reveals.forEach(function (el) {
+          if (!el.classList.contains("in") && isInViewport(el)) {
+            revealIn(el, io);
+          }
+        });
+      }, 120);
+    },
+    { passive: true }
+  );
+
+  window.addEventListener(
+    "orientationchange",
+    function () {
+      setTimeout(function () {
+        reveals.forEach(function (el) {
+          if (!el.classList.contains("in") && isInViewport(el)) {
+            revealIn(el, io);
+          }
+        });
+      }, 200);
+    },
+    { passive: true }
+  );
+
+  /* Banner sections */
+  document.querySelectorAll(".banner-visual").forEach(function (banner) {
+    if (isInViewport(banner)) {
+      banner.classList.add("is-visible");
+      return;
+    }
+    var bIo = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add("is-visible");
+            bIo.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: isMobileViewport() ? 0.08 : 0.2 }
+    );
+    bIo.observe(banner);
+  });
+
+  /* Category filter chips */
+  document.querySelectorAll(".chip").forEach(function (chip) {
+    chip.addEventListener("click", function () {
+      document.querySelectorAll(".chip").forEach(function (x) {
+        x.classList.remove("active");
+      });
+      chip.classList.add("active");
+      var f = chip.dataset.cat;
+      document.querySelectorAll(".cat").forEach(function (el) {
+        el.style.display = f === "all" || el.dataset.cat === f ? "" : "none";
+      });
+    });
+  });
+
+})();
+</script>
+
+</body>
+</html>

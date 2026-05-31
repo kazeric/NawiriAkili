@@ -1,0 +1,103 @@
+<?php
+/**
+ * Title: Nawiri – Home
+ * Slug: charity-grove-nawiri/home
+ * Categories: charity-grove
+ * Keywords: nawiri, home
+ * Inserter: yes
+ */
+?>
+<!-- wp:html -->
+<header class="hero hero-bg">
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <h1 class="headline">Nurturing Minds, <span class="grad">Transforming Communities</span></h1>
+      <p class="lede"><strong>"Nawiri"</strong> means to bloom. <em>Empowering growth, renewal, and a mentally flourishing community.</em> Nawiri exists to ensure quality mental health care is a right, not a privilege. Through the <mark>Nawiri Akili Initiative</mark>, we provide mental health education and subsidised or free care to communities, funded by community sponsorships and the professional expertise of <mark>Nawiri Akili-Care Africa</mark>, our consultancy arm. Together, one ecosystem. One mission.</p>
+      <div class="cta-row">
+        <a href="/walk-with-us/" class="btn btn-green">💛 Support the Initiative</a>
+        <a href="/book/" class="btn btn-primary">Book a Session →</a>
+        <a href="/initiative/" class="btn btn-ghost">Learn About Our Impact →</a>
+      </div>
+    </div>
+    <div class="hero-card hero-card--image-only">
+      <figure class="hero-figure">
+        <img src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_900,f_auto,q_auto/v1779773921/hero_group_jev8af.png" width="600" height="450" alt="A supportive, confidential conversation in a welcoming space." loading="eager" decoding="async" fetchpriority="high" />
+      </figure>
+    </div>
+  </div>
+</header>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<section class="banner banner-visual">
+  <div class="icon">🌍</div>
+  <h2 class="heading-display">Mental health is the defining health crisis of our generation.</h2>
+  <p>Over 1 billion people worldwide are living with a mental health condition. COVID-19 drove a 25% global surge in anxiety, depression, and other mental health conditions, and the world has yet to recover. This is not a distant crisis. It is a reality that touches every family, every community, every generation. Nawiri exists to meet it, one child, one community, one conversation at a time.</p>
+</section>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<section class="section--white">
+  <div class="section-head reveal">
+    <span class="eyebrow">The Numbers, 2025</span>
+    <h2 class="heading-display">The reality we are changing</h2>
+    <p><em>Sources: WHO World Mental Health Today, September 2025 · JAMA Psychiatry 2025 · Project HOPE 2024 · The Lancet 2024</em></p>
+  </div>
+  <div class="stats">
+    <div class="stat reveal"><div class="num">1B+</div><div class="desc">People living with a mental health condition worldwide</div><div class="src">WHO, 2025</div></div>
+    <div class="stat reveal"><div class="num">91%</div><div class="desc">Of people with depression have no access to care</div><div class="src">WHO, 2025</div></div>
+    <div class="stat reveal"><div class="num">6.9%</div><div class="desc">Of those who need treatment actually receive it</div><div class="src">JAMA Psychiatry, 2025</div></div>
+    <div class="stat reveal"><div class="num">1 in 7</div><div class="desc">Young people aged 10–19 have a mental health condition</div><div class="src">Project HOPE, 2024</div></div>
+  </div>
+  <div class="pull reveal">Mental health is not a private burden to be carried alone. It is a shared reality and a shared responsibility, one that touches every family, every community, every generation.</div>
+</section>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<section class="section--tint">
+  <div class="section-head reveal">
+    <span class="eyebrow">Services at a Glance</span>
+    <h2 class="heading-display">How we support individuals and organisations</h2>
+  </div>
+  <div class="svc-grid">
+    <div class="svc reveal"><figure class="svc-thumb"><img src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_800,f_auto,q_auto/v1779773920/individual_therapy_chggs7.jpg" alt="" width="640" height="400" loading="lazy" decoding="async" /></figure><div class="ic">🧠</div><h4>Individual Therapy</h4><p>Professional, confidential support, evidence-based and tailored to you.</p></div>
+    <div class="svc reveal"><figure class="svc-thumb"><img src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_800,f_auto,q_auto/v1779773978/family_therapy_yi63q0.png" alt="" width="640" height="400" loading="lazy" decoding="async" /></figure><div class="ic">👨‍👩‍👧</div><h4>Family Therapy</h4><p>Structured support for family systems: communication, healing, and healthier relationships across generations.</p></div>
+    <div class="svc reveal"><figure class="svc-thumb"><img src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_800,f_auto,q_auto/v1779773912/corporate_whgqjm.jpg" alt="" width="640" height="400" loading="lazy" decoding="async" /></figure><div class="ic">🏢</div><h4>Organisational Wellness</h4><p>Organisations thrive when their people do. Tailored mental health programs, staff support, and sustainable wellness solutions.</p></div>
+    <div class="svc reveal"><figure class="svc-thumb"><img src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_800,f_auto,q_auto/v1779773921/physchology_ortsoy.png" alt="" width="640" height="400" loading="lazy" decoding="async" /></figure><div class="ic">🏫</div><h4>School & Community Programs</h4><p>Mental health education, stigma reduction, and accessible support directly into the spaces where people live, learn, and grow.</p></div>
+    <div class="svc reveal"><figure class="svc-thumb"><img src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_800,f_auto,q_auto/v1779773922/virtual_therapy_zksiis.jpg" alt="" width="640" height="400" loading="lazy" decoding="async" /></figure><div class="ic">💻</div><h4>Virtual Care</h4><p>Fully confidential online sessions from anywhere in Kenya or internationally.</p></div>
+    <div class="svc reveal"><figure class="svc-thumb"><img src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_800,f_auto,q_auto/v1779773981/subsidised_free_care_ngmize.png" alt="" width="640" height="400" loading="lazy" decoding="async" /></figure><div class="ic">💚</div><h4>Subsidised or Free Care</h4><p>Care without conditions. Through the Nawiri Akili Initiative, subsidised and free sessions are available, because mental wellness belongs to everyone, without exception.</p></div>
+  </div>
+  <div class="svc-cta-row"><a href="/services/" class="btn btn-primary">All Services →</a><a href="/book/" class="btn btn-ghost">Book a Session →</a></div>
+</section>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<section class="give">
+  <div class="section-head reveal">
+    <span class="eyebrow eyebrow--purple">Walk With Us</span>
+    <h2 class="heading-display">Mental health care should reach everyone.</h2>
+    <p>Through the Nawiri Akili Initiative, it does, one session, one school, one community at a time. Your contribution is what makes that possible.</p>
+  </div>
+  <div class="tiers">
+    <div class="tier reveal"><div class="amt">KSh 1,000</div><div class="usd">approx. $8</div><div class="what">Sponsor a Session: fund one person's free therapy</div></div>
+    <div class="tier reveal"><div class="amt">KSh 5,000</div><div class="usd">approx. $38</div><div class="what">Community Workshop Support: bring mental health education to a school</div></div>
+    <div class="tier reveal"><div class="amt">KSh 10,000</div><div class="usd">approx. $77</div><div class="what">Subsidised Care Bundle: cover ten people's access to care</div></div>
+    <div class="tier reveal"><div class="amt">KSh 20,000</div><div class="usd">approx. $154</div><div class="what">Impact Partner Tier: a full month of community care and outreach</div></div>
+  </div>
+  <div style="text-align:center;margin-top:40px"><a href="/walk-with-us/" class="btn btn-green">See All Ways to Give →</a></div>
+</section>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<section class="final final-bg">
+  <h2>When one mind flourishes, <span class="green">the whole community grows with it.</span></h2>
+  <p>We exist to make sure nothing stands in the way of it.</p>
+  <div class="cta-row" style="justify-content:center">
+    <a href="/walk-with-us/" class="btn btn-green">💛 Sponsor an Initiative</a>
+    <a href="/book/" class="btn-on-light">Book a Session</a>
+    <a href="/contact/" class="btn btn-ghost">Partner With Us</a>
+  </div>
+</section>
+<!-- /wp:html -->

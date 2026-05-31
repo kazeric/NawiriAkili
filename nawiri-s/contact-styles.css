@@ -1,0 +1,67 @@
+:root{
+    --primary:#4CB894;--brand-dark:#3A9A7A;--brand-darkest:#1E4A3A;
+    --tint:#EDF8F2;--purple:#421f66;--purple-tint:#e4daee;--section-purple:#E8E0F5;--chip-purple-bg:#d6cae6;--chip-purple-fg:#2f1748;
+    --white:#ffffff;--body:#4a5568;--border:#e2ede4;
+    --chip-green-bg:#C8EDE0;--chip-green-fg:#1A4536;
+    --purple-deep:#251238;--green:#4CB894;
+    --hero-image:url("https://res.cloudinary.com/dq6dzskaf/image/upload/w_1920,f_auto,q_80/v1779772272/hero_qojhze.jpg");
+    --final-bg:url("https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1920&q=80");
+  }
+
+.nav-cta{background:var(--primary);color:var(--white);padding:8px 20px;border-radius:100px;font-size:13px;font-weight:600}
+
+.hero.hero-bg{border-bottom-color:color-mix(in srgb,var(--purple) 35%,var(--border) 65%)}
+
+.hero h1{margin:1rem auto 16px}
+
+.hero h1 .grad{color:var(--purple);font-style:italic}
+
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;background:transparent;border:0;max-width:1300px;margin:0 auto}
+
+@media(max-width:880px){.info{grid-template-columns:1fr}}
+
+.ic-card{padding:2.25rem 2rem;background:var(--white);text-align:center;border:0.5px solid var(--border);border-radius:18px}
+
+.ic-card .ic{width:56px;height:56px;border-radius:10px;background:var(--tint);display:grid;place-items:center;font-size:26px;margin:0 auto 18px;border:0.5px solid var(--border)}
+
+.ic-card h4{font-size:1.0625rem;color:var(--brand-dark);margin-bottom:8px;font-family:'Nunito',sans-serif;font-weight:600}
+
+.ic-card p{color:var(--body);font-size:1.0625rem;line-height:1.75;font-weight:400}
+
+.ic-card a{color:var(--primary);font-weight:600}
+
+.partner-row{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;background:transparent;border:0;max-width:1300px;margin:0 auto}
+
+@media(max-width:900px){.partner-row{grid-template-columns:1fr}}
+
+.partner-list{padding:2.5rem;background:var(--brand-dark);color:var(--white);position:relative;border:0.5px solid var(--border);border-radius:18px}
+
+.partner-list::after{display:none}
+
+.partner-list h3{color:var(--white);font-size:18px;margin-bottom:18px;font-family:'DM Serif Display',serif}
+
+.partner-list ul{list-style:none;position:relative}
+
+.partner-list li{padding:14px 0;border-top:0.5px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.92);display:flex;align-items:center;gap:12px;font-size:1.0625rem;font-weight:400}
+
+.partner-list li:first-child{border-top:0}
+
+.partner-list li::before{content:"❤";color:var(--white);opacity:0.85}
+
+form.contact{padding:2.5rem;background:var(--white);border:0.5px solid var(--border);border-radius:18px}
+
+form.contact h3{font-size:1.1875rem;color:var(--brand-darkest);margin-bottom:8px}
+
+form.contact .sub{color:var(--body);margin-bottom:24px;font-size:1.0625rem;font-weight:400}
+
+.field{margin-bottom:18px}
+
+.field label{display:block;font-family:'Nunito',sans-serif;font-weight:600;color:var(--brand-dark);margin-bottom:8px;font-size:14px}
+
+.field input,.field select,.field textarea{width:100%;padding:13px 16px;border:0.5px solid var(--border);border-radius:8px;font-size:15px;font-family:'Nunito',sans-serif;transition:border-color .2s;background:var(--white);color:var(--body)}
+
+.field textarea{resize:vertical;min-height:120px}
+
+.final h2{color:var(--white);font-size:22px;max-width:900px;margin:0 auto 22px;font-family:'DM Serif Display',serif}
+
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 28px;border-radius:100px;font-family:'Nunito',sans-serif;font-weight:700;font-size:14px;cursor:pointer;border:0}

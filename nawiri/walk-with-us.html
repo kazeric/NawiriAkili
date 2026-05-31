@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script id="nawiri-scroll-top">
+(function () {
+  if ("scrollRestoration" in history) { history.scrollRestoration = "manual"; }
+  window.scrollTo(0, 0);
+  window.addEventListener("pageshow", function () { window.scrollTo(0, 0); }, { passive: true });
+})();
+</script>
+<meta charset="utf-8" />
+<title>Walk With Us · Give, Partner, Volunteer · Nawiri Akili</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="description" content="Three ways to walk with Nawiri Akili: give, partner, or volunteer. Your support helps deliver free care, school programs, and community outreach." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{font-size:17px}
+  :root{
+    --primary:#4CB894;--brand-dark:#3A9A7A;--brand-darkest:#1E4A3A;
+    --tint:#EDF8F2;--purple:#421f66;--purple-tint:#e4daee;--section-purple:#E8E0F5;
+    --blue:#1565a8;--blue-tint:#eaf4fd;
+    --white:#ffffff;--body:#4a5568;--border:#e2ede4;
+    --chip-green-bg:#C8EDE0;--chip-green-fg:#1A4536;
+    --chip-purple-bg:#d6cae6;--chip-purple-fg:#2f1748;
+    --purple-deep:#251238;--green:#4CB894;
+    --hero-image:url("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1920&q=80");
+    --final-bg:url("https://images.unsplash.com/photo-1469571486292-c7b0df41cce6?auto=format&fit=crop&w=1920&q=80");
+  }
+  html,body{width:100%;overflow-x:hidden;background:var(--white);color:var(--body);font-family:'Nunito',sans-serif;font-weight:400;line-height:1.8}
+  h1,h2,h3{font-family:'DM Serif Display',serif;font-weight:400;color:var(--brand-darkest);line-height:1.22}
+  h1{font-size:clamp(2.5rem,3.2vw,3rem)}
+  h2{font-size:1.4rem}
+  h3{font-size:1.2rem}
+  h4{font-family:'Nunito',sans-serif;font-weight:600;font-size:1.0625rem;color:var(--brand-dark)}
+  a{color:inherit;text-decoration:none}
+  nav.top{position:sticky;top:0;z-index:50;background:var(--white);border-bottom:0.5px solid var(--border)}
+  nav.top .wrap{padding:1.1rem 2.75rem;display:flex;align-items:center;justify-content:space-between;gap:24px}
+  @media(max-width:640px){nav.top .wrap{padding:0.875rem 1.25rem}}
+  .brand{display:flex;align-items:center;gap:10px;font-family:'Nunito',sans-serif;font-weight:700;font-size:1.125rem;color:var(--brand-dark)}
+  .links{display:flex;gap:28px;font-family:'Nunito',sans-serif;font-size:14px;font-weight:400}
+  .links a{color:var(--body);padding:6px 0}
+  .links a:hover{color:var(--primary)}
+  .nav-cta{background:var(--primary);color:var(--white);padding:9px 22px;border-radius:100px;font-size:14px;font-weight:600}
+  .nav-cta:hover{background:var(--brand-dark)}
+  .burger{display:none;background:none;border:0;font-size:24px;color:var(--brand-dark);cursor:pointer}
+  @media(max-width:880px){.links,.nav-cta{display:none}.burger{display:block}.links.open{display:flex;position:absolute;top:100%;left:0;right:0;background:var(--white);flex-direction:column;padding:1.25rem 2.5rem;border-bottom:0.5px solid var(--border)}}
+  .eyebrow{display:inline-block;background:var(--chip-green-bg);color:var(--chip-green-fg);padding:9px 16px;border-radius:100px;font-family:'Nunito',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase}
+  .eyebrow--purple{background:var(--chip-purple-bg);color:var(--chip-purple-fg)}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 28px;border-radius:100px;font-family:'Nunito',sans-serif;font-weight:700;font-size:14px;cursor:pointer;border:0;transition:background .2s,color .2s}
+  .btn-green{background:var(--primary);color:var(--white)}
+  .btn-green:hover{background:var(--brand-dark)}
+  .btn-light{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--white);color:var(--brand-dark);padding:12px 28px;border-radius:100px;font-family:'Nunito',sans-serif;font-weight:700;font-size:14px}
+  .btn-light:hover{background:var(--purple-deep);color:var(--white);border-color:var(--purple-deep)}
+  .hero{padding:4rem min(5vw,3.25rem);text-align:center;border-bottom:0.5px solid var(--border)}
+  .hero .quote{font-family:'DM Serif Display',serif;font-style:italic;font-size:clamp(1.5rem,3vw,2rem);max-width:1100px;margin:0 auto;line-height:1.4;color:var(--brand-darkest);font-weight:400}
+  .hero .quote .em{color:var(--primary);font-style:italic}
+  .hero .sub{color:var(--body);max-width:40rem;margin:24px auto 0;font-size:1.125rem;font-weight:400}
+  .reality{text-align:center;max-width:1000px;margin:0 auto}
+  .reality h2{margin-bottom:20px}
+  .reality p{color:var(--body);font-size:1.0625rem;max-width:40rem;margin:0 auto 18px;font-weight:400;line-height:1.75}
+  .costs{background:var(--section-purple,var(--purple-tint))}
+  .costs-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.25rem;background:transparent;border:0;max-width:1400px;margin:0 auto;width:100%}
+  @media(max-width:1000px){.costs-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(max-width:640px){.costs-grid{grid-template-columns:minmax(0,1fr);gap:1rem}}
+  .cost{min-width:0;padding:2rem 1.75rem;background:var(--white);border:0.5px solid var(--border);border-radius:18px;border-top:4px solid var(--primary)}
+  @media(max-width:640px){.cost{padding:1.5rem 1.25rem}}
+  .cost:nth-child(2){border-top-color:var(--brand-dark)}
+  .cost:nth-child(3){border-top-color:var(--purple)}
+  .cost:nth-child(4){border-top-color:var(--blue)}
+  .cost .amt{font-family:'DM Serif Display',serif;font-size:clamp(1.5rem,2.5vw,1.875rem);font-weight:400;color:var(--brand-dark);margin-bottom:4px}
+  .cost .usd{font-size:1rem;color:var(--body);margin-bottom:18px;font-weight:400}
+  .cost h4{font-size:1.0625rem;color:var(--brand-dark);margin-bottom:10px;font-family:'Nunito',sans-serif;font-weight:600}
+  .cost p{font-size:1.0625rem;color:var(--body);font-weight:400;line-height:1.75}
+  .nopressure{margin:3rem auto 0;max-width:40rem;text-align:center;font-family:'DM Serif Display',serif;font-style:italic;font-size:1.25rem;color:var(--brand-dark);padding:2.25rem 1.75rem;background:var(--purple-tint);border-radius:18px;border:0.5px solid var(--border);line-height:1.55}
+  @media(max-width:640px){.nopressure{margin-top:2rem;padding:1.75rem 1.25rem;font-size:1.125rem}}
+  .three{display:grid;grid-template-columns:repeat(3,1fr);gap:1.35rem;background:transparent;border:0;max-width:1300px;margin:0 auto}
+  @media(max-width:900px){.three{grid-template-columns:1fr}}
+  .way{padding:2.75rem 2.5rem;background:var(--white);text-align:center;border:0.5px solid var(--border);border-radius:18px}
+  .way .ic{width:56px;height:56px;border-radius:50%;background:var(--tint);display:grid;place-items:center;font-size:28px;margin:0 auto 20px;border:0.5px solid var(--border)}
+  .way h3{font-size:1.1875rem;color:var(--brand-darkest);margin-bottom:12px;font-family:'DM Serif Display',serif}
+  .way p{color:var(--body);font-size:1.0625rem;font-weight:400;line-height:1.75}
+  .tiers{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.25rem;background:transparent;border:0;max-width:1300px;margin:0 auto;width:100%}
+  @media(max-width:900px){.tiers{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(max-width:640px){.tiers{grid-template-columns:minmax(0,1fr);gap:1rem}}
+  .tier{min-width:0;padding:2rem 1.75rem;background:var(--white);text-align:center;border:0.5px solid var(--border);border-radius:18px}
+  @media(max-width:640px){.tier{padding:1.5rem 1.25rem}}
+  .tier .amt{font-family:'DM Serif Display',serif;font-size:clamp(1.35rem,2.2vw,1.65rem);font-weight:400;color:var(--brand-dark)}
+  .tier .usd{font-size:1rem;color:var(--body);margin:4px 0 14px;font-weight:400}
+  .tier .label{font-family:'Nunito',sans-serif;font-weight:700;color:var(--primary);font-size:12px;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:10px}
+  .tier .what{font-size:1.0625rem;color:var(--body);font-weight:400;line-height:1.55}
+  .tier.highlight{background:var(--tint)}
+  .pay{margin:40px auto 0;text-align:center;color:var(--body);font-size:1.0625rem;font-weight:400}
+  .grid2{display:grid;grid-template-columns:repeat(3,1fr);gap:1.35rem;background:transparent;border:0;max-width:1400px;margin:0 auto}
+  @media(max-width:980px){.grid2{grid-template-columns:1fr 1fr}}
+  @media(max-width:600px){.grid2{grid-template-columns:1fr}}
+  .card{padding:2.25rem 2rem;background:var(--white);border:0.5px solid var(--border);border-radius:18px}
+  .card h4{font-size:1.0625rem;color:var(--brand-dark);margin-bottom:10px;font-family:'Nunito',sans-serif;font-weight:600}
+  .card p{color:var(--body);font-size:1.0625rem;margin-bottom:14px;font-weight:400;line-height:1.75}
+  .card .skills{font-size:13px;color:var(--primary);font-style:italic;font-weight:400}
+  .alloc{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+  @media(max-width:900px){.alloc{grid-template-columns:1fr}}
+  .bar{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;background:var(--white);border-radius:14px;margin-bottom:12px;border:0.5px solid var(--border);border-left:4px solid var(--primary)}
+  .bar:nth-child(2){border-left-color:var(--brand-dark)}
+  .bar:nth-child(3){border-left-color:var(--purple)}
+  .bar:nth-child(4){border-left-color:var(--blue)}
+  .bar .label{font-weight:500;color:var(--body);font-size:1.0625rem}
+  .bar .pct{font-family:'DM Serif Display',serif;font-size:22px;font-weight:400;color:var(--brand-dark)}
+
+  /* ── Community Gallery ── */
+  .community-gallery{max-width:1300px;margin:0 auto}
+  .gallery-intro{text-align:center;max-width:680px;margin:0 auto 3rem}
+  .gallery-intro .heading-display{margin-top:18px;margin-bottom:16px}
+  .gallery-intro p{color:var(--body);font-weight:300;font-size:1.0625rem;line-height:1.75}
+  .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.35rem}
+  @media(max-width:900px){.gallery-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:580px){.gallery-grid{grid-template-columns:1fr;gap:1rem}}
+  .gallery-item{border-radius:18px;overflow:hidden;background:var(--white);border:0.5px solid var(--border);display:flex;flex-direction:column;transition:transform 0.4s cubic-bezier(0.22,1,0.36,1),box-shadow 0.4s ease,border-color 0.35s ease}
+  .gallery-item:hover{transform:translate3d(0,-8px,0);box-shadow:0 16px 40px rgba(37,18,56,0.12),0 4px 12px rgba(76,184,148,0.08);border-color:color-mix(in srgb,var(--primary) 35%,var(--border) 65%)}
+  .gallery-item figure{margin:0;aspect-ratio:4/3;overflow:hidden;background:color-mix(in srgb,var(--tint) 60%,var(--purple-tint) 40%);position:relative;flex-shrink:0}
+  .gallery-item figure img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.55s cubic-bezier(0.22,1,0.36,1)}
+  .gallery-item:hover figure img{transform:scale(1.05)}
+  .upload-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;cursor:pointer;transition:background 0.25s ease}
+  .upload-placeholder:hover{background:rgba(76,184,148,0.06)}
+  .upload-icon{width:52px;height:52px;border-radius:50%;background:var(--white);border:0.5px solid var(--border);display:grid;place-items:center;font-size:22px;box-shadow:0 4px 16px rgba(37,18,56,0.08);transition:transform 0.3s ease,box-shadow 0.3s ease}
+  .upload-placeholder:hover .upload-icon{transform:translate3d(0,-3px,0);box-shadow:0 8px 24px rgba(37,18,56,0.12)}
+  .upload-label{font-family:'Nunito',sans-serif;font-size:13px;font-weight:600;color:var(--brand-dark);letter-spacing:0.04em}
+  .upload-placeholder input[type="file"]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+  .gallery-item figcaption{padding:1.1rem 1.35rem 1.35rem;font-family:'Nunito',sans-serif;font-size:0.9375rem;font-weight:400;color:var(--body);font-style:italic;line-height:1.5;flex:1;display:flex;align-items:center;border-top:0.5px solid var(--border)}
+  .gallery-item figcaption::before{content:'';margin-right:0}
+  .gallery-closing{margin:3rem auto 0;max-width:40rem;text-align:center;font-family:'DM Serif Display',serif;font-style:italic;font-size:1.25rem;color:var(--brand-dark);padding:2.25rem 1.75rem;background:color-mix(in srgb,var(--tint) 55%,var(--purple-tint) 45%);border-radius:18px;border:0.5px solid var(--border);line-height:1.55}
+  @media(max-width:640px){.gallery-closing{margin-top:2rem;padding:1.75rem 1.25rem;font-size:1.125rem}}
+
+  .final{background-color:var(--brand-dark);color:var(--white);text-align:center;padding:4rem 2.5rem;border-top:0.5px solid var(--border);position:relative;isolation:isolate}
+  .final h2{color:var(--white);font-size:1.4rem;max-width:1000px;margin:0 auto 16px;font-family:'DM Serif Display',serif}
+  .final h2 .green{color:var(--white);font-style:italic;font-weight:400}
+  .final p{color:rgba(255,255,255,0.92);max-width:40rem;margin:0 auto 36px;font-style:italic;font-weight:400;font-size:1.0625rem;line-height:1.75}
+  footer{background:var(--brand-darkest);color:#D4F0E6;padding:3.5rem 2.5rem 2rem}
+  .foot-grid{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:50px}
+  @media(max-width:880px){.foot-grid{grid-template-columns:1fr 1fr}}
+  footer h5{color:var(--white);font-size:14px;font-family:'Nunito',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:18px}
+  footer ul{list-style:none}footer li{margin-bottom:10px;font-size:1rem;font-weight:400}footer a:hover{color:var(--white)}
+  .foot-brand{font-family:'Nunito',sans-serif;font-weight:700;color:var(--white);font-size:1.25rem;margin-bottom:12px}
+  .copy{max-width:1400px;margin:3rem auto 0;padding-top:2rem;border-top:0.5px solid rgba(255,255,255,0.15);text-align:center;font-size:13px;color:rgba(255,255,255,0.65);font-weight:300}
+</style>
+
+<style>
+  html{font-size:17px}
+  @media(max-width:640px){html{font-size:16px}}
+  body{line-height:1.82;font-weight:400}
+  section{padding:4.25rem min(5vw,3.25rem)}
+  @media(max-width:640px){section{padding:2.85rem 1.35rem}}
+  nav.top .wrap{--nav-pad-y:0.65rem;--nav-bar-inner-h:3.875rem;box-sizing:border-box;padding-top:var(--nav-pad-y);padding-bottom:var(--nav-pad-y);height:calc(var(--nav-bar-inner-h) + 2 * var(--nav-pad-y));min-height:calc(var(--nav-bar-inner-h) + 2 * var(--nav-pad-y));max-height:calc(var(--nav-bar-inner-h) + 2 * var(--nav-pad-y));display:flex;align-items:center;justify-content:space-between;gap:1rem}
+  nav.top .links{display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;justify-content:flex-end;gap:clamp(0.6rem,1.2vw,1.35rem);flex:1 1 auto;min-width:0}
+  nav.top .links a{font-size:14px;white-space:nowrap}
+  nav.top .burger{display:none;flex-shrink:0}
+  nav.top .nav-cta{flex-shrink:0;white-space:nowrap}
+  @media(max-width:880px){
+    nav.top .wrap{position:relative}
+    nav.top .burger{display:block}
+    nav.top .links:not(.open){display:none}
+    nav.top .nav-cta{display:none}
+    nav.top .links.open{display:flex;position:absolute;top:100%;left:0;right:0;z-index:200;flex-direction:column;flex-wrap:nowrap;align-items:stretch;justify-content:flex-start;gap:14px;padding:1.25rem min(2.5rem,5vw);margin:0;background:var(--white,#ffffff);border-bottom:0.5px solid var(--border,#e2ede4);box-shadow:0 10px 30px rgba(0,0,0,0.08)}
+    nav.top .links.open a{white-space:normal}
+  }
+  nav.top .brand{gap:0;line-height:0;display:flex;align-items:center;flex-shrink:0;height:var(--nav-bar-inner-h)}
+  nav.top .brand .brand-logo{display:block;height:var(--nav-bar-inner-h);width:auto;max-height:var(--nav-bar-inner-h);max-width:min(100%,30rem);object-fit:contain;object-position:left center}
+  nav.top{border-bottom-color:color-mix(in srgb,color-mix(in srgb,var(--border,#e2ede4) 70%,var(--primary,#4CB894) 30%) 60%,var(--purple,#421f66) 40%)}
+  nav.top .links a:hover{color:color-mix(in srgb,var(--primary,#4CB894) 60%,var(--purple,#421f66) 40%)}
+  .hero-bg{position:relative;isolation:isolate;background-color:var(--tint,#EDF8F2);background-image:var(--hero-image,none);background-size:cover;background-position:center;background-repeat:no-repeat}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:color-mix(in srgb,var(--hero-overlay,rgba(237,248,242,0.72)) 60%,rgba(66,31,102,0.2) 40%);z-index:0;pointer-events:none}
+  .hero-bg > *{position:relative;z-index:1}
+  .hero-bg--soft::after{background:color-mix(in srgb,var(--hero-overlay-strong,rgba(237,248,242,0.78)) 60%,rgba(66,31,102,0.18) 40%)}
+  .final-bg{position:relative;isolation:isolate;background-color:var(--brand-dark,#3A9A7A);background-image:var(--final-bg,none);background-size:cover;background-position:center}
+  .final-bg::after{content:"";position:absolute;inset:0;background:color-mix(in srgb,var(--final-overlay,rgba(58,154,122,0.92)) 60%,rgba(66,31,102,0.38) 40%);z-index:0;pointer-events:none}
+  .final-bg > *{position:relative;z-index:1}
+  .cta-row,.final-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:1.25rem;justify-content:center;align-items:center}
+  @media(max-width:640px){
+    .cta-row,.final-ctas{flex-direction:column;align-items:stretch;gap:14px;width:100%;max-width:22rem;margin-left:auto;margin-right:auto}
+    .cta-row > a,.cta-row > .btn,.final-ctas > a,.final-ctas > .btn{margin-left:0!important;width:100%;justify-content:center}
+  }
+  section:not(.hero):not(.hero-bg):not(.final):not(.final-bg):not(.banner):not(.banner-visual):not(.section-crisis-info):not(.section--tint):not(.give):not(.form-wrap):not(.founder-wrap):not(.vmv):not(.path):not(.model-wrap):not(.cta):not([class*="hero"]):not([id="give"]):not([style*="background"]){background-color:var(--section-purple,var(--purple-tint))}
+  .section-crisis-info{background:color-mix(in srgb,var(--blue-tint,#eaf4fd) 60%,var(--purple-tint,#e4daee) 40%);border-top:0.5px solid color-mix(in srgb,color-mix(in srgb,var(--border,#e2ede4) 70%,var(--primary,#4CB894) 30%) 60%,var(--purple,#421f66) 40%);border-bottom:0.5px solid color-mix(in srgb,color-mix(in srgb,var(--border,#e2ede4) 70%,var(--primary,#4CB894) 30%) 60%,var(--purple,#421f66) 40%);padding:4rem min(5vw,3.25rem)}
+  @media(max-width:640px){.section-crisis-info{padding:2.85rem 1.35rem}}
+  h2.heading-display{font-family:'DM Serif Display',serif;font-size:clamp(1.625rem,2.6vw,2.05rem);font-weight:400;line-height:1.28;color:color-mix(in srgb,var(--brand-darkest,#1E4A3A) 60%,var(--purple,#421f66) 40%)}
+  .section-crisis-info h2.heading-display{color:var(--brand-darkest)}
+  footer{border-top:2px solid color-mix(in srgb,var(--primary,#4CB894) 60%,var(--purple,#421f66) 40%)}
+</style>
+
+<style id="nawiri-animations">
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1!important;transform:none!important;transition:none!important}
+  header.hero > *,header.hero .hero-grid > *{opacity:1!important;transform:none!important}
+}
+@media(prefers-reduced-motion:no-preference){
+  html{scroll-behavior:smooth}
+  .reveal{opacity:0;transform:translate3d(0,28px,0);transition:opacity 0.8s cubic-bezier(0.22,1,0.36,1),transform 0.8s cubic-bezier(0.22,1,0.36,1);transition-delay:calc(var(--reveal-i,0)*85ms);backface-visibility:hidden}
+  .reveal.in{opacity:1;transform:translate3d(0,0,0)}
+  header.hero > *:not(.blob):not(.hero-grid){opacity:0;transform:translate3d(0,22px,0)}
+  header.hero .hero-grid > *{opacity:0;transform:translate3d(0,22px,0)}
+  header.hero.hero-ready > *:not(.blob):not(.hero-grid),header.hero.hero-ready .hero-grid > *{opacity:1;transform:translate3d(0,0,0);transition:opacity 0.85s cubic-bezier(0.22,1,0.36,1),transform 0.85s cubic-bezier(0.22,1,0.36,1)}
+  header.hero.hero-ready > .eyebrow{transition-delay:0.04s}
+  header.hero.hero-ready > h1{transition-delay:0.1s}
+  header.hero.hero-ready > p,header.hero.hero-ready > .lede{transition-delay:0.16s}
+  header.hero.hero-ready > .intro,header.hero.hero-ready > .notice,header.hero.hero-ready > .quote{transition-delay:0.14s}
+  header.hero.hero-ready > .cta-row{transition-delay:0.24s}
+  nav.top{transition:box-shadow 0.35s ease,background-color 0.35s ease}
+  nav.top.is-scrolled{box-shadow:0 6px 28px rgba(37,18,56,0.1)}
+  .svc,.tier,.stat,.val,.who-card,.vmv-card,.model,.step,.ic-card,.pick,.stp,.way,.cost,.card,.cat,.q,.partner-list,.hero-card,.quote-card,.build,.glance,.pull,.banner-visual,.gallery-item{transition:transform 0.4s cubic-bezier(0.22,1,0.36,1),box-shadow 0.4s ease,border-color 0.35s ease}
+  .svc:hover,.tier:hover,.stat:hover,.val:hover,.who-card:hover,.vmv-card:hover,.model:hover,.step:hover,.ic-card:hover,.pick:hover,.stp:hover,.way:hover,.cost:hover,.card:hover,.cat:hover,.partner-list:hover,form.contact:hover,form.book:hover,.hero-card:hover,.quote-card:hover,.build:hover{transform:translate3d(0,-8px,0);box-shadow:0 16px 40px rgba(37,18,56,0.12),0 4px 12px rgba(76,184,148,0.08);border-color:color-mix(in srgb,var(--primary,#4CB894) 35%,var(--border,#e2ede4) 65%)}
+  .tier.highlight:hover{border-color:color-mix(in srgb,var(--purple,#421f66) 40%,var(--border,#e2ede4) 60%)}
+  .btn,.nav-cta,.submit,.btn-on-light,.btn-light,.btn-outline-white,.btn-on-dark,.btn-on-white,.btn-ghost-outline{transition:transform 0.28s cubic-bezier(0.22,1,0.36,1),box-shadow 0.28s ease,background 0.2s ease,color 0.2s ease,border-color 0.2s ease}
+  .btn:hover,.nav-cta:hover,.submit:hover,.btn-on-light:hover,.btn-light:hover,.btn-outline-white:hover,.btn-on-dark:hover,.btn-on-white:hover,.btn-ghost-outline:hover{transform:translate3d(0,-3px,0);box-shadow:0 10px 24px rgba(37,18,56,0.14)}
+  .btn:active,.nav-cta:active,.submit:active{transform:translate3d(0,-1px,0)}
+  nav.top .links a{position:relative;transition:color 0.25s ease}
+  nav.top .links a::after{content:"";position:absolute;left:0;bottom:2px;width:100%;height:2px;background:var(--primary,#4CB894);transform:scaleX(0);transform-origin:left;transition:transform 0.3s cubic-bezier(0.22,1,0.36,1)}
+  nav.top .links a:hover::after{transform:scaleX(1)}
+  details.q{transition:border-color 0.3s ease,box-shadow 0.35s ease,transform 0.35s ease}
+  details.q:hover{box-shadow:0 8px 24px rgba(37,18,56,0.08)}
+  details.q[open]{box-shadow:0 10px 28px rgba(76,184,148,0.1)}
+  details.q summary{transition:color 0.25s ease}
+  .section-head.reveal.in .eyebrow{animation:nawiri-fade-in 0.6s ease 0.1s both}
+  .section-head.reveal.in .heading-display{animation:nawiri-fade-in 0.7s ease 0.15s both}
+  @keyframes nawiri-fade-in{from{opacity:0;transform:translate3d(0,12px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+  .banner-visual.is-visible{animation:nawiri-banner-in 1s cubic-bezier(0.22,1,0.36,1) both}
+  @keyframes nawiri-banner-in{from{opacity:0.85;transform:scale(1.02)}to{opacity:1;transform:scale(1)}}
+  @media(max-width:880px){
+    .reveal{transform:translate3d(0,20px,0)}
+    .svc:hover,.tier:hover,.stat:hover,.val:hover,.who-card:hover,.vmv-card:hover,.model:hover,.step:hover,.ic-card:hover,.pick:hover,.stp:hover,.way:hover,.cost:hover,.card:hover,.cat:hover,.partner-list:hover,form.contact:hover,form.book:hover,.hero-card:hover,.quote-card:hover,.build:hover{transform:translate3d(0,-5px,0)}
+  }
+  @media(hover:none),(pointer:coarse){
+    .svc:active,.tier:active,.stat:active,.val:active,.who-card:active,.vmv-card:active,.model:active,.step:active,.ic-card:active,.pick:active,.stp:active,.way:active,.cost:active,.card:active,.cat:active,.partner-list:active,form.contact:active,form.book:active,.hero-card:active,.quote-card:active,.build:active{transform:translate3d(0,-4px,0);box-shadow:0 12px 28px rgba(37,18,56,0.1)}
+    details.q:active{box-shadow:0 8px 24px rgba(37,18,56,0.08)}
+  }
+}
+</style>
+</head>
+<body>
+
+<nav class="top"><div class="wrap">
+  <a href="/home.html" class="brand"><img class="brand-logo" src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_320,f_auto,q_auto/v1779775193/nawiri_logo_v8dqxt.jpg" width="320" height="320" alt="Nawiri Akili · Care Africa" decoding="async" /></a>
+  <button class="burger" onclick="document.querySelector('.links').classList.toggle('open')">&#9776;</button>
+  <div class="links"><a href="/home.html">Home</a><a href="/about.html">About</a><a href="/services.html">Services</a><a href="/initiative.html">Nawiri Akili Initiative</a><a href="/walk-with-us.html">Walk With Us</a><a href="/blog.html">Blog</a><a href="/contact.html">Contact</a></div>
+  <a href="#give" class="nav-cta">&#10084; Give Now</a>
+</div></nav>
+
+<section class="hero hero-bg hero-bg--soft">
+  <div class="quote">"Somewhere right now, someone needs help they cannot afford. <span class="em">Your support changes that.</span>"</div>
+  <p class="sub">Walk with us. There is no right way to give. There is only giving.</p>
+</section>
+
+<section class="section-crisis-info">
+  <div class="reality reveal">
+    <span class="eyebrow eyebrow--purple">The Reality We Are Changing</span>
+    <h2 class="heading-display">Mental health care shouldn't cost someone their chance at it.</h2>
+    <p>Over 1 billion people worldwide are living with a mental health condition. Most will never receive care, not because care does not exist, but because it is out of reach. In coastal Kenya, in Kilifi, this is not a distant statistic. It is a person sitting with their pain, alone, because they cannot afford to go anywhere.</p>
+    <p>The Nawiri Akili Initiative was built to close that gap. Community sponsorships and professional revenue are the engine. Every contribution is allocated directly to free care, school programs, and community outreach.</p>
+  </div>
+</section>
+
+<section class="costs">
+  <div style="text-align:center;max-width:1000px;margin:0 auto 50px" class="reveal">
+    <span class="eyebrow">What Care Actually Costs</span>
+    <h2 class="heading-display" style="margin-top:18px">Here is what your support unlocks</h2>
+    <p style="color:var(--body);font-weight:300">These are real costs, not aspirational figures. Small amounts have real consequences here.</p>
+  </div>
+  <div class="costs-grid">
+    <div class="cost reveal"><div class="amt">KSh 1,000</div><div class="usd">approx. $8 per session</div><h4>One free therapy session</h4><p>One person receives a complete free individual therapy session. Professional, evidence-based, confidential support. One hour that can change the direction of a life.</p></div>
+    <div class="cost reveal"><div class="amt">KSh 5,000</div><div class="usd">approx. $38 per workshop</div><h4>A school workshop</h4><p>A full psychoeducation session delivered in a school, reaching 20–50 students with mental health awareness and the language to speak about what they feel.</p></div>
+    <div class="cost reveal"><div class="amt">KSh 10,000</div><div class="usd">approx. $77 per month of care</div><h4>One month of subsidised care</h4><p>One person supported through a full month of subsidised therapy: initial consultation, ongoing sessions, and a follow-up check-in. Sustained care.</p></div>
+    <div class="cost reveal"><div class="amt">KSh 20,000</div><div class="usd">approx. $154 community outreach</div><h4>A community campaign</h4><p>A community awareness campaign reaching families, faith communities, and opinion leaders, reducing stigma at its source, where it actually lives.</p></div>
+  </div>
+  <div class="nopressure reveal">We are not asking you to solve the crisis. We are asking you to cover the cost of one person's care. That is enough to begin.</div>
+</section>
+
+<section style="background:var(--tint)">
+  <div style="text-align:center;max-width:1000px;margin:0 auto 50px" class="reveal">
+    <span class="eyebrow">Three Ways to Be Part of This</span>
+    <h2 class="heading-display" style="margin-top:18px">Walk with us</h2>
+    <p style="color:var(--body);font-weight:300">There is no right way to give. There is only giving. Whether you offer sponsorship, lend support, bring your skills, or partner as an organisation. Every form of support extends care to someone who needs it.</p>
+  </div>
+  <div class="three">
+    <div class="way reveal"><div class="ic">&#10084;</div><h3>Give</h3><p>Sponsor or support free care directly. Each act of support helps the moment when someone gets the help they could not afford.</p></div>
+    <div class="way reveal"><div class="ic">&#129309;</div><h3>Partner</h3><p>Build with us as an organisation, school, foundation, or CSR program. Long-term commitment, shared impact.</p></div>
+    <div class="way reveal"><div class="ic">&#129375;</div><h3>Volunteer</h3><p>Bring your skills. We are early. We need people who care, who show up, who want to be part of this.</p></div>
+  </div>
+</section>
+
+<section id="give" style="background:var(--purple-tint)">
+  <div style="text-align:center;max-width:1000px;margin:0 auto 50px" class="reveal">
+    <span class="eyebrow eyebrow--purple">Give: Individual sponsorship &amp; support</span>
+    <h2 class="heading-display" style="margin-top:18px">Every contribution has a name behind it</h2>
+    <p style="color:var(--body);font-weight:300"></p>
+  </div>
+  <div class="tiers">
+    <div class="tier reveal"><div class="amt">KSh 1,000</div><div class="usd">approx. $8</div><div class="label">First Step</div><div class="what">One person receives a complete free therapy session. Potentially the first honest conversation in years.</div></div>
+    <div class="tier reveal"><div class="amt">KSh 5,000</div><div class="usd">approx. $38</div><div class="label">A School Heard</div><div class="what">A full school mental health workshop reaching 20–50 young people who may never have had the language for what they feel.</div></div>
+    <div class="tier reveal"><div class="amt">KSh 10,000</div><div class="usd">approx. $77</div><div class="label">Ten Lives Reached</div><div class="what">Ten people access professional care this month because of your contribution.</div></div>
+    <div class="tier reveal"><div class="amt">KSh 20,000</div><div class="usd">approx. $154</div><div class="label">A Month of Bloom</div><div class="what">A full month of free community care: sessions, school visits, and outreach.</div></div>
+  </div>
+  <div style="max-width:600px;margin:30px auto 0" class="reveal">
+    <div class="tier highlight" style="padding:2rem;border-radius:12px;border:0.5px solid var(--border)">
+      <div class="label">Your Choice</div>
+      <div class="amt" style="margin:8px 0">Your amount</div>
+      <div class="usd"><em>Any currency</em></div>
+      <div class="what">Whatever you give closes the gap. There is no amount too small when the alternative is nothing at all.</div>
+      <input type="number" placeholder="Enter amount (KSh / USD)" style="margin-top:18px;width:100%;padding:14px 16px;border-radius:8px;border:0.5px solid var(--border);font-size:15px;font-family:'Nunito',sans-serif" />
+      <button class="btn btn-green" style="margin-top:14px;width:100%;justify-content:center" onclick="alert('Thank you. We will follow up via email with payment details.')">Give Now &#8594;</button>
+    </div>
+  </div>
+  <div class="pay">M-Pesa &middot; Bank transfer &middot; Card payments (via Paystack) &middot; International transfers via PayPal &middot; All currencies welcome<br><span style="font-size:13px;opacity:0.9">All contributions are tracked independently and used exclusively for free care, school programs, and community outreach. Every sponsor of KSh 1,000 or more receives a personal update on how their contribution was used. Funds are managed by Nawiri Akili-Care Africa on behalf of the Initiative while CBO registration is in progress.</span></div>
+</section>
+
+<section>
+  <div style="text-align:center;max-width:1000px;margin:0 auto 50px" class="reveal">
+    <span class="eyebrow">Partner: Organisational Support</span>
+    <h2 class="heading-display" style="margin-top:18px">Building with people who believe care should reach everyone</h2>
+    <p style="color:var(--body);font-weight:300">Partnership with Nawiri is a shared commitment to access. We work with organisations ready to move beyond statements about mental health into action.</p>
+  </div>
+  <div class="grid2">
+    <div class="card reveal"><h4>Corporate Social Responsibility</h4><p>Fund free care through your CSR program. We provide transparent reporting on sessions made possible through your sponsorship, communities reached, and people supported. Annual commitments, campaign-based support, or matched staff contributions.</p><div class="skills">Impact reports &middot; Acknowledgement &middot; Co-branded visibility &middot; Community event invitations</div></div>
+    <div class="card reveal"><h4>Institutional &amp; Foundation Funding</h4><p>We welcome grant funding, programme partnerships, and multi-year institutional commitments. A full funding proposal, theory of change documentation, and outcome frameworks are available on request.</p><div class="skills">Funding brief &middot; Theory of change &middot; Outcome frameworks &middot; Progress reports &middot; Learning documentation</div></div>
+    <div class="card reveal"><h4>School &amp; Community Partnerships</h4><p>For schools and community organisations who want to embed mental health programs. We co-design with you, support your team, and build something the community owns.</p><div class="skills">Needs assessment &middot; Program design &middot; Facilitator support &middot; Ongoing guidance &middot; Evaluation</div></div>
+  </div>
+  <p style="text-align:center;margin-top:40px;color:var(--body);font-weight:300">To start a partnership conversation: <a href="mailto:hello@nawiriakili.co.ke" style="color:var(--primary);font-weight:600">hello@nawiriakili.co.ke</a></p>
+</section>
+
+<section style="background:var(--tint)">
+  <div style="text-align:center;max-width:1000px;margin:0 auto 50px" class="reveal">
+    <span class="eyebrow">Volunteer: Bring Your Skills</span>
+    <h2 class="heading-display" style="margin-top:18px">We are early. We need people who believe in this.</h2>
+    <p style="color:var(--body);font-weight:300">We are looking for people who care, who show up, and who want to be part of something that matters.</p>
+  </div>
+  <div class="grid2">
+    <div class="card reveal"><h4>Mental Health Education &amp; Awareness</h4><p>Help develop and deliver mental health education for schools, communities, and online platforms. Facilitate awareness sessions, create content, or support workshop design.</p><div class="skills">Skills helpful: Psychology, counselling, community education, facilitation, content writing</div></div>
+    <div class="card reveal"><h4>Communications &amp; Storytelling</h4><p>Help tell the story of Nawiri through social media, writing, photography, or design. We are building a brand that needs to feel human, warm, and credible.</p><div class="skills">Skills helpful: Writing, design, social media, photography, videography</div></div>
+    <div class="card reveal"><h4>Community Outreach &amp; Mobilisation</h4><p>Help us reach communities in Kilifi and beyond, connecting us to schools, faith leaders, and local organisations, or supporting community events.</p><div class="skills">Skills helpful: Community work, local networks, event coordination, Swahili fluency a plus</div></div>
+    <div class="card reveal"><h4>Fundraising &amp; Donor Relations</h4><p>Help identify funders, write grant applications, or manage donor relationships.</p><div class="skills">Skills helpful: Grant writing, fundraising, donor relations, nonprofit management</div></div>
+    <div class="card reveal"><h4>Technology &amp; Digital</h4><p>Help build and maintain our digital presence: website, booking tools, or virtual access systems.</p><div class="skills">Skills helpful: Web development, UX, digital tools, systems thinking</div></div>
+    <div class="card reveal"><h4>Have a skill we have not listed?</h4><p>Tell us anyway. We are a new organisation and do not yet know everything we need. If you believe in this mission. Reach out.</p><div class="skills">Skills helpful: Anything that serves the mission</div></div>
+  </div>
+  <p style="text-align:center;margin-top:40px;color:var(--body);font-weight:300"><strong>To volunteer:</strong> Send a short message to <a href="mailto:hello@nawiriakili.co.ke" style="color:var(--primary);font-weight:600">hello@nawiriakili.co.ke</a> telling us who you are, what you can offer, and why Nawiri matters to you.</p>
+</section>
+
+<section>
+  <div style="text-align:center;max-width:1000px;margin:0 auto 50px" class="reveal">
+    <span class="eyebrow">Where Your Support Goes</span>
+    <h2 class="heading-display" style="margin-top:18px">Transparent. Accountable. Impact-first.</h2>
+    <p style="color:var(--body);font-weight:300">Every contribution has one purpose: getting care to people who cannot afford it.</p>
+  </div>
+  <div class="alloc">
+    <div class="reveal">
+      <div class="bar"><span class="label">Free therapy sessions</span><span class="pct">45%</span></div>
+      <div class="bar"><span class="label">School programs &amp; youth outreach</span><span class="pct">25%</span></div>
+      <div class="bar"><span class="label">Community awareness &amp; stigma work</span><span class="pct">20%</span></div>
+      <div class="bar"><span class="label">Coordination &amp; operations</span><span class="pct">10%</span></div>
+    </div>
+    <div class="reveal">
+      <div style="position:relative;width:260px;height:260px;margin:0 auto" id="donut">
+        <svg viewBox="0 0 36 36" style="width:100%;height:100%;transform:rotate(-90deg)">
+          <circle cx="18" cy="18" r="15.9155" fill="none" stroke="var(--border)" stroke-width="3.2"/>
+          <circle cx="18" cy="18" r="15.9155" fill="none" stroke="#4CB894" stroke-width="3.2" stroke-dasharray="45 100"/>
+          <circle cx="18" cy="18" r="15.9155" fill="none" stroke="#3A9A7A" stroke-width="3.2" stroke-dasharray="25 100" stroke-dashoffset="-45"/>
+          <circle cx="18" cy="18" r="15.9155" fill="none" stroke="#421f66" stroke-width="3.2" stroke-dasharray="20 100" stroke-dashoffset="-70"/>
+          <circle cx="18" cy="18" r="15.9155" fill="none" stroke="#1565a8" stroke-width="3.2" stroke-dasharray="10 100" stroke-dashoffset="-90"/>
+        </svg>
+        <div style="position:absolute;inset:0;display:grid;place-items:center;text-align:center"><div><div style="font-family:'DM Serif Display',serif;font-size:40px;font-weight:400;color:var(--brand-dark)">100%</div><div style="font-size:13px;color:var(--body)">to the mission</div></div></div>
+      </div>
+      <p style="text-align:center;margin-top:24px;color:var(--body);font-size:15px;font-weight:300">We publish an annual impact report. Donors of KSh 5,000 (approx. $38) or more receives a personal update on how their support was used.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Nawiri in the Community ── -->
+<section style="background:var(--tint)">
+  <div class="community-gallery">
+
+    <div class="gallery-intro reveal">
+      <span class="eyebrow">Nawiri in the Community</span>
+      <h2 class="heading-display">These are the moments this work is built for.</h2>
+      <p>
+        A glimpse of the Nawiri Akili Initiative in action: in schools,
+        communities, and the spaces where mental health support is needed most.
+        Photos are updated as the Initiative's work grows. Each image carries a
+        one-line caption describing the moment.
+      </p>
+    </div>
+
+    <div class="gallery-grid">
+
+      <!-- Image 1 -->
+      <div class="gallery-item reveal">
+        <figure>
+          <img 
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
+            alt="School outreach session"
+            class="gallery-image"
+          >
+        </figure>
+        <figcaption>School outreach session</figcaption>
+      </div>
+
+      <!-- Image 2 -->
+      <div class="gallery-item reveal">
+        <figure>
+          <img 
+            src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop"
+            alt="Community awareness event"
+            class="gallery-image"
+          >
+        </figure>
+        <figcaption>Community awareness event</figcaption>
+      </div>
+
+      <!-- Image 3 -->
+      <div class="gallery-item reveal">
+        <figure>
+          <img 
+            src="https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?q=80&w=1200&auto=format&fit=crop"
+            alt="Safe space session"
+            class="gallery-image"
+          >
+        </figure>
+        <figcaption>Safe space session</figcaption>
+      </div>
+
+    </div>
+
+    <div class="gallery-closing reveal">
+      "When one mind flourishes, the whole community grows with it."
+    </div>
+
+  </div>
+</section>
+
+<section class="final final-bg">
+  <h2>When one mind flourishes, <span class="green">the whole community grows with it.</span></h2>
+  <p>You do not need to solve the crisis. You just need to show up for one person.<br><strong style="color:#fff">Walk with us.</strong></p>
+  <div class="cta-row final-ctas">
+    <a href="#give" class="btn btn-green">&#10084; Give Now</a>
+    <a href="/contact.html" class="btn-light">Partner With Us</a>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div><div class="foot-brand">Nawiri Akili-Care Africa</div><p style="font-style:italic;color:#D4F0E6;margin-bottom:14px">Nurturing Minds, Transforming Communities</p><p style="font-size:15px;font-weight:300">"Nawiri" means to bloom.</p></div>
+    <div><h5>Explore</h5><ul><li><a href="/home.html">Home</a></li><li><a href="/about.html">About Us</a></li><li><a href="/services.html">Services</a></li><li><a href="/initiative.html">Nawiri Akili Initiative</a></li><li><a href="/blog.html">Blog &amp; Insights</a></li></ul></div>
+    <div><h5>Take Action</h5><ul><li><a href="/book.html">Book a Session</a></li><li><a href="/walk-with-us.html">&#128155; Walk With Us</a></li><li><a href="/contact.html">Partner With Us</a></li><li><a href="/walk-with-us.html">Volunteer</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
+    <div><h5>Services</h5><ul><li>Individual Therapy</li><li>Family Therapy</li><li>Group Therapy</li><li>Organisational Wellness</li><li>Virtual Care</li><li>Subsidised or Free Care</li></ul></div>
+  </div>
+  <div class="copy">&copy; 2026 Nawiri Akili-Care Africa &middot; Kilifi, Kenya &middot; Confidential &middot; Compassionate &middot; Accessible</div>
+</footer>
+
+<script>
+function nawiriUpload(input, idx) {
+  if (!input.files || !input.files[0]) return;
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    var figure = document.getElementById('gfig-' + idx);
+    if (!figure) return;
+    var img = document.createElement('img');
+    img.src = e.target.result;
+    img.alt = '';
+    var overlay = document.createElement('div');
+    overlay.className = 'upload-placeholder';
+    overlay.style.cssText = 'background:rgba(30,74,58,0.52);opacity:0;transition:opacity 0.3s ease;';
+    var replaceInput = document.createElement('input');
+    replaceInput.type = 'file';
+    replaceInput.accept = 'image/*';
+    replaceInput.setAttribute('aria-label', 'Replace photo');
+    replaceInput.onchange = function() { nawiriUpload(replaceInput, idx); };
+    overlay.innerHTML = '<div class="upload-icon" style="background:rgba(255,255,255,0.9)">&#128260;</div><span class="upload-label" style="color:#fff">Replace photo</span>';
+    overlay.appendChild(replaceInput);
+    figure.addEventListener('mouseenter', function() { overlay.style.opacity = '1'; });
+    figure.addEventListener('mouseleave', function() { overlay.style.opacity = '0'; });
+    figure.innerHTML = '';
+    figure.appendChild(img);
+    figure.appendChild(overlay);
+  };
+  reader.readAsDataURL(input.files[0]);
+}
+</script>
+
+<script id="nawiri-animations-js">
+(function(){
+  "use strict";
+  var reduced=window.matchMedia("(prefers-reduced-motion:reduce)").matches;
+  var mobileMq=window.matchMedia("(max-width:880px)");
+  var coarseMq=window.matchMedia("(pointer:coarse)");
+  function isMob(){return mobileMq.matches||coarseMq.matches}
+  function revealIn(el,obs){el.classList.add("in");if(obs)obs.unobserve(el)}
+  function inVP(el){
+    var r=el.getBoundingClientRect(),vh=window.innerHeight||document.documentElement.clientHeight,edge=isMob()?12:40;
+    return r.top<vh-edge&&r.bottom>edge;
+  }
+  var nav=document.querySelector("nav.top");
+  if(nav){
+    var onScroll=function(){nav.classList.toggle("is-scrolled",window.scrollY>20)};
+    onScroll();window.addEventListener("scroll",onScroll,{passive:true});
+  }
+  var hero=document.querySelector("header.hero");
+  if(hero){
+    var rh=function(){hero.classList.add("hero-ready")};
+    if(reduced){rh()}else{requestAnimationFrame(function(){requestAnimationFrame(rh)})}
+    window.addEventListener("pageshow",function(e){if(e.persisted)rh()},{passive:true});
+  }
+  var reveals=document.querySelectorAll(".reveal");
+  if(reduced){reveals.forEach(function(el){el.classList.add("in")});return}
+  reveals.forEach(function(el){
+    var p=el.parentElement;
+    if(p){
+      var sibs=Array.prototype.filter.call(p.children,function(c){return c.classList&&c.classList.contains("reveal")});
+      var i=sibs.indexOf(el);
+      if(i>=0)el.style.setProperty("--reveal-i",String(i));
+    }
+  });
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){if(!entry.isIntersecting)return;revealIn(entry.target,io)});
+  },{threshold:isMob()?0.05:0.1,rootMargin:isMob()?"0px":"0px 0px -50px 0px"});
+  reveals.forEach(function(el){if(inVP(el)){revealIn(el,io)}else{io.observe(el)}});
+  var rt;
+  window.addEventListener("resize",function(){
+    clearTimeout(rt);rt=setTimeout(function(){
+      reveals.forEach(function(el){if(!el.classList.contains("in")&&inVP(el))revealIn(el,io)});
+    },120);
+  },{passive:true});
+  window.addEventListener("orientationchange",function(){
+    setTimeout(function(){reveals.forEach(function(el){if(!el.classList.contains("in")&&inVP(el))revealIn(el,io)})},200);
+  },{passive:true});
+  document.querySelectorAll(".banner-visual").forEach(function(banner){
+    if(inVP(banner)){banner.classList.add("is-visible");return}
+    var bIo=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add("is-visible");bIo.unobserve(e.target)}});
+    },{threshold:isMob()?0.08:0.2});
+    bIo.observe(banner);
+  });
+})();
+</script>
+
+</body>
+</html>

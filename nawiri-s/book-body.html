@@ -1,0 +1,78 @@
+<nav class="top"><div class="wrap">
+  <a href="/" class="brand"><img class="brand-logo" src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_320,f_auto,q_auto/v1779775193/nawiri_logo_v8dqxt.jpg" width="320" height="320" alt="Nawiri Akili · Care Africa" decoding="async" /></a>
+  <button class="burger" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
+  <div class="links"><a href="/">Home</a><a href="/about/">About</a><a href="/services/">Services</a><a href="/initiative/">Nawiri Akili Initiative</a><a href="/walk-with-us/">Walk With Us</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a></div>
+  <a href="#book" class="nav-cta">↓ Book Now</a>
+</div></nav>
+
+<section class="hero hero-bg hero-bg--soft">
+  <span class="eyebrow">Book a Session</span>
+  <h1>Your journey to <span class="grad">wellness starts here.</span></h1>
+  <p>Your first step does not need to be perfect. It just needs to be a step. We will meet you exactly where you are, without judgment, without pressure, without conditions.</p>
+</section>
+
+<section>
+  <div class="steps">
+    <div class="stp reveal"><div class="n">1</div><h3>Choose</h3><p>Individual, family, group, consultation, or virtual. Or tell us you are not sure yet. That is a perfectly fine place to start.</p></div>
+    <div class="stp reveal"><div class="n">2</div><h3>Schedule</h3><p>Pick a time. In-person in Kilifi or online from anywhere in Kenya or internationally.</p></div>
+    <div class="stp reveal"><div class="n">3</div><h3>Begin</h3><p>One conversation. That is where it begins.</p></div>
+  </div>
+</section>
+
+<section style="background:var(--tint)">
+  <div style="text-align:center;max-width:1000px;margin:0 auto 50px" class="reveal">
+    <span class="eyebrow">Available Services</span>
+    <h2 class="heading-display" style="margin-top:18px">Choose what feels right</h2>
+  </div>
+  <div class="svcs" id="book-services">
+    <div class="pick reveal" role="button" tabindex="0" data-svc="Individual therapy" aria-pressed="false"><figure class="svc-thumb"><img src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_800,f_auto,q_auto/v1779772368/individual_therapy_hn3wkr.jpg" alt="" width="640" height="400" loading="lazy" decoding="async" /></figure><h4>Individual Therapy</h4><p>Evidence-based one-on-one support. In-person or virtual.</p><div class="meta">Anxiety · Trauma · Depression · Burnout · Life transitions</div></div>
+    <div class="pick reveal" role="button" tabindex="0" data-svc="Family therapy" aria-pressed="false"><figure class="svc-thumb"><img src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_800,f_auto,q_auto/v1779772868/family_therapy_rimzcm.png" alt="" width="640" height="400" loading="lazy" decoding="async" /></figure><h4>Family Therapy</h4><p>Support for family systems navigating conflict, grief, or significant change.</p><div class="meta">Family systems · Communication · Intergenerational</div></div>
+    <div class="pick reveal" role="button" tabindex="0" data-svc="Group therapy" aria-pressed="false"><figure class="svc-thumb"><img src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_800,f_auto,q_auto/v1779772362/mental_health_services_kakmfs.jpg" alt="" width="640" height="400" loading="lazy" decoding="async" /></figure><h4>Group Therapy</h4><p>Professionally facilitated groups for shared experiences.</p><div class="meta">Grief · Anxiety · Trauma · Transitions</div></div>
+    <div class="pick reveal" role="button" tabindex="0" data-svc="Organisational consultation" aria-pressed="false"><figure class="svc-thumb"><img src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_800,f_auto,q_auto/v1779772363/physchology_gqdo9y.png" alt="" width="640" height="400" loading="lazy" decoding="async" /></figure><h4>Psychological Consultation</h4><p>Mental health expertise for organisations, schools, and institutions.</p><div class="meta">Program design · Supervision · Institutional wellness</div></div>
+    <div class="pick reveal" role="button" tabindex="0" data-svc="Virtual session" aria-pressed="false"><figure class="svc-thumb"><img src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_800,f_auto,q_auto/v1779772368/virtual_therapy_tclaeb.jpg" alt="" width="640" height="400" loading="lazy" decoding="async" /></figure><h4>Virtual Session</h4><p>Online from anywhere: Kenya or internationally. All services available.</p><div class="meta">Flexible · Secure · All services</div></div>
+    <div class="pick free reveal" role="button" tabindex="0" data-svc="Subsidised or free care" aria-pressed="false"><figure class="svc-thumb"><img src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_800,f_auto,q_auto/v1779772865/subsidised_free_care_k94ctw.png" alt="" width="640" height="400" loading="lazy" decoding="async" /></figure><h4>Subsidised or Free Support</h4><p><strong>Cannot afford care?</strong> We will find a way. Subsidised and free sessions are available through the Initiative. No one is turned away.</p><div class="meta">Free sessions · Subsidised care · Emergency support · No barriers</div></div>
+  </div>
+</section>
+
+<section id="book" class="form-wrap">
+  <form class="book reveal" onsubmit="event.preventDefault();this.innerHTML='<h2 style=&quot;color:var(--primary);text-align:center&quot;>Thank you ✓</h2><p style=&quot;text-align:center;color:var(--body)&quot;>We will be in touch within 24–48 hours. All information shared is strictly confidential.</p>'">
+    <h2>Booking Form</h2>
+    <p class="sub">All information shared is strictly confidential.</p>
+    <div class="field"><label>Full name</label><input type="text" required placeholder="Your name"></div>
+    <div class="field"><label>Email address</label><input type="email" required placeholder="you@example.com"></div>
+    <div class="field"><label>Phone number <span style="opacity:0.7">(optional)</span></label><input type="tel" placeholder="+254 ..."></div>
+    <div class="field"><label>Service</label>
+      <select id="svc" required>
+        <option value="">Select a service…</option>
+        <option>Individual therapy</option>
+        <option>Family therapy</option>
+        <option>Group therapy</option>
+        <option>Organisational consultation</option>
+        <option>Virtual session</option>
+        <option>Subsidised or free care</option>
+        <option>I would like to support the Initiative</option>
+        <option>Not sure yet</option>
+      </select>
+    </div>
+    <div class="field"><label>Tell us a little about what you are looking for <span style="opacity:0.7">(optional, no wrong answer)</span></label><textarea placeholder="Anything you'd like us to know..."></textarea></div>
+    <div class="field"><label>Preferred contact method</label>
+      <div class="radio-row">
+        <label><input type="radio" name="contact" checked><span>📧 Email</span></label>
+        <label><input type="radio" name="contact"><span>💬 WhatsApp</span></label>
+        <label><input type="radio" name="contact"><span>📞 Phone call</span></label>
+      </div>
+    </div>
+    <button type="submit" class="submit">Request Booking →</button>
+    <p class="note">All information shared is strictly confidential. We will be in touch within 24–48 hours.</p>
+  </form>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div><div class="foot-brand">Nawiri Akili-Care Africa</div><p style="font-style:italic;color:#D4F0E6;margin-bottom:14px">Nurturing Minds, Transforming Communities</p><p style="font-size:15px;font-weight:300">"Nawiri" means to bloom.</p></div>
+    <div><h5>Explore</h5><ul><li><a href="/">Home</a></li><li><a href="/about/">About Us</a></li><li><a href="/services/">Services</a></li><li><a href="/initiative/">Nawiri Akili Initiative</a></li><li><a href="/blog/">Blog & Insights</a></li></ul></div>
+    <div><h5>Take Action</h5><ul><li><a href="/book/">Book a Session</a></li><li><a href="/walk-with-us/">💛 Walk With Us</a></li><li><a href="/contact/">Partner With Us</a></li><li><a href="/walk-with-us/">Volunteer</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+    <div><h5>Services</h5><ul><li>Individual Therapy</li><li>Family Therapy</li><li>Group Therapy</li><li>Organisational Wellness</li><li>Virtual Care</li><li>Subsidised or Free Care</li></ul></div>
+  </div>
+  <div class="copy">© 2026 Nawiri Akili-Care Africa · Kilifi, Kenya · Confidential · Compassionate · Accessible</div>
+</footer>

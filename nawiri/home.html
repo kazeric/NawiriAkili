@@ -1,0 +1,1507 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script id="nawiri-scroll-top">
+(function () {
+  if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+  }
+  window.scrollTo(0, 0);
+  window.addEventListener(
+    "pageshow",
+    function () {
+      window.scrollTo(0, 0);
+    },
+    { passive: true }
+  );
+})();
+</script>
+
+<meta charset="utf-8" />
+<title>Nawiri Akili · Nurturing Minds, Transforming Communities</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="description" content="Nawiri Akili-Care Africa and the Nawiri Akili Initiative: professional mental health care and community impact. Nurturing minds, transforming communities." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{font-size:17px}
+  :root{
+    --primary:#4CB894;--brand-dark:#3A9A7A;--brand-darkest:#1E4A3A;
+    --tint:#EDF8F2;--purple:#421f66;--purple-tint:#e4daee;--section-purple:#E8E0F5;
+    --blue:#1565a8;--blue-tint:#eaf4fd;
+    --white:#ffffff;--body:#4a5568;--border:#e2ede4;
+    --chip-green-bg:#C8EDE0;--chip-green-fg:#1A4536;
+    --chip-purple-bg:#d6cae6;--chip-purple-fg:#2f1748;
+    --chip-blue-bg:#dbeefe;--chip-blue-fg:#0c4a8a;
+    --purple-deep:#251238;--green:#4CB894;
+    --hero-image:url("https://images.unsplash.com/photo-1470058869978-29229b574965?ixlib=rb-4.1.0&auto=format&fit=crop&w=1920&q=80");
+    --banner-image:url("https://images.unsplash.com/photo-1593113598334-c2882886e479?auto=format&fit=crop&w=1600&q=80");
+    --final-bg:url("https://images.unsplash.com/photo-1448375240586-882707a8882e?auto=format&fit=crop&w=1920&q=80");
+  }
+  html,body{width:100%;overflow-x:hidden;background:var(--white);color:var(--body);font-family:'Nunito',system-ui,sans-serif;font-weight:400;line-height:1.8;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'DM Serif Display',serif;font-weight:400;color:var(--brand-darkest);line-height:1.22}
+  h1{font-size:clamp(2.5rem,3.2vw,3rem)}
+  h2{font-size:1.4rem}
+  h3{font-size:1.2rem}
+  h4{font-family:'Nunito',sans-serif;font-weight:600;font-size:1.0625rem;color:var(--brand-dark)}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  nav.top{position:sticky;top:0;z-index:50;width:100%;background:var(--white);border-bottom:0.5px solid var(--border)}
+  nav.top .wrap{max-width:100%;padding:1.15rem 2.75rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+  @media(max-width:640px){nav.top .wrap{padding:0.875rem 1.25rem}}
+  .brand{display:flex;align-items:center;gap:10px;font-family:'Nunito',sans-serif;font-weight:700;font-size:1.125rem;color:var(--brand-dark)}
+  .links{display:flex;gap:1.75rem;font-family:'Nunito',sans-serif;font-size:14px;font-weight:400}
+  .links a{position:relative;padding:6px 0;color:var(--body);transition:color .2s}
+  .links a:hover{color:var(--primary)}
+  .nav-cta{background:var(--primary);color:var(--white);padding:9px 22px;border-radius:100px;font-family:'Nunito',sans-serif;font-size:14px;font-weight:600}
+  .nav-cta:hover{background:var(--brand-dark)}
+  .burger{display:none;background:none;border:0;cursor:pointer;font-size:24px;color:var(--brand-dark)}
+  @media(max-width:880px){.links,.nav-cta{display:none}.burger{display:block}.links.open{display:flex;position:absolute;top:100%;left:0;right:0;background:var(--white);flex-direction:column;padding:1.25rem 2.5rem;gap:14px;border-bottom:0.5px solid var(--border)}}
+  @media(max-width:640px){.links.open{padding:1.25rem}}
+
+  .hero{position:relative;width:100%;min-height:0;display:flex;align-items:flex-start;overflow-x:hidden;overflow-y:visible;padding-block:clamp(1.25rem,2.5vh,2rem)}
+  .hero .blob{display:none}
+  .hero-grid{position:relative;z-index:2;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(1.75rem,4vw,3rem);align-items:start;padding:clamp(1.25rem,2vw,1.75rem) min(5vw,3.25rem)}
+  @media(max-width:980px){.hero-grid{grid-template-columns:1fr;padding:1.25rem 1.15rem}}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--chip-green-bg);color:var(--chip-green-fg);padding:9px 16px;border-radius:100px;font-family:'Nunito',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase}
+  .eyebrow .pulse-dot{display:none}
+  .eyebrow--purple{background:var(--chip-purple-bg);color:var(--chip-purple-fg)}
+  h1.headline{margin:1rem 0 0.875rem}
+  h1.headline .grad{color:color-mix(in srgb,var(--brand-dark) 72%,var(--purple) 28%);font-style:italic}
+  .lede{font-size:1.125rem;color:var(--body);max-width:38rem;font-weight:400}
+  .lede mark{background:var(--chip-green-bg);color:var(--chip-green-fg);font-weight:600;padding:0 4px;font-family:'Nunito',sans-serif}
+  .quote{margin-top:1.25rem;font-family:'DM Serif Display',serif;font-style:italic;font-size:1.25rem;color:var(--brand-dark)}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:1.5rem}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 30px;border-radius:100px;font-family:'Nunito',sans-serif;font-weight:700;font-size:15px;cursor:pointer;border:0;transition:background .2s,color .2s}
+  .btn-primary{background:var(--primary);color:var(--white)}
+  .btn-primary:hover{background:var(--brand-dark)}
+  .btn-green{background:var(--primary);color:var(--white)}
+  .btn-green:hover{background:var(--brand-dark)}
+  .btn-ghost{background:transparent;color:var(--purple);border:1.5px solid var(--purple);padding:12px 28px}
+  .btn-ghost:hover{background:var(--purple-tint)}
+  .btn.btn-ghost:hover{background:var(--purple-deep);color:var(--white);border-color:var(--purple-deep)}
+  .hero-card{position:relative;border-radius:20px;padding:2.5rem;background:rgba(255,255,255,0.96);color:var(--body);border:0.5px solid var(--border)}
+  .hero-card.hero-card--image-only{padding:0;background:transparent;border:0;border-radius:0;box-shadow:none;overflow:visible}
+  .hero-card::after{display:none}
+  .hero-card h3{color:var(--brand-darkest);font-size:1.2rem;margin-bottom:14px}
+  .hero-card p{color:var(--body);font-size:1.0625rem;font-weight:400;margin-bottom:1.5rem}
+  .hero-card .mini{display:flex;gap:10px;flex-wrap:wrap}
+  .chip{background:var(--chip-green-bg);border:0.5px solid var(--border);color:var(--chip-green-fg);padding:9px 15px;border-radius:100px;font-family:'Nunito',sans-serif;font-size:13px;font-weight:600}
+
+  .banner{width:100%;padding:4rem min(5vw,3.25rem);background-color:var(--blue-tint);color:var(--body);text-align:center;border-top:0.5px solid var(--border);border-bottom:0.5px solid var(--border);position:relative;isolation:isolate}
+  @media(max-width:640px){.banner{padding:2.85rem 1.35rem}}
+  .banner .icon{font-size:2.75rem;margin-bottom:1.25rem}
+  .banner h2{color:var(--blue);font-size:1.4rem;max-width:1100px;margin:0 auto 1.25rem;font-family:'DM Serif Display',serif}
+  .banner p{color:var(--body);max-width:40rem;margin:0 auto;font-size:1.125rem;font-weight:400}
+
+  .section-head{max-width:44rem;margin:0 auto 3.5rem;text-align:center}
+  .section-head .eyebrow{margin-bottom:1.15rem}
+  .section-head h2{margin-bottom:1rem}
+  .section-head p{color:var(--body);font-size:1.0625rem;font-weight:400}
+
+  .panel-grid{display:grid;gap:1.25rem;background:transparent;border:0;max-width:1400px;margin:0 auto}
+  .stat{padding:2rem 1.75rem;background:var(--white);text-align:left;border:0.5px solid var(--border);border-radius:18px}
+  .stat .num{font-family:'DM Serif Display',serif;font-size:clamp(1.875rem,3vw,2.25rem);font-weight:400;color:var(--primary);margin-bottom:10px;letter-spacing:-0.02em}
+  .stat .desc{font-size:1.0625rem;color:var(--body);margin-bottom:14px;line-height:1.75;font-weight:400}
+  .stat .src{font-size:12px;color:var(--body);text-transform:uppercase;letter-spacing:0.05em;font-weight:600;opacity:0.85}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;background:transparent;border:0;max-width:960px;margin:0 auto}
+  @media(max-width:900px){.stats{grid-template-columns:repeat(2,1fr)}}
+  .pull{margin:3rem auto 0;max-width:40rem;text-align:center;font-family:'DM Serif Display',serif;font-style:italic;font-size:1.25rem;color:var(--brand-dark);padding:2.25rem 1.75rem;line-height:1.55;background:color-mix(in srgb,var(--tint) 48%,var(--purple-tint) 52%);border-radius:18px;border:0.5px solid color-mix(in srgb,var(--border) 80%,var(--purple-tint) 20%);position:relative}
+  .pull::before,.pull::after{display:none}
+
+  .eco{background:var(--tint)}
+  .eco-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;background:transparent;border:0;max-width:1300px;margin:0 auto}
+  @media(max-width:880px){.eco-grid{grid-template-columns:1fr}}
+  .eco-card{padding:2.75rem 2.5rem;background:var(--white);border:0.5px solid var(--border);border-radius:18px}
+  .eco-card .pill{display:inline-block;padding:7px 15px;border-radius:100px;font-family:'Nunito',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:18px}
+  .eco-card.purple .pill{background:var(--chip-purple-bg);color:var(--chip-purple-fg)}
+  .eco-card.green .pill{background:var(--chip-green-bg);color:var(--chip-green-fg)}
+  .eco-card h3{font-size:1.1875rem;margin-bottom:14px}
+  .eco-card p{color:var(--body);font-weight:400;font-size:1.0625rem;line-height:1.75}
+
+  .pathway{display:flex;flex-direction:column;gap:1.15rem;max-width:920px;margin:0 auto;background:transparent;border:0}
+  .step{padding:1.85rem 1.65rem;background:var(--white);border:0.5px solid var(--border);border-radius:18px}
+  .step .n{font-family:'DM Serif Display',serif;font-size:2.75rem;font-weight:400;color:var(--primary);line-height:1}
+  .step h4{font-size:1.0625rem;margin:14px 0 10px;color:var(--brand-dark)}
+  .step p{font-size:1.0625rem;color:var(--body);line-height:1.75;font-weight:400}
+
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.35rem;background:transparent;border:0;max-width:1400px;margin:0 auto}
+  @media(max-width:980px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.svc-grid{grid-template-columns:1fr}}
+  .svc{padding:2.25rem 2rem;background:var(--white);border:0.5px solid var(--border);border-radius:18px;cursor:default}
+  .svc .ic{width:48px;height:48px;border-radius:10px;background:var(--tint);display:grid;place-items:center;font-size:22px;margin-bottom:18px;border:0.5px solid var(--border)}
+  .svc h4{font-size:1.1875rem;margin-bottom:12px;font-family:'DM Serif Display',serif;color:var(--brand-darkest)}
+  .svc p{color:var(--body);font-size:1.0625rem;font-weight:400;line-height:1.75}
+  .svc-cta-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px;margin-top:40px}
+  @media(max-width:640px){.svc-cta-row{flex-direction:column;gap:14px}}
+
+  .give{background:color-mix(in srgb,var(--purple-tint) 52%,var(--tint) 48%)}
+  .tiers{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.25rem;background:transparent;border:0;max-width:1300px;margin:0 auto;width:100%}
+  @media(max-width:900px){.tiers{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(max-width:640px){.tiers{grid-template-columns:minmax(0,1fr)}}
+  .tier{min-width:0;padding:2rem 1.75rem;background:var(--white);text-align:center;border:0.5px solid var(--border);border-radius:18px}
+  .tier .amt{font-family:'DM Serif Display',serif;font-size:clamp(1.5rem,2.5vw,1.875rem);font-weight:400;color:var(--brand-dark)}
+  .tier .usd{font-size:1rem;color:var(--body);margin:8px 0 1rem;font-weight:400}
+  .tier .what{font-size:1.0625rem;color:var(--body);font-weight:400;line-height:1.55}
+
+  .final{background-color:var(--brand-dark);color:var(--white);text-align:center;padding:4rem 2.5rem;position:relative;border-top:0.5px solid var(--border);isolation:isolate}
+  @media(max-width:640px){.final{padding:3rem 1.25rem}}
+  .final h2{color:var(--white);font-size:clamp(2.375rem,2.4vw,2.625rem);max-width:1000px;margin:0 auto 16px;position:relative;font-family:'DM Serif Display',serif}
+  .final h2 .green{color:var(--white);font-style:italic;font-weight:400}
+  .final p{color:rgba(255,255,255,0.92);max-width:40rem;margin:0 auto 36px;font-size:1.125rem;position:relative;font-weight:400;line-height:1.75}
+  .final .cta-row{justify-content:center}
+  .final .btn-ghost{color:var(--white);border-color:rgba(255,255,255,0.6)}
+  .final .btn-ghost:hover{background:rgba(255,255,255,0.1)}
+  .final .btn-on-light{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--white);color:var(--brand-dark);padding:12px 28px;border-radius:100px;font-family:'Nunito',sans-serif;font-weight:700;font-size:14px}
+  .final .btn-on-light:hover{background:var(--purple-deep);color:var(--white);border-color:var(--purple-deep)}
+
+  footer{background:var(--brand-darkest);color:#D4F0E6;width:100%;padding:3.5rem 2.5rem 2rem}
+  @media(max-width:640px){footer{padding:2.5rem 1.25rem 1.5rem}}
+  .foot-grid{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:50px}
+  @media(max-width:880px){.foot-grid{grid-template-columns:1fr 1fr}}
+  footer h5{color:var(--white);font-family:'Nunito',sans-serif;font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:18px}
+  footer ul{list-style:none}
+  footer li{margin-bottom:10px;font-size:1rem;font-weight:400}
+  footer a:hover{color:var(--white)}
+  footer .foot-brand{font-family:'Nunito',sans-serif;font-weight:700;font-size:1.25rem;color:var(--white);margin-bottom:12px}
+  footer .tag{font-style:italic;color:#D4F0E6;margin-bottom:14px;font-weight:400}
+  .copy{max-width:1400px;margin:3rem auto 0;padding-top:2rem;border-top:0.5px solid rgba(255,255,255,0.15);text-align:center;font-size:13px;color:rgba(255,255,255,0.65);font-weight:300}
+
+  .section--white{background:color-mix(in srgb,var(--tint) 42%,var(--section-purple) 58%)}
+  .section--tint{background:color-mix(in srgb,var(--tint) 56%,var(--purple-tint) 44%)}
+</style>
+<!-- build:css:start -->
+<style>
+/* Shared layout: nav band, section rhythm, hero/banner/final bands, components */
+/* Shared utilities — crisis/info strip + display headings (linked after design tokens in each page’s :root) */
+
+/* -------------------------------------------------------------------------- */
+/* Readability: slightly larger type, more line-height, roomier sections         */
+/* -------------------------------------------------------------------------- */
+html {
+  font-size: 17px;
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  line-height: 1.82;
+  font-weight: 400;
+}
+
+/* Default section rhythm (overrides first inline block when this file loads later) */
+section {
+  padding: 4.25rem min(5vw, 3.25rem);
+}
+
+@media (max-width: 640px) {
+  section {
+    padding: 2.85rem 1.35rem;
+  }
+}
+
+/*
+ * Nav: fixed bar height. Inner content height = --nav-bar-inner-h; logo height matches it exactly.
+ * Change --nav-bar-inner-h (and optionally --nav-pad-y) to resize bar + logo together.
+ */
+nav.top .wrap {
+  --nav-pad-y: 0.65rem;
+  /* Inner band = logo height; larger value = taller fixed bar + bigger logo (same rule) */
+  --nav-bar-inner-h: 3.875rem;
+  box-sizing: border-box;
+  padding-top: var(--nav-pad-y);
+  padding-bottom: var(--nav-pad-y);
+  height: calc(var(--nav-bar-inner-h) + 2 * var(--nav-pad-y));
+  min-height: calc(var(--nav-bar-inner-h) + 2 * var(--nav-pad-y));
+  max-height: calc(var(--nav-bar-inner-h) + 2 * var(--nav-pad-y));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+nav.top .links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(0.6rem, 1.2vw, 1.35rem);
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+nav.top .links a {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+nav.top .burger {
+  display: none;
+  flex-shrink: 0;
+}
+
+nav.top .nav-cta {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* Mobile: row nav + CTA hidden; burger opens full-width dropdown (needs nav.top .wrap position) */
+@media (max-width: 880px) {
+  nav.top .wrap {
+    position: relative;
+  }
+
+  nav.top .burger {
+    display: block;
+  }
+
+  nav.top .links:not(.open) {
+    display: none;
+  }
+
+  nav.top .nav-cta {
+    display: none;
+  }
+
+  nav.top .links.open {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 14px;
+    padding: 1.25rem min(2.5rem, 5vw);
+    margin: 0;
+    background: var(--white, #ffffff);
+    border-bottom: 0.5px solid var(--border, #e2ede4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  nav.top .links.open a {
+    white-space: normal;
+  }
+}
+
+/* Logo height === inner nav band (between vertical padding) */
+nav.top .brand {
+  gap: 0;
+  line-height: 0;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  height: var(--nav-bar-inner-h);
+}
+
+nav.top .brand .brand-logo {
+  display: block;
+  height: var(--nav-bar-inner-h);
+  width: auto;
+  max-height: var(--nav-bar-inner-h);
+  max-width: min(100%, 30rem);
+  object-fit: contain;
+  object-position: left center;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Brand mix: ~60% green family / ~40% purple (borders, overlays, accents)    */
+/* -------------------------------------------------------------------------- */
+
+nav.top {
+  border-bottom-color: color-mix(
+    in srgb,
+    color-mix(in srgb, var(--border, #e2ede4) 70%, var(--primary, #4CB894) 30%) 60%,
+    var(--purple, #421f66) 40%
+  );
+}
+
+nav.top .links a:hover {
+  color: color-mix(in srgb, var(--primary, #4CB894) 60%, var(--purple, #421f66) 40%);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Photography: hero / banner / closing band backgrounds                     */
+/* Set --hero-image, optional --banner-image / --final-bg per page in :root   */
+/* -------------------------------------------------------------------------- */
+
+.hero-bg {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--tint, #EDF8F2);
+  background-image: var(--hero-image, none);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: color-mix(
+    in srgb,
+    var(--hero-overlay, rgba(237, 248, 242, 0.72)) 60%,
+    rgba(66, 31, 102, 0.2) 40%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Slightly stronger overlay for text-heavy heroes (still lets photo show) */
+.hero-bg--soft::after {
+  background: color-mix(
+    in srgb,
+    var(--hero-overlay-strong, rgba(237, 248, 242, 0.78)) 60%,
+    rgba(66, 31, 102, 0.18) 40%
+  );
+}
+
+/* Initiative hero: still purple-forward, with explicit 60/40 green-violet / ink */
+.hero-bg--purple::after {
+  background: color-mix(
+    in srgb,
+    var(--hero-overlay-purple, rgba(245, 240, 252, 0.92)) 60%,
+    rgba(66, 31, 102, 0.28) 40%
+  );
+}
+
+/* Banner strip: optional background photo under blue tint */
+.banner-visual {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--blue-tint, #eaf4fd);
+  background-image: var(--banner-image, none);
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: color-mix(
+    in srgb,
+    var(--banner-overlay, rgba(234, 244, 253, 0.92)) 60%,
+    rgba(66, 31, 102, 0.16) 40%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+.banner-visual > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Dark CTA band with optional texture */
+.final-bg {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--brand-dark, #3A9A7A);
+  background-image: var(--final-bg, none);
+  background-size: cover;
+  background-position: center;
+}
+
+.final-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: color-mix(
+    in srgb,
+    var(--final-overlay, rgba(58, 154, 122, 0.92)) 60%,
+    rgba(66, 31, 102, 0.38) 40%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+.final-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* CTA rows: space between buttons on mobile (no clamping) */
+.cta-row,
+.final-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 1.25rem;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 640px) {
+  .cta-row,
+  .final-ctas {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    width: 100%;
+    max-width: 22rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cta-row > a,
+  .cta-row > .btn,
+  .final-ctas > a,
+  .final-ctas > .btn {
+    margin-left: 0 !important;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+
+/* Site sections: white band backgrounds → soft purple */
+.section--white {
+  background: var(--section-purple, var(--purple-tint));
+}
+section[style*="background:var(--white)"] {
+  background: var(--section-purple, var(--purple-tint)) !important;
+}
+section.name,
+section.costs {
+  background: var(--section-purple, var(--purple-tint));
+}
+section:not(.hero):not(.hero-bg):not(.final):not(.final-bg):not(.banner):not(.banner-visual):not(.section-crisis-info):not(.section--tint):not(.give):not(.form-wrap):not(.founder-wrap):not(.vmv):not(.path):not(.model-wrap):not(.cta):not([class*="hero"]):not([id="give"]):not([style*="background"]) {
+  background-color: var(--section-purple, var(--purple-tint));
+}
+
+
+/* Hero figure (home): photo card — image-only variant uses transparent PNG, no frame */
+.hero-figure {
+  margin: 0 0 1.25rem;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 0.5px solid var(--border, #e2ede4);
+  aspect-ratio: 4 / 3;
+}
+
+.hero-card--image-only .hero-figure {
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  aspect-ratio: auto;
+  background: transparent;
+  overflow: visible;
+}
+
+.hero-figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-card--image-only .hero-figure img {
+  height: auto;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+/* Service card thumbnails: show full photo (no crop); width matches card */
+figure.svc-thumb {
+  margin: 0 0 1rem;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 0.5px solid color-mix(
+    in srgb,
+    color-mix(in srgb, var(--border, #e2ede4) 70%, var(--primary, #4CB894) 30%) 60%,
+    var(--purple, #421f66) 40%
+  );
+  background: color-mix(in srgb, var(--tint, #EDF8F2) 60%, var(--purple-tint, #e4daee) 40%);
+}
+
+figure.svc-thumb img {
+  width: 100%;
+  display: block;
+  height: auto;
+  object-fit: contain;
+}
+
+.blog-list-thumb {
+  flex-shrink: 0;
+  width: 5.75rem;
+  height: 4.25rem;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 0.5px solid var(--border, #e2ede4);
+}
+
+.cats .cat li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.cats .cat li .blog-list-thumb {
+  order: -1;
+}
+
+.cats .cat li .blog-post-title {
+  flex: 1;
+  min-width: 0;
+}
+
+.cats .cat li::before {
+  margin-top: 0.15rem;
+}
+
+
+.section-crisis-info {
+  background: color-mix(in srgb, var(--blue-tint, #eaf4fd) 60%, var(--purple-tint, #e4daee) 40%);
+  border-top: 0.5px solid color-mix(
+    in srgb,
+    color-mix(in srgb, var(--border, #e2ede4) 70%, var(--primary, #4CB894) 30%) 60%,
+    var(--purple, #421f66) 40%
+  );
+  border-bottom: 0.5px solid color-mix(
+    in srgb,
+    color-mix(in srgb, var(--border, #e2ede4) 70%, var(--primary, #4CB894) 30%) 60%,
+    var(--purple, #421f66) 40%
+  );
+  padding: 4rem min(5vw, 3.25rem);
+}
+@media (max-width: 640px) {
+  .section-crisis-info {
+    padding: 2.85rem 1.35rem;
+  }
+}
+
+/**
+ * Display section titles — larger than body h2 (22px), without changing semantic structure.
+ * Specificity beats bare `h2 { font-size: 22px }` in page stylesheets.
+ */
+h2.heading-display {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(1.625rem, 2.6vw, 2.05rem);
+  font-weight: 400;
+  line-height: 1.28;
+  color: color-mix(in srgb, var(--brand-darkest, #1E4A3A) 60%, var(--purple, #421f66) 40%);
+}
+
+/* Crisis / global-messaging banner (ocean headline) — beats .banner h2 { font-size } from page CSS */
+.banner h2.heading-display,
+.section-crisis-banner h2.heading-display {
+  color: var(--blue);
+  font-size: clamp(1.625rem, 2.6vw, 2.05rem);
+}
+
+/* On tinted or blue info sections, keep strong contrast */
+.section-crisis-info h2.heading-display {
+  color: var(--brand-darkest);
+}
+
+/* Display headings on dark or filled bands */
+.glance h2.heading-display,
+.founder h2.heading-display,
+.build h2.heading-display,
+.cta h2.heading-display {
+  color: var(--white);
+  font-size: clamp(1.625rem, 2.6vw, 2.05rem);
+}
+
+footer {
+  border-top: 2px solid color-mix(in srgb, var(--primary, #4CB894) 60%, var(--purple, #421f66) 40%);
+}
+
+.cats .cat {
+  border: 0.5px solid color-mix(
+    in srgb,
+    color-mix(in srgb, var(--border, #e2ede4) 70%, var(--primary, #4CB894) 30%) 60%,
+    var(--purple, #421f66) 40%
+  );
+}
+
+/* White-filled CTAs → purple on hover (matches hero outline buttons) */
+.btn-on-light,
+.btn-light,
+.btn-outline-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--white, #fff);
+  color: var(--brand-dark, #3a9a7a);
+  padding: 12px 28px;
+  border-radius: 100px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.btn-on-light:hover,
+.btn-light:hover,
+.btn-outline-white:hover,
+.final .btn-on-light:hover {
+  background: var(--purple-deep, #251238);
+  color: var(--white, #fff);
+  border-color: var(--purple-deep, #251238);
+}
+
+.btn-on-white:hover {
+  background: var(--purple-deep, #251238);
+  color: var(--white, #fff);
+  border-color: var(--purple-deep, #251238);
+}
+</style>
+<!-- build:css:end -->
+<style>
+  /* Hero backdrop: mint → purple linear gradient over photo */
+  header.hero.hero-bg {
+    background-color: var(--purple-tint);
+    background-image:
+      linear-gradient(
+        128deg,
+        rgba(237, 248, 242, 0.94) 0%,
+        rgba(228, 218, 238, 0.9) 38%,
+        rgba(210, 198, 228, 0.88) 72%,
+        rgba(196, 186, 218, 0.86) 100%
+      ),
+      var(--hero-image);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  header.hero.hero-bg::after {
+    display: none;
+  }
+  header.hero.hero-bg > .hero-grid,
+  header.hero.hero-bg > * {
+    position: relative;
+    z-index: 1;
+  }
+  header.hero.hero-bg .hero-grid {
+    z-index: 2;
+  }
+  /* Image-only hero card: transparent PNG blends into hero gradient (no white box). */
+  .hero-card--image-only {
+    padding: 0;
+    overflow: visible;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .hero-card--image-only .hero-figure {
+    margin: 0;
+    border-radius: 0;
+    border: 0;
+    aspect-ratio: auto;
+    background: transparent;
+    overflow: visible;
+    line-height: 0;
+    display: block;
+  }
+  .hero-card--image-only .hero-figure img {
+    width: 100%;
+    height: auto;
+    max-height: calc(100dvh - 5.175rem - 2rem);
+    display: block;
+    object-fit: contain;
+    object-position: center bottom;
+  }
+</style>
+<style>
+  /* ── HERO VIEWPORT FIT ─────────────────────────────────────────────────────
+     Nav inner band: --nav-bar-inner-h (3.875rem) + 2×--nav-pad-y (0.65rem each) = 5.175rem.
+     Hero fills the remaining viewport so all content — including the three CTA buttons — is visible without scrolling.
+     ───────────────────────────────────────────────────────────────────────── */
+
+  header.hero {
+    min-height: calc(100dvh - 5.175rem);
+    display: flex;
+    align-items: center;        /* vertically centre the two-column grid     */
+    overflow: hidden;
+    padding-block: clamp(0.75rem, 1.5vh, 1.5rem);
+  }
+
+  /* Centre columns vertically; remove extra padding that was pushing things down */
+  .hero-grid {
+    align-items: center;
+    padding-block: 0;
+  }
+
+  /* Headline: fluid — fills wide screens, shrinks on shorter ones */
+  h1.headline {
+    font-size: clamp(1.75rem, 2.8vw + 0.5vh, 3rem);
+    margin-block: 0.6rem;
+  }
+
+  /* Body copy: slightly tighter so the full paragraph and buttons sit above fold */
+  .lede {
+    font-size: clamp(0.9rem, 1vw + 0.35vh, 1.125rem);
+    line-height: 1.65;
+  }
+
+  .quote {
+    margin-top: 0.65rem;
+    font-size: clamp(1rem, 1.3vw, 1.25rem);
+  }
+
+  .cta-row {
+    margin-top: 1rem;
+    gap: 10px;
+  }
+
+  .eyebrow {
+    padding: 7px 14px;
+    font-size: clamp(10px, 1vw, 12px);
+  }
+
+  /* Right-column illustration: cap height, preserve transparent PNG */
+  .hero-card {
+    max-height: calc(100dvh - 5.175rem - 2rem);
+    overflow: visible;
+  }
+
+  .hero-card--image-only .hero-figure img {
+    width: 100%;
+    height: auto;
+    max-height: calc(100dvh - 5.175rem - 2rem);
+    object-fit: contain;
+    object-position: center bottom;
+    display: block;
+  }
+
+  /* ── Stacked / narrow layout (≤980 px) ── */
+  @media (max-width: 980px) {
+    header.hero {
+      min-height: auto;
+      padding-block: 0 2rem;
+      align-items: flex-start;
+      overflow: visible;
+    }
+
+    /* Photo edge-to-edge; text keeps side padding */
+    .hero-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      padding: 0 0 1.25rem;
+    }
+
+    .hero-grid > div:first-child {
+      order: 1;
+      padding-inline: 1.15rem;
+    }
+
+    .hero-card.hero-card--image-only {
+      order: 2;
+      display: block;
+      width: 100%;
+      max-height: none;
+      min-height: 0;
+      padding: 0;
+      margin: 0;
+      overflow: visible;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .hero-card--image-only .hero-figure {
+      margin: 0;
+      width: 100%;
+      aspect-ratio: auto;
+      min-height: 0;
+      max-height: none;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      overflow: visible;
+      line-height: 0;
+    }
+
+    .hero-card--image-only .hero-figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: min(52vh, 420px);
+      min-height: 0;
+      object-fit: contain;
+      object-position: center bottom;
+    }
+  }
+
+  /* Very short landscape only: shrink (do not hide) the photo */
+  @media (max-height: 580px) and (orientation: landscape) {
+    header.hero {
+      min-height: auto;
+      padding-block: 1rem;
+      overflow: visible;
+    }
+
+    .hero-card--image-only .hero-figure {
+      aspect-ratio: auto;
+      height: auto;
+    }
+
+    .hero-card--image-only .hero-figure img {
+      height: auto;
+      max-height: min(40vh, 160px);
+      object-fit: contain;
+      object-position: center bottom;
+    }
+
+    h1.headline {
+      font-size: 1.5rem;
+    }
+
+    .lede {
+      font-size: 0.9rem;
+    }
+  }
+</style>
+
+<style id="nawiri-animations">
+/* ── Motion: scroll reveals, hovers, hero entrance (respects reduced motion) ── */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+  header.hero > *,
+  header.hero .hero-grid > * { opacity: 1 !important; transform: none !important; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0);
+    transition:
+      opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: calc(var(--reveal-i, 0) * 85ms);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  /* Hero entrance — flat heroes and .hero-grid layouts */
+  header.hero > *:not(.blob):not(.hero-grid) {
+    opacity: 0;
+    transform: translate3d(0, 22px, 0);
+  }
+  header.hero .hero-grid > * {
+    opacity: 0;
+    transform: translate3d(0, 22px, 0);
+  }
+  header.hero.hero-ready > *:not(.blob):not(.hero-grid),
+  header.hero.hero-ready .hero-grid > * {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  header.hero.hero-ready .hero-grid > *:nth-child(1) { transition-delay: 0.06s; }
+  header.hero.hero-ready .hero-grid > *:nth-child(2) { transition-delay: 0.2s; }
+  header.hero.hero-ready > .eyebrow { transition-delay: 0.04s; }
+  header.hero.hero-ready > h1 { transition-delay: 0.1s; }
+  header.hero.hero-ready > p,
+  header.hero.hero-ready > .lede { transition-delay: 0.16s; }
+  header.hero.hero-ready > .intro,
+  header.hero.hero-ready > .notice,
+  header.hero.hero-ready > .quote { transition-delay: 0.14s; }
+  header.hero.hero-ready > .cta-row { transition-delay: 0.24s; }
+  header.hero.hero-ready .filter { transition-delay: 0.2s; }
+
+  /* Sticky nav */
+  nav.top {
+    transition: box-shadow 0.35s ease, background-color 0.35s ease;
+  }
+  nav.top.is-scrolled {
+    box-shadow: 0 6px 28px rgba(37, 18, 56, 0.1);
+  }
+
+  /* Interactive cards & panels */
+  .svc,
+  .tier,
+  .stat,
+  .val,
+  .who-card,
+  .vmv-card,
+  .model,
+  .step,
+  .ic-card,
+  .pick,
+  .stp,
+  .way,
+  .cost,
+  .card,
+  .cat,
+  .q,
+  .partner-list,
+  .hero-card:not(.hero-card--image-only),
+  .quote-card,
+  .build,
+  .glance,
+  .pull,
+  .banner-visual {
+    transition:
+      transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.4s ease,
+      border-color 0.35s ease;
+  }
+
+  .svc:hover,
+  .tier:hover,
+  .stat:hover,
+  .val:hover,
+  .who-card:hover,
+  .vmv-card:hover,
+  .model:hover,
+  .step:hover,
+  .ic-card:hover,
+  .pick:hover,
+  .stp:hover,
+  .way:hover,
+  .cost:hover,
+  .card:hover,
+  .cat:hover,
+  .partner-list:hover,
+  form.contact:hover,
+  form.book:hover,
+  .hero-card:not(.hero-card--image-only):hover,
+  .quote-card:hover,
+  .build:hover {
+    transform: translate3d(0, -8px, 0);
+    box-shadow:
+      0 16px 40px rgba(37, 18, 56, 0.12),
+      0 4px 12px rgba(76, 184, 148, 0.08);
+    border-color: color-mix(in srgb, var(--primary, #4CB894) 35%, var(--border, #e2ede4) 65%);
+  }
+
+  .tier.highlight:hover {
+    border-color: color-mix(in srgb, var(--purple, #421f66) 40%, var(--border, #e2ede4) 60%);
+  }
+
+  /* Image zoom inside cards (skip transparent hero illustration) */
+  figure.svc-thumb,
+  .hero-card:not(.hero-card--image-only) .hero-figure {
+    overflow: hidden;
+    border-radius: inherit;
+  }
+  figure.svc-thumb img,
+  .hero-card:not(.hero-card--image-only) .hero-figure img {
+    transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .svc:hover figure.svc-thumb img,
+  .pick:hover figure.svc-thumb img,
+  .hero-card:not(.hero-card--image-only):hover .hero-figure img {
+    transform: scale(1.05);
+  }
+
+  /* Buttons */
+  .btn,
+  .nav-cta,
+  .submit,
+  .btn-on-light,
+  .btn-light,
+  .btn-outline-white,
+  .btn-on-dark,
+  .btn-on-white,
+  .btn-ghost-outline {
+    transition:
+      transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.28s ease,
+      background 0.2s ease,
+      color 0.2s ease,
+      border-color 0.2s ease;
+  }
+  .btn:hover,
+  .nav-cta:hover,
+  .submit:hover,
+  .btn-on-light:hover,
+  .btn-light:hover,
+  .btn-outline-white:hover,
+  .btn-on-dark:hover,
+  .btn-on-white:hover,
+  .btn-ghost-outline:hover {
+    transform: translate3d(0, -3px, 0);
+    box-shadow: 0 10px 24px rgba(37, 18, 56, 0.14);
+  }
+  .btn:active,
+  .nav-cta:active,
+  .submit:active {
+    transform: translate3d(0, -1px, 0);
+  }
+
+  /* Nav links */
+  nav.top .links a {
+    position: relative;
+    transition: color 0.25s ease;
+  }
+  nav.top .links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 100%;
+    height: 2px;
+    background: var(--primary, #4CB894);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  nav.top .links a:hover::after {
+    transform: scaleX(1);
+  }
+
+  /* Blog filter chips */
+  .filter .chip {
+    transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+  }
+  .filter .chip:hover {
+    transform: translate3d(0, -2px, 0);
+    box-shadow: 0 6px 16px rgba(37, 18, 56, 0.1);
+  }
+
+  /* FAQ accordion */
+  details.q {
+    transition: border-color 0.3s ease, box-shadow 0.35s ease, transform 0.35s ease;
+  }
+  details.q:hover {
+    box-shadow: 0 8px 24px rgba(37, 18, 56, 0.08);
+  }
+  details.q[open] {
+    box-shadow: 0 10px 28px rgba(76, 184, 148, 0.1);
+  }
+  details.q summary {
+    transition: color 0.25s ease;
+  }
+
+  /* Section headings pulse-in */
+  .section-head.reveal.in .eyebrow {
+    animation: nawiri-fade-in 0.6s ease 0.1s both;
+  }
+  .section-head.reveal.in .heading-display {
+    animation: nawiri-fade-in 0.7s ease 0.15s both;
+  }
+
+  @keyframes nawiri-fade-in {
+    from { opacity: 0; transform: translate3d(0, 12px, 0); }
+    to { opacity: 1; transform: translate3d(0, 0, 0); }
+  }
+
+  /* Banner subtle scale on scroll */
+  .banner-visual.is-visible {
+    animation: nawiri-banner-in 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  @keyframes nawiri-banner-in {
+    from { opacity: 0.85; transform: scale(1.02); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  /* Mobile: same animations, tuned for small viewports */
+  @media (max-width: 880px) {
+    .reveal {
+      transform: translate3d(0, 20px, 0);
+    }
+    .svc:hover,
+    .tier:hover,
+    .stat:hover,
+    .val:hover,
+    .who-card:hover,
+    .vmv-card:hover,
+    .model:hover,
+    .step:hover,
+    .ic-card:hover,
+    .pick:hover,
+    .stp:hover,
+    .way:hover,
+    .cost:hover,
+    .card:hover,
+    .cat:hover,
+    .partner-list:hover,
+    form.contact:hover,
+    form.book:hover,
+    .hero-card:hover,
+    .quote-card:hover,
+    .build:hover {
+      transform: translate3d(0, -5px, 0);
+    }
+  }
+
+  /* Touch: tap feedback where hover is unavailable */
+  @media (hover: none), (pointer: coarse) {
+    .svc:active,
+    .tier:active,
+    .stat:active,
+    .val:active,
+    .who-card:active,
+    .vmv-card:active,
+    .model:active,
+    .step:active,
+    .ic-card:active,
+    .pick:active,
+    .stp:active,
+    .way:active,
+    .cost:active,
+    .card:active,
+    .cat:active,
+    .partner-list:active,
+    form.contact:active,
+    form.book:active,
+    .hero-card:active,
+    .quote-card:active,
+    .build:active {
+      transform: translate3d(0, -4px, 0);
+      box-shadow: 0 12px 28px rgba(37, 18, 56, 0.1);
+    }
+    .filter .chip:active {
+      transform: scale(0.97);
+    }
+    .svc:active figure.svc-thumb img,
+    .pick:active figure.svc-thumb img {
+      transform: scale(1.03);
+    }
+    details.q:active {
+      box-shadow: 0 8px 24px rgba(37, 18, 56, 0.08);
+    }
+  }
+}
+
+/* Mobile hero image must stay visible (wins over entrance fade) */
+@media (max-width: 980px) {
+  header.hero .hero-grid > .hero-card.hero-card--image-only {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+}
+</style>
+
+<style id="home-mint-purple-blend">
+/* Homepage only: gentle mint ↔ purple blend (subtle, not overpowering) */
+.section--white {
+  background: color-mix(in srgb, var(--tint) 42%, var(--section-purple) 58%);
+}
+.section--tint {
+  background: color-mix(in srgb, var(--tint) 56%, var(--purple-tint) 44%);
+}
+section.give {
+  background: color-mix(in srgb, var(--purple-tint) 52%, var(--tint) 48%);
+}
+.section--white .pull {
+  background: color-mix(in srgb, var(--tint) 48%, var(--purple-tint) 52%);
+  border-color: color-mix(in srgb, var(--border) 80%, var(--purple-tint) 20%);
+}
+.banner.banner-visual {
+  background-color: color-mix(in srgb, var(--blue-tint) 48%, var(--purple-tint) 24%, var(--tint) 28%);
+}
+.banner.banner-visual::after {
+  background: color-mix(
+    in srgb,
+    rgba(234, 244, 253, 0.82) 48%,
+    rgba(228, 218, 238, 0.7) 32%,
+    rgba(237, 248, 242, 0.55) 20%
+  );
+}
+.stat .num {
+  color: color-mix(in srgb, var(--primary) 78%, var(--purple) 22%);
+}
+.svc .ic {
+  background: color-mix(in srgb, var(--tint) 55%, var(--purple-tint) 45%);
+}
+</style>
+
+</head>
+<body>
+
+<nav class="top">
+  <div class="wrap">
+    <a href="/home.html" class="brand"><img class="brand-logo" src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_320,f_auto,q_auto/v1779775193/nawiri_logo_v8dqxt.jpg" width="320" height="320" alt="Nawiri Akili · Care Africa" decoding="async" /></a>
+    <button class="burger" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
+    <div class="links">
+      <a href="/home.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/services.html">Services</a>
+      <a href="/initiative.html">Nawiri Akili Initiative</a>
+      <a href="/walk-with-us.html">Walk With Us</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+    <a href="/book.html" class="nav-cta">Book a Session</a>
+  </div>
+</nav>
+
+<header class="hero hero-bg">
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="hero-grid">
+    <div>
+      <h1 class="headline">Nurturing Minds, <span class="grad">Transforming Communities</span></h1>
+      <p class="lede"><strong>"Nawiri"</strong> means to bloom. <em>Empowering growth, renewal, and a mentally flourishing community.</em> Nawiri exists to ensure quality mental health care is a right, not a privilege. Through the <mark>Nawiri Akili Initiative</mark>, we provide mental health education and subsidised or free care to communities, funded by community sponsorships and the professional expertise of <mark>Nawiri Akili-Care Africa</mark>, our consultancy arm. Together, one ecosystem. One mission.</p>
+      <div class="cta-row">
+        <a href="/walk-with-us.html" class="btn btn-green">💛 Support the Initiative</a>
+        <a href="/book.html" class="btn btn-primary">Book a Session →</a>
+        <a href="/initiative.html" class="btn btn-ghost">Learn About Our Impact →</a>
+      </div>
+    </div>
+    <div class="hero-card hero-card--image-only">
+      <figure class="hero-figure">
+        <img src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_900,f_auto,q_auto/v1780212339/home_x6imou.png" width="600" height="450" alt="A supportive, confidential conversation in a welcoming space." loading="eager" decoding="async" fetchpriority="high" />
+      </figure>
+    </div>
+  </div>
+</header>
+
+<section class="banner banner-visual">
+  <div class="icon">🌍</div>
+  <h2 class="heading-display">Mental health is the defining health crisis of our generation.</h2>
+  <p>Over 1 billion people worldwide are living with a mental health condition. COVID-19 drove a 25% global surge in anxiety, depression, and other mental health conditions, and the world has yet to recover. This is not a distant crisis. It is a reality that touches every family, every community, every generation. Nawiri exists to meet it, one child, one community, one conversation at a time.</p>
+</section>
+
+<section class="section--white">
+  <div class="section-head reveal">
+    <span class="eyebrow">The Numbers, 2025</span>
+    <h2 class="heading-display">The reality we are changing</h2>
+    <p><em>Sources: WHO World Mental Health Today, September 2025 · JAMA Psychiatry 2025 · Project HOPE 2024 · The Lancet 2024</em></p>
+  </div>
+  <div class="stats">
+    <div class="stat reveal"><div class="num">1B+</div><div class="desc">People living with a mental health condition worldwide</div><div class="src">WHO, 2025</div></div>
+    <div class="stat reveal"><div class="num">91%</div><div class="desc">Of people with depression have no access to care</div><div class="src">WHO, 2025</div></div>
+    <div class="stat reveal"><div class="num">6.9%</div><div class="desc">Of those who need treatment actually receive it</div><div class="src">JAMA Psychiatry, 2025</div></div>
+    <div class="stat reveal"><div class="num">1 in 7</div><div class="desc">Young people aged 10–19 have a mental health condition</div><div class="src">Project HOPE, 2024</div></div>
+  </div>
+  <div class="pull reveal">Mental health is not a private burden to be carried alone. It is a shared reality and a shared responsibility, one that touches every family, every community, every generation.</div>
+</section>
+
+<section class="section--tint">
+  <div class="section-head reveal">
+    <span class="eyebrow">Services at a Glance</span>
+    <h2 class="heading-display">How we support individuals and organisations</h2>
+  </div>
+  <div class="svc-grid">
+    <div class="svc reveal"><figure class="svc-thumb"><img src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_800,f_auto,q_auto/v1779773920/individual_therapy_chggs7.jpg" alt="" width="640" height="400" loading="lazy" decoding="async" /></figure><div class="ic">🧠</div><h4>Individual Therapy</h4><p>Professional, confidential support, evidence-based and tailored to you.</p></div>
+    <div class="svc reveal"><figure class="svc-thumb"><img src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_800,f_auto,q_auto/v1779773978/family_therapy_yi63q0.png" alt="" width="640" height="400" loading="lazy" decoding="async" /></figure><div class="ic">👨‍👩‍👧</div><h4>Family Therapy</h4><p>Structured support for family systems: communication, healing, and healthier relationships across generations.</p></div>
+    <div class="svc reveal"><figure class="svc-thumb"><img src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_800,f_auto,q_auto/v1779773912/corporate_whgqjm.jpg" alt="" width="640" height="400" loading="lazy" decoding="async" /></figure><div class="ic">🏢</div><h4>Organisational Wellness</h4><p>Organisations thrive when their people do. Tailored mental health programs, staff support, and sustainable wellness solutions.</p></div>
+    <div class="svc reveal"><figure class="svc-thumb"><img src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_800,f_auto,q_auto/v1779773921/physchology_ortsoy.png" alt="" width="640" height="400" loading="lazy" decoding="async" /></figure><div class="ic">🏫</div><h4>School & Community Programs</h4><p>Mental health education, stigma reduction, and accessible support directly into the spaces where people live, learn, and grow.</p></div>
+    <div class="svc reveal"><figure class="svc-thumb"><img src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_800,f_auto,q_auto/v1779773922/virtual_therapy_zksiis.jpg" alt="" width="640" height="400" loading="lazy" decoding="async" /></figure><div class="ic">💻</div><h4>Virtual Care</h4><p>Fully confidential online sessions from anywhere in Kenya or internationally.</p></div>
+    <div class="svc reveal"><figure class="svc-thumb"><img src="https://res.cloudinary.com/dq6dzskaf/image/upload/w_800,f_auto,q_auto/v1779773981/subsidised_free_care_ngmize.png" alt="" width="640" height="400" loading="lazy" decoding="async" /></figure><div class="ic">💚</div><h4>Subsidised or Free Care</h4><p>Care without conditions. Through the Nawiri Akili Initiative, subsidised and free sessions are available, because mental wellness belongs to everyone, without exception.</p></div>
+  </div>
+  <div class="svc-cta-row"><a href="/services.html" class="btn btn-primary">All Services →</a><a href="/book.html" class="btn btn-ghost">Book a Session →</a></div>
+</section>
+
+<section class="give">
+  <div class="section-head reveal">
+    <span class="eyebrow eyebrow--purple">Walk With Us</span>
+    <h2 class="heading-display">Mental health care should reach everyone.</h2>
+    <p>Through the Nawiri Akili Initiative, it does, one session, one school, one community at a time. Your contribution is what makes that possible.</p>
+  </div>
+  <div class="tiers">
+    <div class="tier reveal"><div class="amt">KSh 1,000</div><div class="usd">approx. $8</div><div class="what">Sponsor a Session: fund one person's free therapy</div></div>
+    <div class="tier reveal"><div class="amt">KSh 5,000</div><div class="usd">approx. $38</div><div class="what">Community Workshop Support: bring mental health education to a school</div></div>
+    <div class="tier reveal"><div class="amt">KSh 10,000</div><div class="usd">approx. $77</div><div class="what">Subsidised Care Bundle: cover ten people's access to care</div></div>
+    <div class="tier reveal"><div class="amt">KSh 20,000</div><div class="usd">approx. $154</div><div class="what">Impact Partner Tier: a full month of community care and outreach</div></div>
+  </div>
+  <div style="text-align:center;margin-top:40px"><a href="/walk-with-us.html" class="btn btn-green">See All Ways to Give →</a></div>
+</section>
+
+<section class="final final-bg">
+  <h2>When one mind flourishes, <span class="green">the whole community grows with it.</span></h2>
+  <p>We exist to make sure nothing stands in the way of it.</p>
+  <div class="cta-row" style="justify-content:center">
+    <a href="/walk-with-us.html" class="btn btn-green">💛 Sponsor an Initiative</a>
+    <a href="/book.html" class="btn-on-light">Book a Session</a>
+    <a href="/contact.html" class="btn btn-ghost">Partner With Us</a>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <div class="foot-brand">Nawiri Akili-Care Africa</div>
+      <p class="tag">Nurturing Minds, Transforming Communities</p>
+      <p style="font-size:1rem;font-weight:400;line-height:1.75">"Nawiri" means to bloom. Empowering growth, renewal and a mentally flourishing community.</p>
+    </div>
+    <div><h5>Explore</h5><ul><li><a href="/home.html">Home</a></li><li><a href="/about.html">About Us</a></li><li><a href="/services.html">Services</a></li><li><a href="/initiative.html">Nawiri Akili Initiative</a></li><li><a href="/blog.html">Blog & Insights</a></li></ul></div>
+    <div><h5>Take Action</h5><ul><li><a href="/book.html">Book a Session</a></li><li><a href="/walk-with-us.html">💛 Walk With Us</a></li><li><a href="/contact.html">Partner With Us</a></li><li><a href="/walk-with-us.html">Volunteer</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
+    <div><h5>Services</h5><ul><li>Individual Therapy</li><li>Family Therapy</li><li>Group Therapy</li><li>Organisational Wellness</li><li>Virtual Care</li><li>Subsidised or Free Care</li></ul></div>
+  </div>
+  <div class="copy">© 2026 Nawiri Akili-Care Africa · Kilifi, Kenya · Confidential · Compassionate · Accessible</div>
+</footer>
+
+<script id="nawiri-animations-js">
+(function () {
+  "use strict";
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var mobileMq = window.matchMedia("(max-width: 880px)");
+  var coarseMq = window.matchMedia("(pointer: coarse)");
+
+  function isMobileViewport() {
+    return mobileMq.matches || coarseMq.matches;
+  }
+
+  function revealIn(el, observer) {
+    el.classList.add("in");
+    if (observer) observer.unobserve(el);
+  }
+
+  function isInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    var edge = isMobileViewport() ? 12 : 40;
+    return rect.top < vh - edge && rect.bottom > edge;
+  }
+
+  function revealOptions() {
+    var mobile = isMobileViewport();
+    return {
+      threshold: mobile ? 0.05 : 0.1,
+      rootMargin: mobile ? "0px 0px 0px 0px" : "0px 0px -50px 0px",
+    };
+  }
+
+  /* Sticky nav shadow */
+  var nav = document.querySelector("nav.top");
+  if (nav) {
+    var onScroll = function () {
+      nav.classList.toggle("is-scrolled", window.scrollY > 20);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
+
+  /* Hero entrance */
+  var hero = document.querySelector("header.hero");
+  if (hero) {
+    var readyHero = function () {
+      hero.classList.add("hero-ready");
+    };
+    if (reduced) {
+      readyHero();
+    } else {
+      requestAnimationFrame(function () {
+        requestAnimationFrame(readyHero);
+      });
+    }
+    window.addEventListener(
+      "pageshow",
+      function (e) {
+        if (e.persisted) readyHero();
+      },
+      { passive: true }
+    );
+  }
+
+  /* Scroll reveals with stagger within parent */
+  var reveals = document.querySelectorAll(".reveal");
+  if (reduced) {
+    reveals.forEach(function (el) {
+      el.classList.add("in");
+    });
+    return;
+  }
+
+  reveals.forEach(function (el) {
+    var parent = el.parentElement;
+    if (parent) {
+      var siblings = Array.prototype.filter.call(parent.children, function (c) {
+        return c.classList && c.classList.contains("reveal");
+      });
+      var idx = siblings.indexOf(el);
+      if (idx >= 0) el.style.setProperty("--reveal-i", String(idx));
+    }
+  });
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      revealIn(entry.target, io);
+    });
+  }, revealOptions());
+
+  reveals.forEach(function (el) {
+    if (isInViewport(el)) {
+      revealIn(el, io);
+    } else {
+      io.observe(el);
+    }
+  });
+
+  var resizeTimer;
+  window.addEventListener(
+    "resize",
+    function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () {
+        reveals.forEach(function (el) {
+          if (!el.classList.contains("in") && isInViewport(el)) {
+            revealIn(el, io);
+          }
+        });
+      }, 120);
+    },
+    { passive: true }
+  );
+
+  window.addEventListener(
+    "orientationchange",
+    function () {
+      setTimeout(function () {
+        reveals.forEach(function (el) {
+          if (!el.classList.contains("in") && isInViewport(el)) {
+            revealIn(el, io);
+          }
+        });
+      }, 200);
+    },
+    { passive: true }
+  );
+
+  /* Banner sections */
+  document.querySelectorAll(".banner-visual").forEach(function (banner) {
+    if (isInViewport(banner)) {
+      banner.classList.add("is-visible");
+      return;
+    }
+    var bIo = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add("is-visible");
+            bIo.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: isMobileViewport() ? 0.08 : 0.2 }
+    );
+    bIo.observe(banner);
+  });
+
+})();
+</script>
+
+</body>
+</html>
