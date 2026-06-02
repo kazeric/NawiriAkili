@@ -116,7 +116,7 @@
     }
 
     .grid-4 {
-      grid-template-columns: repeat(4, minmax(280px, 1fr))
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
     }
 
     .center {
@@ -415,10 +415,7 @@
       transition: transform .8s cubic-bezier(.2, .8, .2, 1);
     }
 
-    .card>p {
-      margin: 0;
-      line-height: 0;
-    }
+
 
     .card:hover .card-img,
     .card:hover>img,
@@ -1047,31 +1044,31 @@
           one community at a time. Your contribution is what makes that possible.</p>
         <a href="walk-with-us/" class="btn btn-secondary">See All Ways to Give →</a>
       </div>
-      <div class="grid grid-4" style="gap:1rem">
-        <div class="tier">
-          <div class="amount">KSh 1,000</div>
-          <div class="approx">approx. $8</div>
-          <div class="tier-name">Sponsor a Session</div>
-          <div class="tier-desc">Fund one person&rsquo;s free therapy</div>
-        </div>
-        <div class="tier">
-          <div class="amount">KSh 5,000</div>
-          <div class="approx">approx. $38</div>
-          <div class="tier-name">Community Workshop Support</div>
-          <div class="tier-desc">Bring mental health education to a school</div>
-        </div>
-        <div class="tier">
-          <div class="amount">KSh 10,000</div>
-          <div class="approx">approx. $77</div>
-          <div class="tier-name">Subsidised Care Bundle</div>
-          <div class="tier-desc">Cover ten people&rsquo;s access to care</div>
-        </div>
-        <div class="tier">
-          <div class="amount">KSh 20,000</div>
-          <div class="approx">approx. $154</div>
-          <div class="tier-name">Impact Partner Tier</div>
-          <div class="tier-desc">A full month of community care and outreach</div>
-        </div>
+    </div>
+    <div class=" reveal" style="gap:1rem; display: flex;  flex-wrap:wrap; align-items: center; justify-content: center; margin-top:2.5rem">
+      <div class="tier">
+        <div class="amount">KSh 1,000</div>
+        <div class="approx">approx. $8</div>
+        <div class="tier-name">Sponsor a Session</div>
+        <div class="tier-desc">Fund one person's free therapy</div>
+      </div>
+      <div class="tier">
+        <div class="amount">KSh 5,000</div>
+        <div class="approx">approx. $38</div>
+        <div class="tier-name">Community Workshop Support</div>
+        <div class="tier-desc">Bring mental health education to a school</div>
+      </div>
+      <div class="tier">
+        <div class="amount">KSh 10,000</div>
+        <div class="approx">approx. $77</div>
+        <div class="tier-name">Subsidised Care Bundle</div>
+        <div class="tier-desc">Cover ten people's access to care</div>
+      </div>
+      <div class="tier">
+        <div class="amount">KSh 20,000</div>
+        <div class="approx">approx. $154</div>
+        <div class="tier-name">Impact Partner Tier</div>
+        <div class="tier-desc">A full month of community care and outreach</div>
       </div>
     </div>
   </section>
