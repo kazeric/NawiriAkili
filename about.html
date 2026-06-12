@@ -898,6 +898,64 @@
       font-size: .88rem;
       font-weight: 500;
     }
+
+/* Founder layout */
+#founder .reveal{
+  max-width:1100px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:320px 1fr;
+  gap:3rem;
+  align-items:center;
+}
+
+/* Founder image container */
+#founder .reveal > div:first-child{
+  text-align:center;
+}
+
+/* Any image placed in the photo column */
+#founder .reveal > div:first-child img{
+  width:280px;
+  height:280px;
+  object-fit:cover;
+  border-radius:50%;
+  border:8px solid #fff;
+  box-shadow:0 20px 40px rgba(0,0,0,.12);
+  display:block;
+  margin:0 auto;
+  transition:all .4s ease;
+}
+
+#founder .reveal > div:first-child img:hover{
+  transform:translateY(-4px);
+  box-shadow:0 28px 50px rgba(0,0,0,.16);
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+  #founder .reveal{
+    display:flex !important;
+    flex-direction:column !important;
+    gap:2rem !important;
+    text-align:center;
+  }
+
+  #founder .reveal > div:first-child{
+    width:100%;
+  }
+
+  #founder .reveal > div:first-child img{
+    width:220px;
+    height:220px;
+    max-width:70vw;
+  }
+
+  #founder .note{
+    text-align:left;
+  }
+}
   </style>
 </head>
 
@@ -1021,30 +1079,50 @@
     </div>
   </section>
 
-  <section class="section purple-tint" id="founder">
-    <div class="reveal" style="max-width:920px;margin:0 auto">
+<section class="section purple-tint" id="founder">
+  <div class="reveal"
+    style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:320px 1fr;gap:3rem;align-items:center;">
+
+    <!-- Founder Photo -->
+  <div>
+      [sc name="about-founder-profile"][/sc]
+
+</div>
+    <!-- Founder Content -->
+    <div>
       <span class="eyebrow purple">Founder</span>
       <h2>Built from experience. Driven by purpose.</h2>
-      <p style="margin-top:1rem">Nawiri was born from a professional understanding, a caring heart, and a mind that has
-        firsthand known the weight of struggling without support.</p>
-      <p style="margin-top:1rem"><strong>Peris Gichuki</strong> is a licensed psychologist with over five years of
-        clinical and community experience spanning psychotherapy, psychosocial counselling, trauma-informed care,
-        addiction rehabilitation, GBV-integrated support, clinical supervision, and community outreach. She has worked
-        with individuals, families, groups, institutions, and communities across clinical settings, rehabilitation
-        centres, schools, and grassroots programs &mdash; bringing the same standard of care to every context and every
-        person she has served.</p>
-      <p style="margin-top:1rem">She was someone who grew up wishing she had the language to name what she felt, the
-        guidance to make sense of it, and a safe space to speak it without fear.</p>
-      <div class="note purple" style="margin-top:1.4rem"><em>That wish became a vision. And that vision became
-          Nawiri.</em></div>
-      <p style="margin-top:1.4rem">Built for the generation coming up. Built for communities that have been waiting too
-        long. Built on the belief that professional care and open, barrier-free access are not two separate things
-        &mdash;
-        they are two halves of the same commitment. The consultancy serves those ready to begin. The Initiative ensures
-        that readiness is never required to receive support.</p>
-    </div>
-  </section>
 
+      <p style="margin-top:1rem">
+        Nawiri was born from a professional understanding, a caring heart, and a mind that has
+        firsthand known the weight of struggling without support.
+      </p>
+
+      <p style="margin-top:1rem">
+        <strong>Peris Gichuki</strong> is a licensed psychologist with over five years of
+        clinical and community experience spanning psychotherapy, psychosocial counselling,
+        trauma-informed care, addiction rehabilitation, GBV-integrated support, clinical
+        supervision, and community outreach.
+      </p>
+
+      <p style="margin-top:1rem">
+        She was someone who grew up wishing she had the language to name what she felt,
+        the guidance to make sense of it, and a safe space to speak it without fear.
+      </p>
+
+      <div class="note purple" style="margin-top:1.4rem">
+        <em>That wish became a vision. And that vision became Nawiri.</em>
+      </div>
+
+      <p style="margin-top:1.4rem">
+        Built for the generation coming up. Built for communities that have been waiting too
+        long. Built on the belief that professional care and open, barrier-free access are not
+        two separate things—they are two halves of the same commitment.
+      </p>
+    </div>
+
+  </div>
+</section>
   <script>
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => {
