@@ -910,7 +910,7 @@
       <span class="eyebrow">Book a Session</span>
       <h1>Your journey to wellness starts here.</h1>
       <p class="lead">Your first step does not need to be perfect. It just needs to be a step. We will meet you exactly
-        where you are ; without judgment, without pressure, without conditions.</p>
+        where you are, without judgment, without pressure, and without conditions.</p>
     </div>
   </header>
 
@@ -918,27 +918,29 @@
     <div class="center reveal" style="margin-bottom:2.5rem"><span class="eyebrow purple">Three simple steps</span>
       <h2>How it works</h2>
     </div>
-    <div class="reveal" style="display:grid; gap:2rem; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
-      <div class="step">
+    <div class="reveal" style="display:flex; flex-wrap: wrap; gap:1.5rem;">
+      <div class="step" style="flex: 1 1 480px;">
         <div class="step-num">1</div>
         <div>
           <h3>Choose</h3>
-          <p>Individual, family, group, consultation, or virtual. Or tell us you are not sure yet ; that is a
+          <p>Select individual, family, group, consultation, or virtual care. If you are not entirely sure yet, that is
+            a
             perfectly fine place to start.</p>
         </div>
       </div>
-      <div class="step">
+      <div class="step" style="flex: 1 1 480px;">
         <div class="step-num">2</div>
         <div>
           <h3>Schedule</h3>
-          <p>Pick a time. In-person in Kilifi or online from anywhere in Kenya or internationally.</p>
+          <p>Pick a time that fits your schedule. Meet in-person in Kilifi or connect online from anywhere in Kenya or
+            internationally.</p>
         </div>
       </div>
-      <div class="step">
+      <div class="step" style="flex: 1 1 480px;">
         <div class="step-num">3</div>
         <div>
           <h3>Begin</h3>
-          <p>One conversation. That is where it begins.</p>
+          <p>It all starts with a single conversation.</p>
         </div>
       </div>
     </div>
@@ -953,7 +955,7 @@
       <article class="card" style="flex: 1 1 480px;">[sc name="book-service-card-1"][/sc]
         <div class="card-body"><span class="icon">🧠</span>
           <h3>Individual Therapy</h3>
-          <p>Evidence-based one-on-one support. In-person or virtual.</p>
+          <p>Evidence-based one-on-one support available in-person or virtually.</p>
           <div><span class="tag">Anxiety</span><span class="tag">Trauma</span><span class="tag">Depression</span><span
               class="tag">Burnout</span><span class="tag">Life transitions</span></div>
         </div>
@@ -961,7 +963,7 @@
       <article class="card green-accent" style="flex: 1 1 480px;">[sc name="book-service-card-2"][/sc]
         <div class="card-body"><span class="icon">👨‍👩‍👧</span>
           <h3>Family Therapy</h3>
-          <p>Support for family systems navigating conflict, grief, or significant change.</p>
+          <p>Dedicated support for family systems navigating conflict, grief, or significant change.</p>
           <div><span class="tag">Family systems</span><span class="tag">Communication</span><span
               class="tag">Intergenerational</span></div>
         </div>
@@ -969,7 +971,7 @@
       <article class="card" style="flex: 1 1 480px;">[sc name="book-service-card-3"][/sc]
         <div class="card-body"><span class="icon">👥</span>
           <h3>Group Therapy</h3>
-          <p>Professionally facilitated groups for shared experiences.</p>
+          <p>Professionally facilitated therapeutic groups focused on shared experiences.</p>
           <div><span class="tag">Grief</span><span class="tag">Anxiety</span><span class="tag">Trauma</span><span
               class="tag">Transitions</span></div>
         </div>
@@ -977,7 +979,7 @@
       <article class="card green-accent" style="flex: 1 1 480px;">[sc name="book-service-card-4"][/sc]
         <div class="card-body"><span class="icon">🏢</span>
           <h3>Psychological Consultation</h3>
-          <p>Mental health expertise for organisations, schools, and institutions.</p>
+          <p>Professional mental health expertise designed for organisations, schools, and institutions.</p>
           <div><span class="tag">Program design</span><span class="tag">Supervision</span><span
               class="tag">Institutional wellness</span></div>
         </div>
@@ -985,7 +987,7 @@
       <article class="card" style="flex: 1 1 480px;">[sc name="book-service-card-5"][/sc]
         <div class="card-body"><span class="icon">💻</span>
           <h3>Virtual Session</h3>
-          <p>Online from anywhere ; Kenya or internationally. All services available.</p>
+          <p>Secure online sessions accessible from anywhere in Kenya or internationally across all services.</p>
           <div><span class="tag">Flexible</span><span class="tag">Secure</span><span class="tag">All services</span>
           </div>
         </div>
@@ -993,8 +995,8 @@
       <article class="card green-accent" style="flex: 1 1 480px;">[sc name="book-service-card-6"][/sc]
         <div class="card-body"><span class="icon">🌱</span>
           <h3>Subsidised or Free Support</h3>
-          <p>Cannot afford care? We will find a way. Subsidised and free sessions are available through the Initiative.
-            No one is turned away.</p>
+          <p>If professional care is currently out of reach, we will find a way forward. Subsidised and free sessions
+            are available through the Initiative, ensuring no one is turned away.</p>
           <div><span class="tag">Free sessions</span><span class="tag">Subsidised care</span><span class="tag">Emergency
               support</span><span class="tag">No barriers</span></div>
         </div>
@@ -1007,36 +1009,7 @@
       <div class="center" style="margin-bottom:1.5rem"><span class="eyebrow">Booking Form</span>
         <h2>Let's find your first step together</h2>
       </div>
-      <form class="form"
-        onsubmit="event.preventDefault();this.querySelector('.submit-msg').style.display='block';this.reset();">
-        <div><label>Full name</label><input required type="text"></div>
-        <div><label>Email address</label><input required type="email"></div>
-        <div><label>Phone number (optional)</label><input type="tel"></div>
-        <div><label>Service</label><select required>
-            <option value="">Select a service</option>
-            <option>Individual therapy</option>
-            <option>Family therapy</option>
-            <option>Group therapy</option>
-            <option>Organisational consultation</option>
-            <option>Virtual session</option>
-            <option>I would like to support the Initiative</option>
-            <option>Not sure yet</option>
-          </select></div>
-        <div><label>Tell us a little about what you are looking for <em>(optional ; no wrong
-              answer)</em></label><textarea placeholder="Whatever feels right to share..."></textarea></div>
-        <div><label>Preferred contact method</label><select required>
-            <option value="">Select</option>
-            <option>Email</option>
-            <option>WhatsApp</option>
-            <option>Phone call</option>
-          </select></div>
-        <button type="submit" class="btn btn-primary" style="justify-self:start">Book My Session →</button>
-        <p class="form-note">All information shared is strictly confidential. We will be in touch within 24–48 hours.
-        </p>
-        <p class="submit-msg"
-          style="display:none;background:#dcfce7;color:#15803d;padding:1rem;border-radius:12px;text-align:center;font-weight:600">
-          💛 Thank you. We'll be in touch within 24–48 hours.</p>
-      </form>
+      [sureforms id='161']
     </div>
   </section>
 
